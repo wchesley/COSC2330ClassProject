@@ -13,6 +13,7 @@ namespace COSC2330ClassProject
         {
             // Take info from form to register
             // add each item to the data base, unsure how we want to store addresses. Might just format all as string?
+            HassPass(pass);
         }
 
         public string HassPass(string password) // To securly store passwords, haven't fully tested yet. 
