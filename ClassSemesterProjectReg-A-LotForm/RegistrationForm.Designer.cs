@@ -259,6 +259,7 @@
             this.Controls.Add(this.label1);
             this.Name = "RegistrationForm";
             this.Text = "Register";
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 

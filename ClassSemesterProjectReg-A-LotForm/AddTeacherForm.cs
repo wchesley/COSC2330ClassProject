@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace ClassSemesterProjectReg_A_LotForm
 {
-    public partial class RegistrarForm : Form
+    public partial class AddTeacherForm : Form
     {
-        public RegistrarForm()
+        public AddTeacherForm()
         {
             InitializeComponent();
-        }
-
-        private void btnAddProfessor_Click(object sender, EventArgs e)
-        {
-            AddTeacherForm frm = new AddTeacherForm();
-            frm.Show();
-            this.Hide();
         }
     }
 }

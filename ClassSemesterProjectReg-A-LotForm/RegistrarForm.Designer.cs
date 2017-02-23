@@ -28,93 +28,257 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCancelCourse = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabManageCourses = new System.Windows.Forms.TabPage();
+            this.btnSearchCourse = new System.Windows.Forms.Button();
+            this.btnRemoveCourse = new System.Windows.Forms.Button();
             this.btnAddCourse = new System.Windows.Forms.Button();
-            this.btnViewProfessorProfiles = new System.Windows.Forms.Button();
-            this.btnViewStudentProfiles = new System.Windows.Forms.Button();
-            this.btnAddProfessor = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tabManageProfessors = new System.Windows.Forms.TabPage();
+            this.btnSearchProfessor = new System.Windows.Forms.Button();
+            this.btnUpdateProfessor = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnRemoveProfessor = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAddProfessor = new System.Windows.Forms.Button();
+            this.tabManageStudents = new System.Windows.Forms.TabPage();
+            this.btnSearchStudent = new System.Windows.Forms.Button();
+            this.btnUpdateStudent = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnRemoveStudent = new System.Windows.Forms.Button();
+            this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabManageCourses.SuspendLayout();
+            this.tabManageProfessors.SuspendLayout();
+            this.tabManageStudents.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnCancelCourse
+            // label1
             // 
-            this.btnCancelCourse.Location = new System.Drawing.Point(204, 30);
-            this.btnCancelCourse.Name = "btnCancelCourse";
-            this.btnCancelCourse.Size = new System.Drawing.Size(158, 52);
-            this.btnCancelCourse.TabIndex = 10;
-            this.btnCancelCourse.Text = "Cancel Course";
-            this.btnCancelCourse.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(25, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 20);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Registrar Actions";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabManageCourses);
+            this.tabControl1.Controls.Add(this.tabManageProfessors);
+            this.tabControl1.Controls.Add(this.tabManageStudents);
+            this.tabControl1.Location = new System.Drawing.Point(29, 54);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(475, 438);
+            this.tabControl1.TabIndex = 21;
+            // 
+            // tabManageCourses
+            // 
+            this.tabManageCourses.Controls.Add(this.btnSearchCourse);
+            this.tabManageCourses.Controls.Add(this.btnRemoveCourse);
+            this.tabManageCourses.Controls.Add(this.btnAddCourse);
+            this.tabManageCourses.Controls.Add(this.tableLayoutPanel1);
+            this.tabManageCourses.Location = new System.Drawing.Point(4, 22);
+            this.tabManageCourses.Name = "tabManageCourses";
+            this.tabManageCourses.Padding = new System.Windows.Forms.Padding(3);
+            this.tabManageCourses.Size = new System.Drawing.Size(467, 412);
+            this.tabManageCourses.TabIndex = 0;
+            this.tabManageCourses.Text = "Manage Courses";
+            this.tabManageCourses.UseVisualStyleBackColor = true;
+            // 
+            // btnSearchCourse
+            // 
+            this.btnSearchCourse.Location = new System.Drawing.Point(237, 371);
+            this.btnSearchCourse.Name = "btnSearchCourse";
+            this.btnSearchCourse.Size = new System.Drawing.Size(109, 32);
+            this.btnSearchCourse.TabIndex = 3;
+            this.btnSearchCourse.Text = "Search Course";
+            this.btnSearchCourse.UseVisualStyleBackColor = true;
+            // 
+            // btnRemoveCourse
+            // 
+            this.btnRemoveCourse.Location = new System.Drawing.Point(122, 371);
+            this.btnRemoveCourse.Name = "btnRemoveCourse";
+            this.btnRemoveCourse.Size = new System.Drawing.Size(109, 32);
+            this.btnRemoveCourse.TabIndex = 2;
+            this.btnRemoveCourse.Text = "Remove Course";
+            this.btnRemoveCourse.UseVisualStyleBackColor = true;
             // 
             // btnAddCourse
             // 
-            this.btnAddCourse.Location = new System.Drawing.Point(30, 30);
+            this.btnAddCourse.Location = new System.Drawing.Point(7, 371);
             this.btnAddCourse.Name = "btnAddCourse";
-            this.btnAddCourse.Size = new System.Drawing.Size(158, 52);
-            this.btnAddCourse.TabIndex = 11;
+            this.btnAddCourse.Size = new System.Drawing.Size(109, 32);
+            this.btnAddCourse.TabIndex = 1;
             this.btnAddCourse.Text = "Add Course";
             this.btnAddCourse.UseVisualStyleBackColor = true;
             // 
-            // btnViewProfessorProfiles
+            // tableLayoutPanel1
             // 
-            this.btnViewProfessorProfiles.Location = new System.Drawing.Point(30, 98);
-            this.btnViewProfessorProfiles.Name = "btnViewProfessorProfiles";
-            this.btnViewProfessorProfiles.Size = new System.Drawing.Size(158, 52);
-            this.btnViewProfessorProfiles.TabIndex = 12;
-            this.btnViewProfessorProfiles.Text = "View/Update \r\nProfessor Profiles";
-            this.btnViewProfessorProfiles.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel1.ColumnCount = 7;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(454, 359);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // btnViewStudentProfiles
+            // tabManageProfessors
             // 
-            this.btnViewStudentProfiles.Location = new System.Drawing.Point(204, 98);
-            this.btnViewStudentProfiles.Name = "btnViewStudentProfiles";
-            this.btnViewStudentProfiles.Size = new System.Drawing.Size(158, 52);
-            this.btnViewStudentProfiles.TabIndex = 13;
-            this.btnViewStudentProfiles.Text = "View/Update \r\nStudent Profiles";
-            this.btnViewStudentProfiles.UseVisualStyleBackColor = true;
-           
+            this.tabManageProfessors.Controls.Add(this.btnSearchProfessor);
+            this.tabManageProfessors.Controls.Add(this.btnUpdateProfessor);
+            this.tabManageProfessors.Controls.Add(this.tableLayoutPanel2);
+            this.tabManageProfessors.Controls.Add(this.btnRemoveProfessor);
+            this.tabManageProfessors.Controls.Add(this.btnAddProfessor);
+            this.tabManageProfessors.Location = new System.Drawing.Point(4, 22);
+            this.tabManageProfessors.Name = "tabManageProfessors";
+            this.tabManageProfessors.Padding = new System.Windows.Forms.Padding(3);
+            this.tabManageProfessors.Size = new System.Drawing.Size(467, 412);
+            this.tabManageProfessors.TabIndex = 1;
+            this.tabManageProfessors.Text = "Manage Professors";
+            this.tabManageProfessors.UseVisualStyleBackColor = true;
             // 
-            // btnAddProfessor
+            // btnSearchProfessor
             // 
-            this.btnAddProfessor.Location = new System.Drawing.Point(30, 166);
-            this.btnAddProfessor.Name = "btnAddProfessor";
-            this.btnAddProfessor.Size = new System.Drawing.Size(158, 52);
-            this.btnAddProfessor.TabIndex = 14;
-            this.btnAddProfessor.Text = "Add Professor";
-            this.btnAddProfessor.UseVisualStyleBackColor = true;
+            this.btnSearchProfessor.Location = new System.Drawing.Point(351, 371);
+            this.btnSearchProfessor.Name = "btnSearchProfessor";
+            this.btnSearchProfessor.Size = new System.Drawing.Size(109, 32);
+            this.btnSearchProfessor.TabIndex = 24;
+            this.btnSearchProfessor.Text = "Search Professor";
+            this.btnSearchProfessor.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateProfessor
+            // 
+            this.btnUpdateProfessor.Location = new System.Drawing.Point(237, 371);
+            this.btnUpdateProfessor.Name = "btnUpdateProfessor";
+            this.btnUpdateProfessor.Size = new System.Drawing.Size(109, 32);
+            this.btnUpdateProfessor.TabIndex = 21;
+            this.btnUpdateProfessor.Text = "Update Professor";
+            this.btnUpdateProfessor.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 7;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(454, 359);
+            this.tableLayoutPanel2.TabIndex = 19;
             // 
             // btnRemoveProfessor
             // 
-            this.btnRemoveProfessor.Location = new System.Drawing.Point(204, 166);
+            this.btnRemoveProfessor.Location = new System.Drawing.Point(122, 371);
             this.btnRemoveProfessor.Name = "btnRemoveProfessor";
-            this.btnRemoveProfessor.Size = new System.Drawing.Size(158, 52);
-            this.btnRemoveProfessor.TabIndex = 15;
+            this.btnRemoveProfessor.Size = new System.Drawing.Size(109, 32);
+            this.btnRemoveProfessor.TabIndex = 20;
             this.btnRemoveProfessor.Text = "Remove Professor";
             this.btnRemoveProfessor.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // btnAddProfessor
             // 
-            this.groupBox1.Controls.Add(this.btnRemoveProfessor);
-            this.groupBox1.Controls.Add(this.btnCancelCourse);
-            this.groupBox1.Controls.Add(this.btnAddProfessor);
-            this.groupBox1.Controls.Add(this.btnAddCourse);
-            this.groupBox1.Controls.Add(this.btnViewStudentProfiles);
-            this.groupBox1.Controls.Add(this.btnViewProfessorProfiles);
-            this.groupBox1.Location = new System.Drawing.Point(32, 24);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(391, 242);
-            this.groupBox1.TabIndex = 16;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Registrar Actions";
+            this.btnAddProfessor.Location = new System.Drawing.Point(7, 371);
+            this.btnAddProfessor.Name = "btnAddProfessor";
+            this.btnAddProfessor.Size = new System.Drawing.Size(109, 32);
+            this.btnAddProfessor.TabIndex = 19;
+            this.btnAddProfessor.Text = "Add Professor";
+            this.btnAddProfessor.UseVisualStyleBackColor = true;
+            this.btnAddProfessor.Click += new System.EventHandler(this.btnAddProfessor_Click);
+            // 
+            // tabManageStudents
+            // 
+            this.tabManageStudents.Controls.Add(this.btnSearchStudent);
+            this.tabManageStudents.Controls.Add(this.btnUpdateStudent);
+            this.tabManageStudents.Controls.Add(this.tableLayoutPanel3);
+            this.tabManageStudents.Controls.Add(this.btnRemoveStudent);
+            this.tabManageStudents.Controls.Add(this.btnAddStudent);
+            this.tabManageStudents.Location = new System.Drawing.Point(4, 22);
+            this.tabManageStudents.Name = "tabManageStudents";
+            this.tabManageStudents.Padding = new System.Windows.Forms.Padding(3);
+            this.tabManageStudents.Size = new System.Drawing.Size(467, 412);
+            this.tabManageStudents.TabIndex = 2;
+            this.tabManageStudents.Text = "Manage Students";
+            this.tabManageStudents.UseVisualStyleBackColor = true;
+            // 
+            // btnSearchStudent
+            // 
+            this.btnSearchStudent.Location = new System.Drawing.Point(351, 371);
+            this.btnSearchStudent.Name = "btnSearchStudent";
+            this.btnSearchStudent.Size = new System.Drawing.Size(109, 32);
+            this.btnSearchStudent.TabIndex = 23;
+            this.btnSearchStudent.Text = "Search Student";
+            this.btnSearchStudent.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateStudent
+            // 
+            this.btnUpdateStudent.Location = new System.Drawing.Point(236, 371);
+            this.btnUpdateStudent.Name = "btnUpdateStudent";
+            this.btnUpdateStudent.Size = new System.Drawing.Size(109, 32);
+            this.btnUpdateStudent.TabIndex = 22;
+            this.btnUpdateStudent.Text = "Update Student";
+            this.btnUpdateStudent.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 7;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(454, 359);
+            this.tableLayoutPanel3.TabIndex = 19;
+            // 
+            // btnRemoveStudent
+            // 
+            this.btnRemoveStudent.Location = new System.Drawing.Point(121, 371);
+            this.btnRemoveStudent.Name = "btnRemoveStudent";
+            this.btnRemoveStudent.Size = new System.Drawing.Size(109, 32);
+            this.btnRemoveStudent.TabIndex = 22;
+            this.btnRemoveStudent.Text = "Remove Student";
+            this.btnRemoveStudent.UseVisualStyleBackColor = true;
+            // 
+            // btnAddStudent
+            // 
+            this.btnAddStudent.Location = new System.Drawing.Point(6, 371);
+            this.btnAddStudent.Name = "btnAddStudent";
+            this.btnAddStudent.Size = new System.Drawing.Size(109, 32);
+            this.btnAddStudent.TabIndex = 21;
+            this.btnAddStudent.Text = "Add Student";
+            this.btnAddStudent.UseVisualStyleBackColor = true;
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(346, 280);
+            this.btnLogOut.Location = new System.Drawing.Point(425, 498);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(75, 23);
-            this.btnLogOut.TabIndex = 17;
+            this.btnLogOut.TabIndex = 20;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
             // 
@@ -122,25 +286,42 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 319);
+            this.ClientSize = new System.Drawing.Size(525, 535);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.groupBox1);
             this.Name = "RegistrarForm";
             this.Text = "Registrar Form";
-            this.groupBox1.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabManageCourses.ResumeLayout(false);
+            this.tabManageProfessors.ResumeLayout(false);
+            this.tabManageStudents.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnCancelCourse;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabManageCourses;
+        private System.Windows.Forms.Button btnSearchCourse;
+        private System.Windows.Forms.Button btnRemoveCourse;
         private System.Windows.Forms.Button btnAddCourse;
-        private System.Windows.Forms.Button btnViewProfessorProfiles;
-        private System.Windows.Forms.Button btnViewStudentProfiles;
-        private System.Windows.Forms.Button btnAddProfessor;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TabPage tabManageProfessors;
+        private System.Windows.Forms.Button btnSearchProfessor;
+        private System.Windows.Forms.Button btnUpdateProfessor;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnRemoveProfessor;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnAddProfessor;
+        private System.Windows.Forms.TabPage tabManageStudents;
+        private System.Windows.Forms.Button btnSearchStudent;
+        private System.Windows.Forms.Button btnUpdateStudent;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button btnRemoveStudent;
+        private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.Button btnLogOut;
     }
 }

@@ -30,16 +30,18 @@ namespace ClassSemesterProjectReg_A_LotForm
             // Had some thoughts on the address, it might be easier to created 
             // seperate text boxes for street name, street number, zip and state? 
             // might 
+
+            // We're not going to be using the Address information for the actual program or anything to send out real letters so I didn't bother making multiple variables
             string rawFirstName = txtFirstName.Text;
             string rawLastName = txtLastName.Text;
             string address = txtAddress.Text;
             string rawphonenumber = txtPhoneNumber.Text; 
             double conFirstName;
             double conLastName;
-            int zip;
-            string state; 
+            //int zip;  <--- We're not going to need these as seperate variable it'll just be stored as one Address: ________ string saves work time.
+            //string state; 
             
-            // shouldn't the names stay as strings?
+            // shouldn't the names stay as strings? <--(They're not being converted, this is a check to make sure the users aren't enterting numbers for their first and last name)
             if (double.TryParse(rawFirstName, out conFirstName) || txtFirstName.Text == "") // Checks to make sure the first name is a valid name
             {
                 MessageBox.Show("Please re-Enter your first name.");
@@ -84,5 +86,7 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             string userLastName = txtLastName.Text; // Stores the users last name
         }
+
+       
     }
 }
