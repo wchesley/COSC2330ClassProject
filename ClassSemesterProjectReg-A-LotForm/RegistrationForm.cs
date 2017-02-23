@@ -29,10 +29,13 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             string rawFirstName = txtFirstName.Text;
             string rawLastName = txtLastName.Text;
+            string rawaddress = txtAddress.Text;
+            string rawphonenumber = txtPhoneNumber.Text; 
             double conFirstName;
             double conLastName;
+            int address; 
             
-            
+            // shouldn't the names stay as strings?
             if (double.TryParse(rawFirstName, out conFirstName) || txtFirstName.Text == "") // Checks to make sure the first name is a valid name
             {
                 MessageBox.Show("Please re-Enter your first name.");
@@ -48,8 +51,9 @@ namespace ClassSemesterProjectReg_A_LotForm
             }
             else
             {
-
+               
             }
+            
         }
 
         private void txtAddress_TextChanged(object sender, EventArgs e)
