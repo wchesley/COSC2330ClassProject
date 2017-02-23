@@ -24,16 +24,20 @@ namespace ClassSemesterProjectReg_A_LotForm
             frm.Show();
             this.Hide();
         }
-
+        // comment to fix my git comment... 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
+            // Had some thoughts on the address, it might be easier to created 
+            // seperate text boxes for street name, street number, zip and state? 
+            // might 
             string rawFirstName = txtFirstName.Text;
             string rawLastName = txtLastName.Text;
-            string rawaddress = txtAddress.Text;
+            string address = txtAddress.Text;
             string rawphonenumber = txtPhoneNumber.Text; 
             double conFirstName;
             double conLastName;
-            int address; 
+            int zip;
+            string state; 
             
             // shouldn't the names stay as strings?
             if (double.TryParse(rawFirstName, out conFirstName) || txtFirstName.Text == "") // Checks to make sure the first name is a valid name
