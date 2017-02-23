@@ -5,7 +5,8 @@ using System.Text;
 
 namespace COSC2330ClassProject
 {
-    public class Registrar
+    public class Registrar 
     {
+        
     }
 }
