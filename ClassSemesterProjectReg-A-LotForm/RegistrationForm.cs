@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ClassSemesterProjectReg_A_LotForm
 {
     public partial class RegistrationForm : Form
@@ -24,7 +25,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             frm.Show();
             this.Hide();
         }
-        // comment to fix my git comment... 
+         
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
             // Had some thoughts on the address, it might be easier to created 
