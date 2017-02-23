@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ClassSemesterProjectReg_A_LotForm
+{
+    public partial class StudentForm : Form
+    {
+        public StudentForm()
+        {
+            InitializeComponent();
+        }
+
+        private void lnkChangePassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //Go to ChangePasswordForm
+        }
+
+        private void lnkUpdateProfileInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //Go to UpdateStudentInfoForm
+        }
+
+        private void btnViewSchedule_Click(object sender, EventArgs e)
+        {
+            //Go to ScheduleForm
+        }
+    }
+}
