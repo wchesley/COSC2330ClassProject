@@ -48,6 +48,7 @@
             this.btnUpdateFax = new System.Windows.Forms.Button();
             this.txtUpdateFax = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.lblUpdateMessege = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label6
@@ -78,6 +79,7 @@
             this.btnUpdateEmail.TabIndex = 31;
             this.btnUpdateEmail.Text = "Update";
             this.btnUpdateEmail.UseVisualStyleBackColor = true;
+            this.btnUpdateEmail.Click += new System.EventHandler(this.btnUpdateEmail_Click);
             // 
             // txtUpdateEmail
             // 
@@ -103,6 +105,7 @@
             this.btnUpdatePhoneNumber.TabIndex = 28;
             this.btnUpdatePhoneNumber.Text = "Update";
             this.btnUpdatePhoneNumber.UseVisualStyleBackColor = true;
+            this.btnUpdatePhoneNumber.Click += new System.EventHandler(this.btnUpdatePhoneNumber_Click);
             // 
             // txtUpdatePhoneNumber
             // 
@@ -128,6 +131,7 @@
             this.btnUpdateAddress.TabIndex = 25;
             this.btnUpdateAddress.Text = "Update";
             this.btnUpdateAddress.UseVisualStyleBackColor = true;
+            this.btnUpdateAddress.Click += new System.EventHandler(this.btnUpdateAddress_Click);
             // 
             // txtUpdateAddress
             // 
@@ -153,6 +157,7 @@
             this.btnUpdateLastName.TabIndex = 22;
             this.btnUpdateLastName.Text = "Update";
             this.btnUpdateLastName.UseVisualStyleBackColor = true;
+            this.btnUpdateLastName.Click += new System.EventHandler(this.btnUpdateLastName_Click);
             // 
             // txtUpdateLastName
             // 
@@ -178,6 +183,7 @@
             this.btnUpdateFirstName.TabIndex = 19;
             this.btnUpdateFirstName.Text = "Update";
             this.btnUpdateFirstName.UseVisualStyleBackColor = true;
+            this.btnUpdateFirstName.Click += new System.EventHandler(this.btnUpdateFirstName_Click);
             // 
             // txtUpdateFirstName
             // 
@@ -203,6 +209,7 @@
             this.btnUpdateFax.TabIndex = 36;
             this.btnUpdateFax.Text = "Update";
             this.btnUpdateFax.UseVisualStyleBackColor = true;
+            this.btnUpdateFax.Click += new System.EventHandler(this.btnUpdateFax_Click);
             // 
             // txtUpdateFax
             // 
@@ -220,11 +227,22 @@
             this.label7.TabIndex = 34;
             this.label7.Text = "Fax:";
             // 
+            // lblUpdateMessege
+            // 
+            this.lblUpdateMessege.AutoSize = true;
+            this.lblUpdateMessege.ForeColor = System.Drawing.Color.Red;
+            this.lblUpdateMessege.Location = new System.Drawing.Point(97, 322);
+            this.lblUpdateMessege.Name = "lblUpdateMessege";
+            this.lblUpdateMessege.Size = new System.Drawing.Size(22, 13);
+            this.lblUpdateMessege.TabIndex = 37;
+            this.lblUpdateMessege.Text = ". . .";
+            // 
             // UpdateTeacherInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 351);
+            this.Controls.Add(this.lblUpdateMessege);
             this.Controls.Add(this.btnUpdateFax);
             this.Controls.Add(this.txtUpdateFax);
             this.Controls.Add(this.label7);
@@ -274,5 +292,6 @@
         private System.Windows.Forms.Button btnUpdateFax;
         private System.Windows.Forms.TextBox txtUpdateFax;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblUpdateMessege;
     }
 }

@@ -45,6 +45,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnDone = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblUpdateMessege = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -81,6 +82,7 @@
             this.btnUpdateLastName.TabIndex = 5;
             this.btnUpdateLastName.Text = "Update";
             this.btnUpdateLastName.UseVisualStyleBackColor = true;
+            this.btnUpdateLastName.Click += new System.EventHandler(this.btnUpdateLastName_Click);
             // 
             // txtUpdateLastName
             // 
@@ -106,6 +108,7 @@
             this.btnUpdateAddress.TabIndex = 8;
             this.btnUpdateAddress.Text = "Update";
             this.btnUpdateAddress.UseVisualStyleBackColor = true;
+            this.btnUpdateAddress.Click += new System.EventHandler(this.btnUpdateAddress_Click);
             // 
             // txtUpdateAddress
             // 
@@ -131,6 +134,7 @@
             this.btnUpdatePhoneNumber.TabIndex = 11;
             this.btnUpdatePhoneNumber.Text = "Update";
             this.btnUpdatePhoneNumber.UseVisualStyleBackColor = true;
+            this.btnUpdatePhoneNumber.Click += new System.EventHandler(this.btnUpdatePhoneNumber_Click);
             // 
             // txtUpdatePhoneNumber
             // 
@@ -156,6 +160,7 @@
             this.btnUpdateEmail.TabIndex = 14;
             this.btnUpdateEmail.Text = "Update";
             this.btnUpdateEmail.UseVisualStyleBackColor = true;
+            this.btnUpdateEmail.Click += new System.EventHandler(this.btnUpdateEmail_Click);
             // 
             // txtUpdateEmail
             // 
@@ -193,11 +198,22 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Update Student Information";
             // 
+            // lblUpdateMessege
+            // 
+            this.lblUpdateMessege.AutoSize = true;
+            this.lblUpdateMessege.ForeColor = System.Drawing.Color.Red;
+            this.lblUpdateMessege.Location = new System.Drawing.Point(97, 284);
+            this.lblUpdateMessege.Name = "lblUpdateMessege";
+            this.lblUpdateMessege.Size = new System.Drawing.Size(22, 13);
+            this.lblUpdateMessege.TabIndex = 38;
+            this.lblUpdateMessege.Text = ". . .";
+            // 
             // UpdateStudentInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 306);
+            this.Controls.Add(this.lblUpdateMessege);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.btnUpdateEmail);
@@ -241,5 +257,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblUpdateMessege;
     }
 }
