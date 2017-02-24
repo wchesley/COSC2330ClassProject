@@ -5,6 +5,7 @@ using System.Text;
 using System.Security.Cryptography;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.IO; // added to test with writing to file, testing user creation. 
 
 namespace COSC2330ClassProject
 {
@@ -13,25 +14,27 @@ namespace COSC2330ClassProject
     {
         SqlConnection connection = new SqlConnection();
         
-        public void addUser(string fName, string lName, string pass, string email, string address, string state, int zipCode)
+        public void addUser(string fName, string lName, int phoneNum, string address)
         {
             // Take info from form to register
             // add each item to the data base, unsure how we want to store addresses. 
             // (Might just format all as string?) - changed to seperate values. 
             // might be easier that way
-            connection.ConnectionString = "server=cis1.actx.edu;Database=project;User Id=project;Password=password;";
+            // connection.ConnectionString = "server=cis1.actx.edu;Database=project;User Id=project;Password=password;";
             // ConncectionString is just full of placeholders till we get the actual DB info
-            HassPass(pass);
-            using (SqlCommand insertNewStudent = connection.CreateCommand() )
-            {
-                // adding the student information to the DB, mostly incomplete here till we get DB access. 
-                insertNewStudent.CommandText = "insert into databasename.Student values = ("fName  lName + pass + email + address + state + zipCode";";
-                    //will need to fix above error, will test when DB access is aquired.
-                insertNewStudent.ExecuteNonQuery(); 
-            }
+            dynamic[] storageSpace = { fName, lName, phoneNum, address }; // this line and the one below are for testing only
+            // sorry this class is a mess, so much to do yet hard to do without the DB :( 
+            File.AppendAllText(@"C:\Users\walker\Desktop\testAddUser.txt", storageSpace.ToString());
+            //using (SqlCommand insertNewStudent = connection.CreateCommand() )
+            //{
+            //    // adding the student information to the DB, mostly incomplete here till we get DB access. 
+            //    insertNewStudent.CommandText = "insert into databasename.Student values = ("fName + lName + pass + email + address + state + zipCode";";
+            //        //will need to fix above error, will test when DB access is aquired.
+            //    insertNewStudent.ExecuteNonQuery(); 
+            //}
         }
 
-        public string HassPass(string password) // To securly store passwords, haven't fully tested yet. 
+        public string HassPass(string password) // tested; hashing is consistant 
         {
             SHA256 sha = new SHA256CryptoServiceProvider();
             sha.ComputeHash(ASCIIEncoding.ASCII.GetBytes(password)); //compute hash from text entered
