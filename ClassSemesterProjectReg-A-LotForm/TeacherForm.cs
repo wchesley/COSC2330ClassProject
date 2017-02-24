@@ -29,6 +29,7 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             //Go to UpdateTeacherInfoForm
             UpdateTeacherInfoForm frm = new UpdateTeacherInfoForm();
+            frm.previousForm = this;
             frm.Show();
             this.Hide();
         }

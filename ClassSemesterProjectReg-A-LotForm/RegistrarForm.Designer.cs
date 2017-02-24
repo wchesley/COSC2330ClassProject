@@ -31,27 +31,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabManageCourses = new System.Windows.Forms.TabPage();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnSearchCourse = new System.Windows.Forms.Button();
             this.btnRemoveCourse = new System.Windows.Forms.Button();
             this.btnAddCourse = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tabManageProfessors = new System.Windows.Forms.TabPage();
+            this.cmbSearchProfessor = new System.Windows.Forms.ComboBox();
             this.btnSearchProfessor = new System.Windows.Forms.Button();
             this.btnUpdateProfessor = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnRemoveProfessor = new System.Windows.Forms.Button();
             this.btnAddProfessor = new System.Windows.Forms.Button();
             this.tabManageStudents = new System.Windows.Forms.TabPage();
+            this.cmbSearchStudent = new System.Windows.Forms.ComboBox();
             this.btnSearchStudent = new System.Windows.Forms.Button();
             this.btnUpdateStudent = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnRemoveStudent = new System.Windows.Forms.Button();
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.cmbSearchStudent = new System.Windows.Forms.ComboBox();
-            this.cmbSearchProfessor = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabManageCourses.SuspendLayout();
             this.tabManageProfessors.SuspendLayout();
@@ -94,6 +94,18 @@
             this.tabManageCourses.TabIndex = 0;
             this.tabManageCourses.Text = "Manage Courses";
             this.tabManageCourses.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Reset table",
+            "By Course Number",
+            "By Course Name"});
+            this.comboBox1.Location = new System.Drawing.Point(237, 409);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(109, 21);
+            this.comboBox1.TabIndex = 25;
             // 
             // btnSearchCourse
             // 
@@ -156,6 +168,18 @@
             this.tabManageProfessors.Text = "Manage Professors";
             this.tabManageProfessors.UseVisualStyleBackColor = true;
             // 
+            // cmbSearchProfessor
+            // 
+            this.cmbSearchProfessor.FormattingEnabled = true;
+            this.cmbSearchProfessor.Items.AddRange(new object[] {
+            "Reset table",
+            "By ID Number",
+            "By Last Name"});
+            this.cmbSearchProfessor.Location = new System.Drawing.Point(351, 410);
+            this.cmbSearchProfessor.Name = "cmbSearchProfessor";
+            this.cmbSearchProfessor.Size = new System.Drawing.Size(109, 21);
+            this.cmbSearchProfessor.TabIndex = 25;
+            // 
             // btnSearchProfessor
             // 
             this.btnSearchProfessor.Location = new System.Drawing.Point(351, 371);
@@ -194,6 +218,16 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(454, 359);
             this.tableLayoutPanel2.TabIndex = 19;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(3, 3);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(102, 17);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "TempCheckBox";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // btnRemoveProfessor
             // 
             this.btnRemoveProfessor.Location = new System.Drawing.Point(122, 371);
@@ -228,6 +262,18 @@
             this.tabManageStudents.TabIndex = 2;
             this.tabManageStudents.Text = "Manage Students";
             this.tabManageStudents.UseVisualStyleBackColor = true;
+            // 
+            // cmbSearchStudent
+            // 
+            this.cmbSearchStudent.FormattingEnabled = true;
+            this.cmbSearchStudent.Items.AddRange(new object[] {
+            "Reset table",
+            "By ID Number",
+            "By Last Name"});
+            this.cmbSearchStudent.Location = new System.Drawing.Point(351, 410);
+            this.cmbSearchStudent.Name = "cmbSearchStudent";
+            this.cmbSearchStudent.Size = new System.Drawing.Size(109, 21);
+            this.cmbSearchStudent.TabIndex = 24;
             // 
             // btnSearchStudent
             // 
@@ -291,52 +337,7 @@
             this.btnLogOut.TabIndex = 20;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(3, 3);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(102, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "TempCheckBox";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // cmbSearchStudent
-            // 
-            this.cmbSearchStudent.FormattingEnabled = true;
-            this.cmbSearchStudent.Items.AddRange(new object[] {
-            "Reset table",
-            "By ID Number",
-            "By Last Name"});
-            this.cmbSearchStudent.Location = new System.Drawing.Point(351, 410);
-            this.cmbSearchStudent.Name = "cmbSearchStudent";
-            this.cmbSearchStudent.Size = new System.Drawing.Size(109, 21);
-            this.cmbSearchStudent.TabIndex = 24;
-            // 
-            // cmbSearchProfessor
-            // 
-            this.cmbSearchProfessor.FormattingEnabled = true;
-            this.cmbSearchProfessor.Items.AddRange(new object[] {
-            "Reset table",
-            "By ID Number",
-            "By Last Name"});
-            this.cmbSearchProfessor.Location = new System.Drawing.Point(351, 410);
-            this.cmbSearchProfessor.Name = "cmbSearchProfessor";
-            this.cmbSearchProfessor.Size = new System.Drawing.Size(109, 21);
-            this.cmbSearchProfessor.TabIndex = 25;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Reset table",
-            "By Course Number",
-            "By Course Name"});
-            this.comboBox1.Location = new System.Drawing.Point(237, 409);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(109, 21);
-            this.comboBox1.TabIndex = 25;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // RegistrarForm
             // 

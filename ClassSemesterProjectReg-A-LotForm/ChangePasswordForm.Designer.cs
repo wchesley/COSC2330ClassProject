@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblPasswordUpdated = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -97,6 +98,7 @@
             this.btnChangePassword.TabIndex = 6;
             this.btnChangePassword.Text = "Change Password";
             this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // label4
             // 
@@ -108,11 +110,22 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Update Password";
             // 
+            // lblPasswordUpdated
+            // 
+            this.lblPasswordUpdated.AutoSize = true;
+            this.lblPasswordUpdated.ForeColor = System.Drawing.Color.Red;
+            this.lblPasswordUpdated.Location = new System.Drawing.Point(110, 236);
+            this.lblPasswordUpdated.Name = "lblPasswordUpdated";
+            this.lblPasswordUpdated.Size = new System.Drawing.Size(22, 13);
+            this.lblPasswordUpdated.TabIndex = 8;
+            this.lblPasswordUpdated.Text = ". . .";
+            // 
             // ChangePasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(338, 262);
+            this.Controls.Add(this.lblPasswordUpdated);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.txtNewPassword2);
@@ -138,5 +151,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblPasswordUpdated;
     }
 }

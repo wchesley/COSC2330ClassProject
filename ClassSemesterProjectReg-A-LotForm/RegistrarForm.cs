@@ -26,10 +26,19 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void btnUpdateProfessor_Click(object sender, EventArgs e)
         {
-            AddTeacherForm frm = new AddTeacherForm();
+            //AddTeacherForm frm = new AddTeacherForm();
+            UpdateTeacherInfoForm frm = new UpdateTeacherInfoForm();
+            frm.previousForm = this;
             frm.Show();
             this.Hide();
 
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+       
     }
 }
