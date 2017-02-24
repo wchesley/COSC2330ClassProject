@@ -20,11 +20,17 @@ namespace ClassSemesterProjectReg_A_LotForm
         private void lnkChangePassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //Go to ChangePasswordForm
+            ChangePasswordForm frm = new ChangePasswordForm();
+            frm.Show();
+            this.Hide();
         }
 
         private void lnkUpdateProfileInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //Go to UpdateStudentInfoForm
+            UpdateStudentInfoForm frm = new UpdateStudentInfoForm();
+            frm.Show();
+            this.Hide();
         }
 
         private void btnViewSchedule_Click(object sender, EventArgs e)

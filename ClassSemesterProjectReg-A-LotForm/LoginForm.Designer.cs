@@ -36,6 +36,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.linkToRegister = new System.Windows.Forms.LinkLabel();
+            this.btnTestStudentForm = new System.Windows.Forms.Button();
+            this.btnTestTeacherForm = new System.Windows.Forms.Button();
+            this.btnTestRegistrarForm = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -63,7 +68,6 @@
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.Size = new System.Drawing.Size(170, 20);
             this.txtStudentID.TabIndex = 2;
-            this.txtStudentID.TextChanged += new System.EventHandler(this.txtStudentID_TextChanged);
             // 
             // txtPassword
             // 
@@ -78,9 +82,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(174, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "StudentID:";
+            this.label3.Text = "Login ID:";
             // 
             // label4
             // 
@@ -112,11 +116,64 @@
             this.linkToRegister.Text = "Don\'t have an account? Click here to register.";
             this.linkToRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkToRegister_LinkClicked);
             // 
+            // btnTestStudentForm
+            // 
+            this.btnTestStudentForm.Location = new System.Drawing.Point(24, 51);
+            this.btnTestStudentForm.Name = "btnTestStudentForm";
+            this.btnTestStudentForm.Size = new System.Drawing.Size(89, 71);
+            this.btnTestStudentForm.TabIndex = 8;
+            this.btnTestStudentForm.Text = "Test StudentForm";
+            this.btnTestStudentForm.UseVisualStyleBackColor = true;
+            this.btnTestStudentForm.Click += new System.EventHandler(this.btnTestStudentForm_Click);
+            // 
+            // btnTestTeacherForm
+            // 
+            this.btnTestTeacherForm.Location = new System.Drawing.Point(24, 137);
+            this.btnTestTeacherForm.Name = "btnTestTeacherForm";
+            this.btnTestTeacherForm.Size = new System.Drawing.Size(89, 71);
+            this.btnTestTeacherForm.TabIndex = 9;
+            this.btnTestTeacherForm.Text = "Test TeacherForm";
+            this.btnTestTeacherForm.UseVisualStyleBackColor = true;
+            this.btnTestTeacherForm.Click += new System.EventHandler(this.btnTestTeacherForm_Click);
+            // 
+            // btnTestRegistrarForm
+            // 
+            this.btnTestRegistrarForm.Location = new System.Drawing.Point(24, 225);
+            this.btnTestRegistrarForm.Name = "btnTestRegistrarForm";
+            this.btnTestRegistrarForm.Size = new System.Drawing.Size(89, 71);
+            this.btnTestRegistrarForm.TabIndex = 10;
+            this.btnTestRegistrarForm.Text = "Test RegistrarForm";
+            this.btnTestRegistrarForm.UseVisualStyleBackColor = true;
+            this.btnTestRegistrarForm.Click += new System.EventHandler(this.btnTestRegistrarForm_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(24, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "DELETE LATER:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(24, 302);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "TEST BUTTONS";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(522, 341);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnTestRegistrarForm);
+            this.Controls.Add(this.btnTestTeacherForm);
+            this.Controls.Add(this.btnTestStudentForm);
             this.Controls.Add(this.linkToRegister);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label4);
@@ -142,6 +199,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.LinkLabel linkToRegister;
+        private System.Windows.Forms.Button btnTestStudentForm;
+        private System.Windows.Forms.Button btnTestTeacherForm;
+        private System.Windows.Forms.Button btnTestRegistrarForm;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 

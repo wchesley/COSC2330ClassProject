@@ -32,26 +32,55 @@ namespace ClassSemesterProjectReg_A_LotForm
             string rawStudentID = txtStudentID.Text;
             double conStudentID;
 
-            if (double.TryParse(rawStudentID, out conStudentID) || txtStudentID.Text != null)
+            if (double.TryParse(rawStudentID, out conStudentID) && txtStudentID.Text != "") // if its a number, and not blank...
             {
-                MessageBox.Show("Please re-enter your Student ID.");
+                if (txtPassword.Text != "") // if the password field is not empty
+                {
+                    // Identify student / Professor / Registrar login code
+                    // open up apprropriate form: RegistrarForm / StudentForm or TeacherForm
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a password.");
+                }
             }
             else
             {
-
+                MessageBox.Show("Please enter a valid ID.");
             }
         }
 
-        private void txtStudentID_TextChanged(object sender, EventArgs e)
-        {
-            string rawstudentID = txtStudentID.Text;
-            int conStudentID;
-               
-        }
+        
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
             string password = txtPassword.Text;
+        }
+
+
+
+        // ************* THESE BUTTONS ARE TO TEST THE STUDENT, REGISTRAR, AND TEACHER FORMS, THEY WILL BE DELETED ONCE WE IMPLIMENT THE LOGIN FUNCTION*******
+        private void btnTestStudentForm_Click(object sender, EventArgs e) // DELETE THIS LATER
+        {
+            StudentForm frm = new StudentForm();
+            frm.Show();
+            this.Hide();
+
+        }
+
+        private void btnTestTeacherForm_Click(object sender, EventArgs e) // DELETE THIS LATER
+        {
+            TeacherForm frm = new TeacherForm();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnTestRegistrarForm_Click(object sender, EventArgs e) // DELETE THIS LATER
+        {
+            RegistrarForm frm = new RegistrarForm();
+            frm.Show();
+            this.Hide();
         }
     }
 }

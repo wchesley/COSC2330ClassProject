@@ -76,7 +76,6 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(138, 20);
             this.txtFirstName.TabIndex = 2;
-            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
             // 
             // txtLastName
             // 
@@ -84,7 +83,6 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(138, 20);
             this.txtLastName.TabIndex = 4;
-            this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
             // 
             // lblLastName
             // 
@@ -110,7 +108,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(297, 20);
             this.txtEmail.TabIndex = 6;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // lblAddress
             // 
@@ -127,7 +124,6 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(297, 20);
             this.txtAddress.TabIndex = 10;
-            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
             // 
             // lblPhoneNumber
             // 
@@ -144,7 +140,6 @@
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(297, 20);
             this.txtPhoneNumber.TabIndex = 12;
-            this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
             // 
             // btnCreateAccount
             // 
@@ -259,7 +254,6 @@
             this.Controls.Add(this.label1);
             this.Name = "RegistrationForm";
             this.Text = "Register";
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 

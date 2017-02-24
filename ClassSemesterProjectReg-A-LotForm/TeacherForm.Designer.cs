@@ -35,6 +35,8 @@
             this.picProfilePicture = new System.Windows.Forms.PictureBox();
             this.lnkUpdateProfileInfo = new System.Windows.Forms.LinkLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblFax = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblProfileEmail = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblProfilePhoneNumber = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@
             this.lblTeacherProfileName = new System.Windows.Forms.Label();
             this.btnPickCoursesToTeach = new System.Windows.Forms.Button();
             this.btnViewInstructionSchedule = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblFax = new System.Windows.Forms.Label();
             this.lnkChangePassword = new System.Windows.Forms.LinkLabel();
             this.btnLogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picProfilePicture)).BeginInit();
@@ -103,6 +103,7 @@
             this.lnkUpdateProfileInfo.TabIndex = 13;
             this.lnkUpdateProfileInfo.TabStop = true;
             this.lnkUpdateProfileInfo.Text = "Update my profile information";
+            this.lnkUpdateProfileInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkUpdateProfileInfo_LinkClicked);
             // 
             // groupBox1
             // 
@@ -125,6 +126,24 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Your Profile";
+            // 
+            // lblFax
+            // 
+            this.lblFax.AutoSize = true;
+            this.lblFax.Location = new System.Drawing.Point(103, 154);
+            this.lblFax.Name = "lblFax";
+            this.lblFax.Size = new System.Drawing.Size(51, 13);
+            this.lblFax.TabIndex = 12;
+            this.lblFax.Text = "TempFax";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Fax:";
             // 
             // lblProfileEmail
             // 
@@ -238,24 +257,6 @@
             this.btnViewInstructionSchedule.TabIndex = 19;
             this.btnViewInstructionSchedule.Text = "View Instruction Schedule";
             this.btnViewInstructionSchedule.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 154);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Fax:";
-            // 
-            // lblFax
-            // 
-            this.lblFax.AutoSize = true;
-            this.lblFax.Location = new System.Drawing.Point(103, 154);
-            this.lblFax.Name = "lblFax";
-            this.lblFax.Size = new System.Drawing.Size(51, 13);
-            this.lblFax.TabIndex = 12;
-            this.lblFax.Text = "TempFax";
             // 
             // lnkChangePassword
             // 

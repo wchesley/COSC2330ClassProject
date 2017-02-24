@@ -40,54 +40,69 @@ namespace ClassSemesterProjectReg_A_LotForm
             double conFirstName;
             double conLastName;
             //int zip;  <--- We're not going to need these as seperate variable it'll just be stored as one Address: ________ string saves work time.
-            //string state; 
-            
-            // shouldn't the names stay as strings? <--(They're not being converted, this is a check to make sure the users aren't enterting numbers for their first and last name)
-            if (double.TryParse(rawFirstName, out conFirstName) || txtFirstName.Text == "") // Checks to make sure the first name is a valid name
-            {
-                MessageBox.Show("Please re-Enter your first name.");
+            //string state; <-- just trying to cut down on work and amount of stuff we have to deal with
 
-                if (double.TryParse(rawLastName, out conLastName) || txtLastName.Text == "") // Checks to make sure the last name is a valid name
+            string userAddress = txtAddress.Text; // Stores the address the user entered
+            string userPhoneNumber = txtPhoneNumber.Text; // Stores the phone number the user entered
+            int conPhoneNumber;
+            string userEmail = txtEmail.Text; // Stores the Email the user entered
+            string userFirstName = txtFirstName.Text; // Stores the users first name
+            string userLastName = txtLastName.Text; // Stores the users last name
+
+            // shouldn't the names stay as strings? <--(names arent being converted, this is just a check to make sure the users aren't enterting numbers for their first and last name)
+            if ( !(double.TryParse(rawFirstName, out conFirstName)) && txtFirstName.Text != "") ///If name is not a number & not blank..
+            {
+
+                if ( !( double.TryParse(rawLastName, out conLastName)) && txtLastName.Text != "") 
                 {
-                    MessageBox.Show("Please re-enter your last name.");
+                   
+                    if (txtAddress.Text != "") 
+                    {
+                        
+                        if (int.TryParse(userPhoneNumber, out conPhoneNumber) && txtPhoneNumber.Text != "") 
+                        {
+                            
+                            if (txtEmail.Text != "") 
+                            {
+                                // Store the information given by the end-user into the database
+                                // Generate a user ID and password
+                                // Show the user ID in place of: lblStudentID
+                                // Show the user temp. Password in place of: lblStudentPassword
+                                btnCreateAccount.Hide(); // hides the button so the user can't make multiple accounts with the same information
+                            }
+                            else
+                            {
+                                MessageBox.Show("Please enter an Email.");
+
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please enter a valid phone number.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter an address.");
+                    }
                 }
                 else
                 {
-
+                    MessageBox.Show("Please enter a valid last name.");
                 }
             }
             else
             {
-               
+                MessageBox.Show("Please enter a valid first name.");
             }
             
+            
+            
+            
+            
+
         }
 
-        private void txtAddress_TextChanged(object sender, EventArgs e)
-        {
-            string userAddress = txtAddress.Text; // Stores the address the user entered
-        }
-
-        private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
-        {
-            string userPhoneNumber = txtPhoneNumber.Text; // Stores the phone number the user entered
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-            string userEmail = txtEmail.Text; // Stores the Email the user entered
-        }
-
-        private void txtFirstName_TextChanged(object sender, EventArgs e)
-        {
-            string userFirstName = txtFirstName.Text; // Stores the users first name
-        }
-
-        private void txtLastName_TextChanged(object sender, EventArgs e)
-        {
-            string userLastName = txtLastName.Text; // Stores the users last name
-        }
-
-       
+        
     }
 }
