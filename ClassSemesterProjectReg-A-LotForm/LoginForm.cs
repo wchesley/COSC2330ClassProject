@@ -61,6 +61,7 @@ namespace ClassSemesterProjectReg_A_LotForm
 
 
         // ************* THESE BUTTONS ARE TO TEST THE STUDENT, REGISTRAR, AND TEACHER FORMS, THEY WILL BE DELETED ONCE WE IMPLIMENT THE LOGIN FUNCTION*******
+        // test modification
         private void btnTestStudentForm_Click(object sender, EventArgs e) // DELETE THIS LATER
         {
             StudentForm frm = new StudentForm();
