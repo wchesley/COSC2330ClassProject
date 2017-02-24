@@ -46,5 +46,20 @@ namespace COSC2330ClassProject
             //need to build verification system aswell. 
             //verification system for it still. 
         }
+        private string ResetPassword(string userID, int DOB)
+        {
+            string newpassword = "";
+            // search for user ID & DOB in DB, verify with what end user has enterd
+            // if data is validated, offer two text boxes to change password 
+            //write change to DB after hashing it.
+            return HassPass(newpassword); 
+        }
+        public void LoginVerify()
+        {
+            // take info from login screen and verify against DB. 
+        }
+
+
+        
     }
 }
