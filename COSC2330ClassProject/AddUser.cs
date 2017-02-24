@@ -25,8 +25,9 @@ namespace COSC2330ClassProject
             using (SqlCommand insertNewStudent = connection.CreateCommand() )
             {
                 // adding the student information to the DB, mostly incomplete here till we get DB access. 
-                insertNewStudent.CommandText = "insert into databasename.Student values = ("fName + lName + pass + email + address + state + zipcode;";
+                insertNewStudent.CommandText = "insert into databasename.Student values = ("fName  lName + pass + email + address + state + zipCode";";
                     //will need to fix above error, will test when DB access is aquired.
+                insertNewStudent.ExecuteNonQuery(); 
             }
         }
 
