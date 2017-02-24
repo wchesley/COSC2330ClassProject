@@ -23,5 +23,13 @@ namespace ClassSemesterProjectReg_A_LotForm
             frm.Show();
             this.Hide();
         }
+
+        private void btnUpdateProfessor_Click(object sender, EventArgs e)
+        {
+            AddTeacherForm frm = new AddTeacherForm();
+            frm.Show();
+            this.Hide();
+
+        }
     }
 }
