@@ -17,16 +17,7 @@ namespace COSC2330ClassProject
         //{
 
         //}
-        public void AddProfessor(string fName, string lName, int DOB, string address, int zip, string state)
-        {
-        // code to add to DB I was thinking an if block to chose from prof or registrar for student
-        // we can just redirect to the student registration form. ie:
-            // if addprofessor is selected on registrars add user form, then go to code to 
-            // add to professor DB
-            // if addRegistrar, then goto code to add new Registrar. 
-            //I'd imagine the code will be similar but we'll need to change the address of the DB depending on 
-            // what they want to add. 
-        }
+        
         
     }
 }

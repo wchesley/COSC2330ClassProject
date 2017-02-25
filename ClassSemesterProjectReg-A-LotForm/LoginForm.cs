@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using COSC2330ClassProject; // added to access dll. 
 
 namespace ClassSemesterProjectReg_A_LotForm
 {
     public partial class LoginForm : Form
     {
+        AddUser newUser = new AddUser(); // added so we can access add user class
         public LoginForm()
         {
             InitializeComponent();
@@ -55,7 +57,7 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            string password = txtPassword.Text;
+            string password = newUser.HashPass(txtPassword.Text); // hashed password after user enteres it. 
         }
 
 

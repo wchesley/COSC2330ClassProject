@@ -14,7 +14,7 @@ namespace COSC2330ClassProject
     {
         SqlConnection connection = new SqlConnection();
         
-        public void addUser(string fName, string lName, int phoneNum, string address)
+        public void aAddStudent(string fName, string lName, int phoneNum, string address)
         {
             // Take info from form to register
             // add each item to the data base, unsure how we want to store addresses. 
@@ -34,7 +34,7 @@ namespace COSC2330ClassProject
             //}
         }
 
-        public string HassPass(string password) // tested; hashing is consistant 
+        public string HashPass(string password) // tested; hashing is consistant 
         {
             SHA256 sha = new SHA256CryptoServiceProvider();
             sha.ComputeHash(ASCIIEncoding.ASCII.GetBytes(password)); //compute hash from text entered
@@ -49,17 +49,16 @@ namespace COSC2330ClassProject
             //need to build verification system aswell. 
             //verification system for it still. 
         }
-        private string ResetPassword(string userID, int DOB)
+        
+        public void VerifyLogin()
         {
-            string newpassword = "";
-            // search for user ID & DOB in DB, verify with what end user has enterd
-            // if data is validated, offer two text boxes to change password 
-            //write change to DB after hashing it.
-            return HassPass(newpassword); 
-        }
-        public void LoginVerify()
-        {
-            // take info from login screen and verify against DB. 
+            // search DB for UserID
+            // if UserID == null
+            // tell end user that user doesn't exist
+            //if UserID is found check the password they entered
+            //agains the one we have stored in the DB
+            // if they match, then go to student or professor profile page
+            //else login failed, password incorrect.
         }
 
 

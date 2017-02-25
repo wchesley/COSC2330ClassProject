@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using COSC2330ClassProject; //Added reference to this dll in ClassSemesterProjectReg-A-LotForm
+
 
 namespace ClassSemesterProjectReg_A_LotForm
 {
     public partial class ChangePasswordForm : Form
     {
+        AddUser resetPass = new AddUser(); 
         public ChangePasswordForm()
         {
             InitializeComponent();
@@ -19,6 +22,7 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
+            
             string Password = "";
 
             if (txtOldPassword.Text != "" )
@@ -27,7 +31,8 @@ namespace ClassSemesterProjectReg_A_LotForm
                 {
                     if (txtNewPassword.Text == txtNewPassword2.Text)
                     {
-                        Password = txtNewPassword2.Text;
+                        Password = resetPass.HashPass(txtNewPassword2.Text); //Hashes password before storing it.
+                        
                         // Store Password in database with the students info
                         lblPasswordUpdated.Text = "Password successfully updated.";
                     }
