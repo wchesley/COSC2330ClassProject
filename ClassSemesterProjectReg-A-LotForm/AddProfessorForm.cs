@@ -40,9 +40,9 @@ namespace ClassSemesterProjectReg_A_LotForm
             {
                 MessageBox.Show(txtPhoneNumber.Text, " is not a valid number. Please try again");
             }
-            if (txtFax.Text != "" || txtFax.Text != null)
+            if (txtFax.Text != "" || txtFax.Text != null) // if it's not blank
             {
-                if (int.TryParse(tempFax, out fax))
+                if (int.TryParse(tempFax, out fax)) //testing to see if it's a number. 
                 {
 
                 }

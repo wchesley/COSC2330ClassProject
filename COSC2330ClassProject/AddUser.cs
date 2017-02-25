@@ -14,7 +14,7 @@ namespace COSC2330ClassProject
     {
         SqlConnection connection = new SqlConnection();
         
-        public void aAddStudent(string fName, string lName, int phoneNum, string address)
+        public void AddStudent(string fName, string lName, int phoneNum, string address)
         {
             // Take info from form to register
             // add each item to the data base, unsure how we want to store addresses. 
