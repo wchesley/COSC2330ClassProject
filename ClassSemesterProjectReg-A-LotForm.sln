@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassSemesterProjectReg-A-LotForm", "ClassSemesterProjectReg-A-LotForm\ClassSemesterProjectReg-A-LotForm.csproj", "{2C72F4A1-3B04-4791-9A6C-E4CC1C70AF90}"
+	ProjectSection(ProjectDependencies) = postProject
+		{43E4FA62-06CC-4CCA-986D-774F64709173} = {43E4FA62-06CC-4CCA-986D-774F64709173}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COSC2330ClassProject", "COSC2330ClassProject\COSC2330ClassProject.csproj", "{43E4FA62-06CC-4CCA-986D-774F64709173}"
 EndProject
