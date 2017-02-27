@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data.Sql;
+using System.Data.SqlClient;
+
+
 
 namespace COSC2330ClassProject
 {
     public class Courses
     {
+        SqlConnection connection = new SqlConnection();
         public int ClassTime
         {
             get
