@@ -15,23 +15,23 @@
     </TypeIdentifier>
   </Class>
   <Class Name="COSC2330ClassProject.Registrar">
-    <Position X="4.25" Y="2.5" Width="1.5" />
+    <Position X="4.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAQAAAAAAQAAAAABAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
       <FileName>Registrar.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="COSC2330ClassProject.Courses">
-    <Position X="6.25" Y="2.5" Width="1.5" />
+    <Position X="6.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAgAAAAQAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Courses.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="COSC2330ClassProject.AddUser">
-    <Position X="2.75" Y="0.75" Width="1.5" />
+    <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAABAAAABAAAAAAAAAAAAAAIAAIAAAAA=</HashCode>
       <FileName>AddUser.cs</FileName>
     </TypeIdentifier>
   </Class>
