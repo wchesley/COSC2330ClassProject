@@ -37,16 +37,16 @@ namespace ClassSemesterProjectReg_A_LotForm
             string address = txtAddress.Text;
             string rawphonenumber = txtPhoneNumber.Text; 
             double conFirstName;
-            double conLastName;
+            double conLastName; 
             string userAddress = txtAddress.Text; // Stores the address the user entered
             string userPhoneNumber = txtPhoneNumber.Text; // Stores the phone number the user entered
-            int conPhoneNumber;
+            int conPhoneNumber; //Stores the phonenumber as a int
             string userEmail = txtEmail.Text; // Stores the Email the user entered
             string userFirstName = txtFirstName.Text; // Stores the users first name
             string userLastName = txtLastName.Text; // Stores the users last name
 
            
-            if ( !(double.TryParse(rawFirstName, out conFirstName)) && txtFirstName.Text != "") ///If name is not a number & not blank..
+            if ( !(double.TryParse(rawFirstName, out conFirstName)) && txtFirstName.Text != "") //If name is not a number & not blank..
             {
 
                 if ( !( double.TryParse(rawLastName, out conLastName)) && txtLastName.Text != "") 

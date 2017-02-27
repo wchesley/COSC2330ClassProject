@@ -12,6 +12,7 @@ namespace COSC2330ClassProject
     {
         AddUser addForRegistrar = new AddUser();
         SqlConnection connection = new SqlConnection();
+        // db login info: db1 pass: db10 
 
         public void AddStudent() // take data from form and plug into database. 
         { 
