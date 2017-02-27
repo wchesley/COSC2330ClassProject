@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Data.Sql;
 using System.Data.SqlClient;
-using ClassSemesterProjectReg_A_LotForm;
 using System.Windows.Input;
 using System.Windows.Forms; 
 namespace COSC2330ClassProject
