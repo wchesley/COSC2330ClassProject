@@ -1,6 +1,6 @@
 ﻿namespace ClassSemesterProjectReg_A_LotForm
 {
-    partial class TeacherScheduleForm
+    partial class ScheduleForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,6 +35,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -111,11 +112,22 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1080, 409);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
-            // TeacherScheduleForm
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(482, 638);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(332, 91);
+            this.btnBack.TabIndex = 8;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // ScheduleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 882);
+            this.ClientSize = new System.Drawing.Size(1300, 805);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
@@ -123,8 +135,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "TeacherScheduleForm";
-            this.Text = "TeacherScheduleForm";
+            this.Name = "ScheduleForm";
+            this.Text = "Schedule";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,5 +151,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btnBack;
     }
 }

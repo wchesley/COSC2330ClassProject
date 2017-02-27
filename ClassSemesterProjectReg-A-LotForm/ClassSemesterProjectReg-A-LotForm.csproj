@@ -88,6 +88,12 @@
     <Compile Include="ChangePasswordForm.Designer.cs">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CourseRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseRegisterForm.Designer.cs">
+      <DependentUpon>CourseRegisterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,11 +126,11 @@
     <Compile Include="TeacherForm.Designer.cs">
       <DependentUpon>TeacherForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherScheduleForm.cs">
+    <Compile Include="ScheduleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherScheduleForm.Designer.cs">
-      <DependentUpon>TeacherScheduleForm.cs</DependentUpon>
+    <Compile Include="ScheduleForm.Designer.cs">
+      <DependentUpon>ScheduleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateStudentInfoForm.cs">
       <SubType>Form</SubType>
@@ -156,6 +162,9 @@
     <EmbeddedResource Include="ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CourseRegisterForm.resx">
+      <DependentUpon>CourseRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,8 +189,8 @@
     <EmbeddedResource Include="TeacherForm.resx">
       <DependentUpon>TeacherForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherScheduleForm.resx">
-      <DependentUpon>TeacherScheduleForm.cs</DependentUpon>
+    <EmbeddedResource Include="ScheduleForm.resx">
+      <DependentUpon>ScheduleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateStudentInfoForm.resx">
       <DependentUpon>UpdateStudentInfoForm.cs</DependentUpon>

@@ -37,5 +37,13 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             //Go to ScheduleForm
         }
+
+        private void btnRegisterForSections_Click(object sender, EventArgs e)
+        {
+            //Go to Rgister
+            CourseRegisterForm frm = new CourseRegisterForm();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

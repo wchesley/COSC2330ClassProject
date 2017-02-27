@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ClassSemesterProjectReg_A_LotForm
 {
-    public partial class TeacherScheduleForm : Form
+    public partial class ScheduleForm : Form
     {
-        public TeacherScheduleForm()
+        public ScheduleForm()
         {
             InitializeComponent();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
