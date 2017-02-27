@@ -54,5 +54,17 @@ namespace COSC2330ClassProject
             {
             }
         }
+
+        public int Capacity
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
     }
 }
