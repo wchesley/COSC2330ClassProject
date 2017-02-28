@@ -21,52 +21,70 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             string courseName = txtCourseName.Text;
             string courseCode = txtCourseCode.Text;
+            string courseTime = cmbTimeSlot.Text;
             int conCourseCode;
-            // Course time, and Department are stored in Combobox. Do you think that would work?
             
-
+             //----------------Work in Progress
             if (txtCourseName.Text != "")
             {
-                if (int.TryParse(courseCode, out conCourseCode) && txtCourseCode.Text != "")
-                {
-                    //if (ComboBox FOR TIME)
-                    //{
-                    //    if (ComboBox FOR DEPARTMENT)
-                    //    {
+               //Store the course name
 
-                    //    }
-                    //    else
-                    //    {
-
-                    //    }
-                    //}
-                    //else
-                    //{
-
-                    //}
-                }
-                else
-                {
-                    MessageBox.Show("Please enter a valid course code number.");
-                }
             }
-            else
+            else if (int.TryParse(courseCode, out conCourseCode) && txtCourseCode.Text != "")
             {
-                MessageBox.Show("Please enter a course name.");
+               // Store the Course Code
             }
 
-            if(MessageBox.Show("Would you like to add another course?", "Add Course", MessageBoxButtons.YesNo) == DialogResult.No)
+            else if (cmbTimeSlot.Text == "8:00am -  9:00am" && cmbTimeSlot.Text != "")
             {
-                //Return to RegistrarForm
-                RegistrarForm frm = new RegistrarForm();
-                frm.Show();
-                this.Hide();
-
+                //Store the time: courseTime
             }
-            else
+            else if (cmbTimeSlot.Text == "9:30am - 10:30am" && cmbTimeSlot.Text != "")
             {
-
+                //Store the time: courseTime
             }
+            else if (cmbTimeSlot.Text == "11:00am - 12:30pm" && cmbTimeSlot.Text != "")
+            {
+                //Store the time: courseTime
+            }
+            else if (cmbTimeSlot.Text == "1:00pm - 2:00pm" && cmbTimeSlot.Text != "")
+            {
+                //Store the time: courseTime
+            }
+            else if (cmbTimeSlot.Text == "2:30pm - 3:30pm " && cmbTimeSlot.Text != "")
+            {
+                //Store the time: courseTime
+                //MessageBox.Show("The course time is: " + courseTime);
+            }
+            // ----------------Work in Progress
+
+            //else
+            //{
+            //    MessageBox.Show("Please enter a course time.");
+            //}
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Please enter a valid course code number.");
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Please enter a course name.");
+            //}
+
+            //if(MessageBox.Show("Would you like to add another course?", "Add Course", MessageBoxButtons.YesNo) == DialogResult.No)
+            //{
+            //    //Return to RegistrarForm
+            //    RegistrarForm frm = new RegistrarForm();
+            //    frm.Show();
+            //    this.Hide();
+
+            //}
+            //else
+            //{
+
+            //}
         }
 
         private void btnDone_Click(object sender, EventArgs e)

@@ -125,7 +125,6 @@
             this.cmbTimeSlot.Name = "cmbTimeSlot";
             this.cmbTimeSlot.Size = new System.Drawing.Size(208, 21);
             this.cmbTimeSlot.TabIndex = 12;
-            this.cmbTimeSlot.Text = "Pick Course Time Slot";
             // 
             // cmbDepartment
             // 
@@ -165,7 +164,6 @@
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(208, 21);
             this.cmbDepartment.TabIndex = 13;
-            this.cmbDepartment.Text = "Pick a Department";
             // 
             // AddCourseForm
             // 

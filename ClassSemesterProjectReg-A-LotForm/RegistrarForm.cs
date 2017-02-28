@@ -57,6 +57,11 @@ namespace ClassSemesterProjectReg_A_LotForm
             //Check for checked course, if course is checked, delete it from the database
         }
 
+        private void btnRemoveProfessor_Click(object sender, EventArgs e)
+        {
+            //Check for checked course, if course is checked, delete it from the database
+        }
+
         private void btnSearchCourse_Click(object sender, EventArgs e)
         {
             string userSearch = txtBoxUserSearch.Text;
@@ -86,7 +91,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             }
             else if (cmbSearchCourse.Text == "Reset table")
             {
-                // Show all the data in the Course database
+                // Show all the data in the Course database in the tblCourseData
                 
             }
             else
@@ -108,25 +113,25 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void btnSearchProfessor_Click(object sender, EventArgs e)
         {
-            string userSearch = txtBoxUserSearch.Text;
+            string userSearchProfessor = txtUserSearchProfessor.Text;
 
-            if (cmbSearchProfessor.Text == "" && userSearch == "")
+            if (cmbSearchProfessor.Text == "" && userSearchProfessor == "")
             {
-                MessageBox.Show("Please Enter something to search by.");
+                MessageBox.Show("Please enter something to search by.");
             }
             else if (cmbSearchProfessor.Text == "By ID Number" && txtBoxUserSearch.Text != "")
             {
                 // Query over Professor database by Professor ID
-                // display professors matching the ID number the user entered (userSearch)
+                // display professors matching the variable the user entered (userSearchProfessor)
             }
             else if (cmbSearchProfessor.Text == "By Last Name" && txtBoxUserSearch.Text != "")
             {
                 // Query over professor database by LastName
-                // Display professors matching the LastName the user entered (userSearch)
+                // Display professors matching the variable the user entered (userSearchProfessor)
             }
             else if (cmbSearchProfessor.Text == "Reset Table")
             {
-                // Show all professors in database.
+                // Show all professors in database in the tblProfessorData.
             }
             else
             {
@@ -136,7 +141,32 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void btnSearchStudent_Click(object sender, EventArgs e)
         {
+            string userSearchStudent = txtUserSearchStudent.Text;
 
+            if (cmbSearchProfessor.Text == "" && txtUserSearchProfessor.Text == "")
+            {
+                MessageBox.Show("Please enter something to seach by");
+            }
+            else if (cmbSearchProfessor.Text == "By ID Number" && txtUserSearchStudent.Text != "")
+            {
+                // Query over student database by Student ID
+                // Display students matching the variable the user entered (userSearchStudent)
+            }
+            else if (cmbSearchStudent.Text == "By Last Name" && txtUserSearchStudent.Text != "")
+            {
+                // Query over student database by Student LastName
+                // Display students matching the variable the user entered (userSearchStudent)
+            }
+            else if (cmbSearchStudent.Text == "Reset table")
+            {
+                // Display all the studends in the database in the tblStudentData table.
+            }
+            else
+            {
+                MessageBox.Show("Enter something to search by.");
+            }
         }
+
+        
     }
 }

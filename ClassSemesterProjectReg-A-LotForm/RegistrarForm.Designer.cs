@@ -35,19 +35,19 @@
             this.btnSearchCourse = new System.Windows.Forms.Button();
             this.btnRemoveCourse = new System.Windows.Forms.Button();
             this.btnAddCourse = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblCourseData = new System.Windows.Forms.TableLayoutPanel();
             this.tabManageProfessors = new System.Windows.Forms.TabPage();
             this.cmbSearchProfessor = new System.Windows.Forms.ComboBox();
             this.btnSearchProfessor = new System.Windows.Forms.Button();
             this.btnUpdateProfessor = new System.Windows.Forms.Button();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblProfessorData = new System.Windows.Forms.TableLayoutPanel();
             this.btnRemoveProfessor = new System.Windows.Forms.Button();
             this.btnAddProfessor = new System.Windows.Forms.Button();
             this.tabManageStudents = new System.Windows.Forms.TabPage();
             this.cmbSearchStudent = new System.Windows.Forms.ComboBox();
             this.btnSearchStudent = new System.Windows.Forms.Button();
             this.btnUpdateStudent = new System.Windows.Forms.Button();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblStudentData = new System.Windows.Forms.TableLayoutPanel();
             this.btnRemoveStudent = new System.Windows.Forms.Button();
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
@@ -60,8 +60,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtBoxUserSearch = new System.Windows.Forms.TextBox();
-            this.txtuserSearch = new System.Windows.Forms.TextBox();
-            this.txtuserChange = new System.Windows.Forms.TextBox();
+            this.txtUserSearchProfessor = new System.Windows.Forms.TextBox();
+            this.txtUserSearchStudent = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -77,11 +77,11 @@
             this.label22 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabManageCourses.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tblCourseData.SuspendLayout();
             this.tabManageProfessors.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.tblProfessorData.SuspendLayout();
             this.tabManageStudents.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.tblStudentData.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -112,7 +112,7 @@
             this.tabManageCourses.Controls.Add(this.btnSearchCourse);
             this.tabManageCourses.Controls.Add(this.btnRemoveCourse);
             this.tabManageCourses.Controls.Add(this.btnAddCourse);
-            this.tabManageCourses.Controls.Add(this.tableLayoutPanel1);
+            this.tabManageCourses.Controls.Add(this.tblCourseData);
             this.tabManageCourses.Location = new System.Drawing.Point(4, 22);
             this.tabManageCourses.Name = "tabManageCourses";
             this.tabManageCourses.Padding = new System.Windows.Forms.Padding(3);
@@ -164,40 +164,40 @@
             this.btnAddCourse.UseVisualStyleBackColor = true;
             this.btnAddCourse.Click += new System.EventHandler(this.btnAddCourse_Click);
             // 
-            // tableLayoutPanel1
+            // tblCourseData
             // 
-            this.tableLayoutPanel1.ColumnCount = 8;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.label8, 7, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 6, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label18, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 6);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.077994F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.922F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(454, 359);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tblCourseData.ColumnCount = 8;
+            this.tblCourseData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblCourseData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblCourseData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblCourseData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblCourseData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblCourseData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblCourseData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblCourseData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblCourseData.Controls.Add(this.label8, 7, 0);
+            this.tblCourseData.Controls.Add(this.label3, 6, 0);
+            this.tblCourseData.Controls.Add(this.label2, 3, 0);
+            this.tblCourseData.Controls.Add(this.label5, 5, 0);
+            this.tblCourseData.Controls.Add(this.label18, 0, 0);
+            this.tblCourseData.Controls.Add(this.label4, 4, 0);
+            this.tblCourseData.Controls.Add(this.label6, 1, 0);
+            this.tblCourseData.Controls.Add(this.label7, 2, 0);
+            this.tblCourseData.Location = new System.Drawing.Point(6, 6);
+            this.tblCourseData.Name = "tblCourseData";
+            this.tblCourseData.RowCount = 2;
+            this.tblCourseData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.077994F));
+            this.tblCourseData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.922F));
+            this.tblCourseData.Size = new System.Drawing.Size(454, 359);
+            this.tblCourseData.TabIndex = 0;
             // 
             // tabManageProfessors
             // 
-            this.tabManageProfessors.Controls.Add(this.txtuserSearch);
+            this.tabManageProfessors.Controls.Add(this.txtUserSearchProfessor);
             this.tabManageProfessors.Controls.Add(this.cmbSearchProfessor);
             this.tabManageProfessors.Controls.Add(this.btnSearchProfessor);
             this.tabManageProfessors.Controls.Add(this.btnUpdateProfessor);
-            this.tabManageProfessors.Controls.Add(this.tableLayoutPanel2);
+            this.tabManageProfessors.Controls.Add(this.tblProfessorData);
             this.tabManageProfessors.Controls.Add(this.btnRemoveProfessor);
             this.tabManageProfessors.Controls.Add(this.btnAddProfessor);
             this.tabManageProfessors.Location = new System.Drawing.Point(4, 22);
@@ -240,30 +240,30 @@
             this.btnUpdateProfessor.UseVisualStyleBackColor = true;
             this.btnUpdateProfessor.Click += new System.EventHandler(this.btnUpdateProfessor_Click);
             // 
-            // tableLayoutPanel2
+            // tblProfessorData
             // 
-            this.tableLayoutPanel2.ColumnCount = 7;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.Controls.Add(this.label15, 6, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label9, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label14, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label10, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label13, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label11, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label12, 3, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 6);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(454, 359);
-            this.tableLayoutPanel2.TabIndex = 19;
+            this.tblProfessorData.ColumnCount = 7;
+            this.tblProfessorData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblProfessorData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblProfessorData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblProfessorData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblProfessorData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblProfessorData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblProfessorData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblProfessorData.Controls.Add(this.label15, 6, 0);
+            this.tblProfessorData.Controls.Add(this.label9, 0, 0);
+            this.tblProfessorData.Controls.Add(this.label14, 5, 0);
+            this.tblProfessorData.Controls.Add(this.label10, 1, 0);
+            this.tblProfessorData.Controls.Add(this.label13, 4, 0);
+            this.tblProfessorData.Controls.Add(this.label11, 2, 0);
+            this.tblProfessorData.Controls.Add(this.label12, 3, 0);
+            this.tblProfessorData.Location = new System.Drawing.Point(6, 6);
+            this.tblProfessorData.Name = "tblProfessorData";
+            this.tblProfessorData.RowCount = 2;
+            this.tblProfessorData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblProfessorData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblProfessorData.Size = new System.Drawing.Size(454, 359);
+            this.tblProfessorData.TabIndex = 19;
             // 
             // btnRemoveProfessor
             // 
@@ -273,6 +273,7 @@
             this.btnRemoveProfessor.TabIndex = 20;
             this.btnRemoveProfessor.Text = "Remove Professor";
             this.btnRemoveProfessor.UseVisualStyleBackColor = true;
+            this.btnRemoveProfessor.Click += new System.EventHandler(this.btnRemoveProfessor_Click);
             // 
             // btnAddProfessor
             // 
@@ -286,11 +287,11 @@
             // 
             // tabManageStudents
             // 
-            this.tabManageStudents.Controls.Add(this.txtuserChange);
+            this.tabManageStudents.Controls.Add(this.txtUserSearchStudent);
             this.tabManageStudents.Controls.Add(this.cmbSearchStudent);
             this.tabManageStudents.Controls.Add(this.btnSearchStudent);
             this.tabManageStudents.Controls.Add(this.btnUpdateStudent);
-            this.tabManageStudents.Controls.Add(this.tableLayoutPanel3);
+            this.tabManageStudents.Controls.Add(this.tblStudentData);
             this.tabManageStudents.Controls.Add(this.btnRemoveStudent);
             this.tabManageStudents.Controls.Add(this.btnAddStudent);
             this.tabManageStudents.Location = new System.Drawing.Point(4, 22);
@@ -305,9 +306,9 @@
             // 
             this.cmbSearchStudent.FormattingEnabled = true;
             this.cmbSearchStudent.Items.AddRange(new object[] {
-            "Reset table",
             "By ID Number",
-            "By Last Name"});
+            "By Last Name",
+            "Reset table"});
             this.cmbSearchStudent.Location = new System.Drawing.Point(351, 410);
             this.cmbSearchStudent.Name = "cmbSearchStudent";
             this.cmbSearchStudent.Size = new System.Drawing.Size(109, 21);
@@ -332,28 +333,28 @@
             this.btnUpdateStudent.Text = "Update Student";
             this.btnUpdateStudent.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel3
+            // tblStudentData
             // 
-            this.tableLayoutPanel3.ColumnCount = 6;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.Controls.Add(this.label22, 5, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label16, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label21, 4, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label17, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label20, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label19, 2, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 6);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(454, 359);
-            this.tableLayoutPanel3.TabIndex = 19;
+            this.tblStudentData.ColumnCount = 6;
+            this.tblStudentData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblStudentData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblStudentData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblStudentData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblStudentData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblStudentData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblStudentData.Controls.Add(this.label22, 5, 0);
+            this.tblStudentData.Controls.Add(this.label16, 0, 0);
+            this.tblStudentData.Controls.Add(this.label21, 4, 0);
+            this.tblStudentData.Controls.Add(this.label17, 1, 0);
+            this.tblStudentData.Controls.Add(this.label20, 3, 0);
+            this.tblStudentData.Controls.Add(this.label19, 2, 0);
+            this.tblStudentData.Location = new System.Drawing.Point(6, 6);
+            this.tblStudentData.Name = "tblStudentData";
+            this.tblStudentData.RowCount = 2;
+            this.tblStudentData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblStudentData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblStudentData.Size = new System.Drawing.Size(454, 359);
+            this.tblStudentData.TabIndex = 19;
             // 
             // btnRemoveStudent
             // 
@@ -469,19 +470,19 @@
             this.txtBoxUserSearch.Size = new System.Drawing.Size(100, 20);
             this.txtBoxUserSearch.TabIndex = 26;
             // 
-            // txtuserSearch
+            // txtUserSearchProfessor
             // 
-            this.txtuserSearch.Location = new System.Drawing.Point(245, 410);
-            this.txtuserSearch.Name = "txtuserSearch";
-            this.txtuserSearch.Size = new System.Drawing.Size(100, 20);
-            this.txtuserSearch.TabIndex = 26;
+            this.txtUserSearchProfessor.Location = new System.Drawing.Point(245, 410);
+            this.txtUserSearchProfessor.Name = "txtUserSearchProfessor";
+            this.txtUserSearchProfessor.Size = new System.Drawing.Size(100, 20);
+            this.txtUserSearchProfessor.TabIndex = 26;
             // 
-            // txtuserChange
+            // txtUserSearchStudent
             // 
-            this.txtuserChange.Location = new System.Drawing.Point(245, 410);
-            this.txtuserChange.Name = "txtuserChange";
-            this.txtuserChange.Size = new System.Drawing.Size(100, 20);
-            this.txtuserChange.TabIndex = 27;
+            this.txtUserSearchStudent.Location = new System.Drawing.Point(245, 410);
+            this.txtUserSearchStudent.Name = "txtUserSearchStudent";
+            this.txtUserSearchStudent.Size = new System.Drawing.Size(100, 20);
+            this.txtUserSearchStudent.TabIndex = 27;
             // 
             // label9
             // 
@@ -613,16 +614,16 @@
             this.tabControl1.ResumeLayout(false);
             this.tabManageCourses.ResumeLayout(false);
             this.tabManageCourses.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tblCourseData.ResumeLayout(false);
+            this.tblCourseData.PerformLayout();
             this.tabManageProfessors.ResumeLayout(false);
             this.tabManageProfessors.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.tblProfessorData.ResumeLayout(false);
+            this.tblProfessorData.PerformLayout();
             this.tabManageStudents.ResumeLayout(false);
             this.tabManageStudents.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
+            this.tblStudentData.ResumeLayout(false);
+            this.tblStudentData.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -636,17 +637,17 @@
         private System.Windows.Forms.Button btnSearchCourse;
         private System.Windows.Forms.Button btnRemoveCourse;
         private System.Windows.Forms.Button btnAddCourse;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tblCourseData;
         private System.Windows.Forms.TabPage tabManageProfessors;
         private System.Windows.Forms.Button btnSearchProfessor;
         private System.Windows.Forms.Button btnUpdateProfessor;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tblProfessorData;
         private System.Windows.Forms.Button btnRemoveProfessor;
         private System.Windows.Forms.Button btnAddProfessor;
         private System.Windows.Forms.TabPage tabManageStudents;
         private System.Windows.Forms.Button btnSearchStudent;
         private System.Windows.Forms.Button btnUpdateStudent;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tblStudentData;
         private System.Windows.Forms.Button btnRemoveStudent;
         private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.Button btnLogOut;
@@ -662,8 +663,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBoxUserSearch;
-        private System.Windows.Forms.TextBox txtuserSearch;
-        private System.Windows.Forms.TextBox txtuserChange;
+        private System.Windows.Forms.TextBox txtUserSearchProfessor;
+        private System.Windows.Forms.TextBox txtUserSearchStudent;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label14;
