@@ -31,13 +31,15 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             //Testing the tryparse for First and last name
 
-            string rawStudentID = txtStudentID.Text;
-            double conStudentID;
+            string rawID = txtID.Text;
+            int conID;
 
-            if (double.TryParse(rawStudentID, out conStudentID) && txtStudentID.Text != "") // if its a number, and not blank...
+            if (int.TryParse(rawID, out conID) && txtID.Text != "") // if its a number, and not blank...
             {
                 if (txtPassword.Text != "") // if the password field is not empty
                 {
+                    
+                    
                     // Identify student / Professor / Registrar login code
                     // open up apprropriate form: RegistrarForm / StudentForm or TeacherForm
                     

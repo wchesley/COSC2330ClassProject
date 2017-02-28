@@ -18,6 +18,8 @@ namespace COSC2330ClassProject
         { 
             
         }
+
+        //Krista already has error messages in the UI, so I don't think you need to worry about them or tryparsing here? Maybe we need to remove them from the UI and let all the error handling be done in the dll.
         public void AddProfessor(string fName, string lName, string address, string tempPhone, string email, string tempFax = "") //moved back from gui, reason: to support more OOD (seperation of gui from business logic) 
         {   //hard coded fax to be blank in method call as it should make that number optional, needs testing first. 
             int phone = 0000000000;
