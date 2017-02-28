@@ -33,5 +33,12 @@ namespace ClassSemesterProjectReg_A_LotForm
             frm.Show();
             this.Hide();
         }
+
+        private void btnViewSchedule_Click(object sender, EventArgs e)
+        {
+            ScheduleForm frm = new ScheduleForm();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

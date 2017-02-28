@@ -81,6 +81,7 @@
             this.btnViewSchedule.TabIndex = 15;
             this.btnViewSchedule.Text = "View Schedule";
             this.btnViewSchedule.UseVisualStyleBackColor = true;
+            this.btnViewSchedule.Click += new System.EventHandler(this.btnViewSchedule_Click);
             // 
             // picProfilePicture
             // 

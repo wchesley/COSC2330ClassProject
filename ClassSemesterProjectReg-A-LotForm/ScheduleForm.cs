@@ -26,5 +26,12 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
 
         }
+
+        private void btnCourseRegistration_Click(object sender, EventArgs e)
+        {
+            CourseRegisterForm frm = new CourseRegisterForm();
+            frm.Show();
+            this.Hide();
+        }
     }
 }
