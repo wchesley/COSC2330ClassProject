@@ -38,6 +38,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmbTimeSlot = new System.Windows.Forms.ComboBox();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // label1
@@ -112,6 +113,7 @@
             // 
             // cmbTimeSlot
             // 
+            this.cmbTimeSlot.ForeColor = System.Drawing.SystemColors.InfoText;
             this.cmbTimeSlot.FormattingEnabled = true;
             this.cmbTimeSlot.Items.AddRange(new object[] {
             "8:00am -  9:00am",
@@ -123,20 +125,47 @@
             this.cmbTimeSlot.Name = "cmbTimeSlot";
             this.cmbTimeSlot.Size = new System.Drawing.Size(208, 21);
             this.cmbTimeSlot.TabIndex = 12;
+            this.cmbTimeSlot.Text = "Pick Course Time Slot";
             // 
             // cmbDepartment
             // 
+            this.cmbDepartment.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cmbDepartment.FormattingEnabled = true;
             this.cmbDepartment.Items.AddRange(new object[] {
-            "Science",
-            "Computer",
-            "Math",
-            "Arts",
-            "English"});
+            "ABDR - Auto Collision Technology",
+            "ACCT - Accounting",
+            "AIRP - Aviation / Aircraft",
+            "ANTH - Anthropology",
+            "ARCH - Architecture",
+            "ARTS - Art / Graphic Design",
+            "BAS - Basic Academic Skills",
+            "BASM - Basic Academeic Skills Math",
+            "BASR - Basic Academic Skills Reading",
+            "BASW - Basic Academic Writing",
+            "BCIS - Computer Information Systems",
+            "BCISL - Compter Information Systems",
+            "BIOL - Biology",
+            "BGMT - Managment",
+            "BUSI - Buisness Administration",
+            "CDEC - Child Development/Early Child",
+            "CETT - Electronics",
+            "CHEF - Food Services",
+            "CHEM - Chemistry",
+            "CJLE - Criminal Justice",
+            "COMG - Communications, General",
+            "COMM - Mass Com.",
+            "COSC - CIS/Eng Computer Sci.",
+            "COSCL - Computer Info Systems Labs",
+            "CPMT - Electronis Technology",
+            "CRIJ - Criminal Justice",
+            "CRTR - Court Reporting",
+            "CTMT - Computer Tomography",
+            "CVOP - Commercial Vehicle Operation"});
             this.cmbDepartment.Location = new System.Drawing.Point(108, 129);
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(208, 21);
             this.cmbDepartment.TabIndex = 13;
+            this.cmbDepartment.Text = "Pick a Department";
             // 
             // AddCourseForm
             // 
@@ -172,5 +201,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbTimeSlot;
         private System.Windows.Forms.ComboBox cmbDepartment;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
