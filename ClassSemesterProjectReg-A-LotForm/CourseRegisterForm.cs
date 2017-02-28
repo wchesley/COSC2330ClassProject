@@ -28,5 +28,17 @@ namespace ClassSemesterProjectReg_A_LotForm
             frm.Show();
             this.Hide();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            StudentForm frm = new StudentForm();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

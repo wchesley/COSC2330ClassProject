@@ -21,5 +21,10 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
 
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
