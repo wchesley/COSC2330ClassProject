@@ -76,11 +76,11 @@
     <Compile Include="AddProfessorForm.Designer.cs">
       <DependentUpon>AddProfessorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddTeacherForm.cs">
+    <Compile Include="AddStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddTeacherForm.Designer.cs">
-      <DependentUpon>AddTeacherForm.cs</DependentUpon>
+    <Compile Include="AddStudentForm.Designer.cs">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ChangePasswordForm.cs">
       <SubType>Form</SubType>
@@ -156,8 +156,8 @@
     <EmbeddedResource Include="AddProfessorForm.resx">
       <DependentUpon>AddProfessorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddTeacherForm.resx">
-      <DependentUpon>AddTeacherForm.cs</DependentUpon>
+    <EmbeddedResource Include="AddStudentForm.resx">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>

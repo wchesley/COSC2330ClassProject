@@ -133,6 +133,7 @@
             this.btnAddCourse.TabIndex = 1;
             this.btnAddCourse.Text = "Add Course";
             this.btnAddCourse.UseVisualStyleBackColor = true;
+            this.btnAddCourse.Click += new System.EventHandler(this.btnAddCourse_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -328,6 +329,7 @@
             this.btnAddStudent.TabIndex = 21;
             this.btnAddStudent.Text = "Add Student";
             this.btnAddStudent.UseVisualStyleBackColor = true;
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // btnLogOut
             // 
@@ -348,7 +350,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnLogOut);
             this.Name = "RegistrarForm";
-            this.Text = "Registrar Form";
+            this.Text = "Registrar Actions";
             this.tabControl1.ResumeLayout(false);
             this.tabManageCourses.ResumeLayout(false);
             this.tabManageProfessors.ResumeLayout(false);

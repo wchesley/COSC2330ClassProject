@@ -7,29 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.Sql;
-using System.Data.SqlClient;
-using COSC2330ClassProject; 
 
 namespace ClassSemesterProjectReg_A_LotForm
 {
-    public partial class AddProfessorForm : Form
+    public partial class AddStudentForm : Form
     {
-        Registrar registrar = new Registrar(); 
-        public AddProfessorForm()
+        public AddStudentForm()
         {
             InitializeComponent();
         }
 
-        private void btnDone_Click(object sender, EventArgs e)
-        {
-            
-        }
-        //
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-
-            //-------------------------------------------
             string rawFirstName = txtFirstName.Text;
             string rawLastName = txtLastName.Text;
             string address = txtAddress.Text;
@@ -39,8 +28,6 @@ namespace ClassSemesterProjectReg_A_LotForm
             string userAddress = txtAddress.Text; // Stores the address the user entered
             string userPhoneNumber = txtPhoneNumber.Text; // Stores the phone number the user entered
             int conPhoneNumber; //Stores the phonenumber as a int
-            string userFax = txtFax.Text;
-            int conFax;
             string userEmail = txtEmail.Text; // Stores the Email the user entered
             string userFirstName = txtFirstName.Text; // Stores the users first name
             string userLastName = txtLastName.Text; // Stores the users last name
@@ -60,19 +47,8 @@ namespace ClassSemesterProjectReg_A_LotForm
 
                             if (txtEmail.Text != "")
                             {
-                                if (int.TryParse(userFax, out conFax) && txtFax.Text != "")
-                                {
-                                    // Store the information given by the end-user into the database
-                                    
-                                    registrar.AddProfessor(txtFirstName.Text, txtLastName.Text, txtAddress.Text, txtPhoneNumber.Text, txtFax.Text);
-
-                                    
-
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Please enter a valid fax number.");
-                                }
+                                MessageBox.Show("The student has been added"); //<---- replace this with the proper equivalent of: 
+                                                                                //registrar.AddStudent(txtFirstName.Text, txtLastName.Text, txtAddress.Text, txtPhoneNumber.Text,);
                             }
 
                             else
@@ -101,14 +77,11 @@ namespace ClassSemesterProjectReg_A_LotForm
                 MessageBox.Show("Please enter a valid first name.");
             }
             //-------------------------------------------
-
-           
-            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDone_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Would you like to add another Professor?", "Add Professor", MessageBoxButtons.YesNo) == DialogResult.No)
+            if (MessageBox.Show("Would you like to add another Student?", "Add Student", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 //Return to RegistrarForm
 
@@ -120,7 +93,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             else
             {
 
-            }
+            };
         }
     }
 }

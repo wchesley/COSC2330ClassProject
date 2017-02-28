@@ -19,7 +19,7 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void btnAddProfessor_Click(object sender, EventArgs e)
         {
-            AddTeacherForm frm = new AddTeacherForm();
+            AddProfessorForm frm = new AddProfessorForm();
             frm.Show();
             this.Hide();
         }
@@ -39,6 +39,17 @@ namespace ClassSemesterProjectReg_A_LotForm
             this.Close();
         }
 
-       
+        private void btnAddCourse_Click(object sender, EventArgs e)
+        {
+            AddCourseForm frm = new AddCourseForm();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            AddStudentForm frm = new AddStudentForm();
+            frm.Show();
+        }
     }
 }

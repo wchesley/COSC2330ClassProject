@@ -30,16 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtCourseName = new System.Windows.Forms.TextBox();
+            this.txtCourseCode = new System.Windows.Forms.TextBox();
             this.btnAddCourse = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.cmbTimeSlot = new System.Windows.Forms.ComboBox();
+            this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -60,15 +58,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Course Code:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(70, 159);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Term:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -87,40 +76,19 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Department:";
             // 
-            // textBox1
+            // txtCourseName
             // 
-            this.textBox1.Location = new System.Drawing.Point(108, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtCourseName.Location = new System.Drawing.Point(108, 48);
+            this.txtCourseName.Name = "txtCourseName";
+            this.txtCourseName.Size = new System.Drawing.Size(213, 20);
+            this.txtCourseName.TabIndex = 5;
             // 
-            // textBox2
+            // txtCourseCode
             // 
-            this.textBox2.Location = new System.Drawing.Point(108, 75);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 20);
-            this.textBox2.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(108, 102);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(213, 20);
-            this.textBox3.TabIndex = 7;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(108, 129);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(213, 20);
-            this.textBox4.TabIndex = 8;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(108, 156);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(213, 20);
-            this.textBox5.TabIndex = 9;
+            this.txtCourseCode.Location = new System.Drawing.Point(108, 75);
+            this.txtCourseCode.Name = "txtCourseCode";
+            this.txtCourseCode.Size = new System.Drawing.Size(213, 20);
+            this.txtCourseCode.TabIndex = 6;
             // 
             // btnAddCourse
             // 
@@ -142,21 +110,47 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Create a Course";
             // 
+            // cmbTimeSlot
+            // 
+            this.cmbTimeSlot.FormattingEnabled = true;
+            this.cmbTimeSlot.Items.AddRange(new object[] {
+            "8:00am -  9:00am",
+            "9:30am - 10:30am",
+            "11:00am - 12:30pm",
+            "1:00pm - 2:00pm",
+            "2:30pm - 3:30pm "});
+            this.cmbTimeSlot.Location = new System.Drawing.Point(108, 102);
+            this.cmbTimeSlot.Name = "cmbTimeSlot";
+            this.cmbTimeSlot.Size = new System.Drawing.Size(208, 21);
+            this.cmbTimeSlot.TabIndex = 12;
+            // 
+            // cmbDepartment
+            // 
+            this.cmbDepartment.FormattingEnabled = true;
+            this.cmbDepartment.Items.AddRange(new object[] {
+            "Science",
+            "Computer",
+            "Math",
+            "Arts",
+            "English"});
+            this.cmbDepartment.Location = new System.Drawing.Point(108, 129);
+            this.cmbDepartment.Name = "cmbDepartment";
+            this.cmbDepartment.Size = new System.Drawing.Size(208, 21);
+            this.cmbDepartment.TabIndex = 13;
+            // 
             // AddCourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(373, 226);
+            this.Controls.Add(this.cmbDepartment);
+            this.Controls.Add(this.cmbTimeSlot);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnAddCourse);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCourseCode);
+            this.Controls.Add(this.txtCourseName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AddCourseForm";
@@ -170,15 +164,13 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtCourseName;
+        private System.Windows.Forms.TextBox txtCourseCode;
         private System.Windows.Forms.Button btnAddCourse;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbTimeSlot;
+        private System.Windows.Forms.ComboBox cmbDepartment;
     }
 }
