@@ -51,5 +51,15 @@ namespace ClassSemesterProjectReg_A_LotForm
                 MessageBox.Show("Please enter your old password.");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPasswordUpdated_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
