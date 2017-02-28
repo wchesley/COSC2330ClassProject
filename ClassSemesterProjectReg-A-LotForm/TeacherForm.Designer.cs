@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherForm));
-            this.btnDropSections = new System.Windows.Forms.Button();
             this.btnRegisterForSections = new System.Windows.Forms.Button();
             this.btnViewSchedule = new System.Windows.Forms.Button();
             this.picProfilePicture = new System.Windows.Forms.PictureBox();
@@ -55,31 +54,23 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnDropSections
-            // 
-            this.btnDropSections.Location = new System.Drawing.Point(373, 257);
-            this.btnDropSections.Name = "btnDropSections";
-            this.btnDropSections.Size = new System.Drawing.Size(158, 52);
-            this.btnDropSections.TabIndex = 17;
-            this.btnDropSections.Text = "Drop Sections";
-            this.btnDropSections.UseVisualStyleBackColor = true;
-            // 
             // btnRegisterForSections
             // 
-            this.btnRegisterForSections.Location = new System.Drawing.Point(200, 257);
+            this.btnRegisterForSections.Location = new System.Drawing.Point(286, 265);
             this.btnRegisterForSections.Name = "btnRegisterForSections";
             this.btnRegisterForSections.Size = new System.Drawing.Size(158, 52);
             this.btnRegisterForSections.TabIndex = 16;
-            this.btnRegisterForSections.Text = "Register for Sections";
+            this.btnRegisterForSections.Text = "Register / Drop Sections";
             this.btnRegisterForSections.UseVisualStyleBackColor = true;
+            this.btnRegisterForSections.Click += new System.EventHandler(this.btnRegisterForSections_Click);
             // 
             // btnViewSchedule
             // 
-            this.btnViewSchedule.Location = new System.Drawing.Point(27, 257);
+            this.btnViewSchedule.Location = new System.Drawing.Point(113, 265);
             this.btnViewSchedule.Name = "btnViewSchedule";
             this.btnViewSchedule.Size = new System.Drawing.Size(158, 52);
             this.btnViewSchedule.TabIndex = 15;
-            this.btnViewSchedule.Text = "View Schedule";
+            this.btnViewSchedule.Text = "View Course Schedule";
             this.btnViewSchedule.UseVisualStyleBackColor = true;
             this.btnViewSchedule.Click += new System.EventHandler(this.btnViewSchedule_Click);
             // 
@@ -243,7 +234,7 @@
             // 
             // btnPickCoursesToTeach
             // 
-            this.btnPickCoursesToTeach.Location = new System.Drawing.Point(114, 323);
+            this.btnPickCoursesToTeach.Location = new System.Drawing.Point(286, 323);
             this.btnPickCoursesToTeach.Name = "btnPickCoursesToTeach";
             this.btnPickCoursesToTeach.Size = new System.Drawing.Size(158, 52);
             this.btnPickCoursesToTeach.TabIndex = 18;
@@ -252,7 +243,7 @@
             // 
             // btnViewInstructionSchedule
             // 
-            this.btnViewInstructionSchedule.Location = new System.Drawing.Point(286, 323);
+            this.btnViewInstructionSchedule.Location = new System.Drawing.Point(113, 323);
             this.btnViewInstructionSchedule.Name = "btnViewInstructionSchedule";
             this.btnViewInstructionSchedule.Size = new System.Drawing.Size(158, 52);
             this.btnViewInstructionSchedule.TabIndex = 19;
@@ -288,7 +279,6 @@
             this.Controls.Add(this.lnkChangePassword);
             this.Controls.Add(this.btnViewInstructionSchedule);
             this.Controls.Add(this.btnPickCoursesToTeach);
-            this.Controls.Add(this.btnDropSections);
             this.Controls.Add(this.btnRegisterForSections);
             this.Controls.Add(this.btnViewSchedule);
             this.Controls.Add(this.picProfilePicture);
@@ -305,8 +295,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnDropSections;
         private System.Windows.Forms.Button btnRegisterForSections;
         private System.Windows.Forms.Button btnViewSchedule;
         private System.Windows.Forms.PictureBox picProfilePicture;
