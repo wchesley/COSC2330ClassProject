@@ -13,7 +13,7 @@ namespace ClassSemesterProjectReg_A_LotForm
 {
     public partial class LoginForm : Form
     {
-        AddUser newUser = new AddUser(); // added so we can access add user class
+       
         public LoginForm()
         {
             InitializeComponent();
@@ -33,13 +33,13 @@ namespace ClassSemesterProjectReg_A_LotForm
 
             string rawID = txtID.Text;
             int conID;
-
+            AddUser loginCheck = new AddUser();
             if (int.TryParse(rawID, out conID) && txtID.Text != "") // if its a number, and not blank...
             {
                 if (txtPassword.Text != "") // if the password field is not empty
                 {
                     
-                    
+                    //will check DB and match ID and pass that way, loops through each DB to check ID && pass. 
                     // Identify student / Professor / Registrar login code
                     // open up apprropriate form: RegistrarForm / StudentForm or TeacherForm
                     
@@ -53,13 +53,14 @@ namespace ClassSemesterProjectReg_A_LotForm
             {
                 MessageBox.Show("Please enter a valid ID.");
             }
+            loginCheck.VerifyLogin((txtID.ToString()) , txtPassword.ToString()); // checking userID and password against DB. needs testing, espically wiht paswords and numbers in passwords. 
         }
 
         
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            string password = newUser.HashPass(txtPassword.Text); // hashed password after user enteres it. 
+            //string password = newUser.HashPass(txtPassword.Text); // hashed password after user enteres it. 
         }
 
 

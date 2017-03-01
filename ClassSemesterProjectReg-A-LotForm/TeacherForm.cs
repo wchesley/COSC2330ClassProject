@@ -11,11 +11,16 @@ using COSC2330ClassProject;
 
 namespace ClassSemesterProjectReg_A_LotForm
 {
-    public partial class TeacherForm : Form
+    public partial class TeacherForm : Form, IUpdateableForm
     {
         public TeacherForm()
         {
             InitializeComponent();
+            PopulateForm();
+        }
+
+        public void PopulateForm()
+        {
             string currentName = "";
             string currentID = "";
             string currentAddress = "";
@@ -34,7 +39,6 @@ namespace ClassSemesterProjectReg_A_LotForm
             lblProfileEmail.Text = currentEmail;
             lblFax.Text = currentFax;
         }
-
         private void lnkChangePassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Go to ChangePasswordForm
