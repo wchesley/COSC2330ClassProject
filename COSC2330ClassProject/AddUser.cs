@@ -41,9 +41,8 @@ namespace COSC2330ClassProject
                 // Change to 2 hexadecimal digits per byte entered. 
                 strBuilder.Append(result[i].ToString("x2"));
             }
-            return strBuilder.ToString(); // returns hash as string. weill go to be stored in database
-            //need to build verification system aswell. 
-            //verification system for it still. 
+            return strBuilder.ToString(); // returns hash as string. 
+            
         }
         
         public void VerifyLogin(string userID, string pass)
@@ -60,12 +59,15 @@ namespace COSC2330ClassProject
             pass = HashPass(pass); // hass pass to match against hashed pass in DB.
             using(SqlCommand readAllStudents = connection.CreateCommand())
                 {
-                    readAllStudents.CommandText = "SELECT * FROM db_owner.StudentDatabase where ID='"+ userID+ "'";
-                using(SqlDataReader read = readAllStudents.ExecuteReader())
-                    {
-                        // check password if userID exists
-                        // else check ProfessorDatabase
-                    }
+                    readAllStudents.CommandText = "SELECT paddedID,password FROM dbo.StudentDatabase where ID='"+ userID+ "'" + pass + ";";
+                    if(readAllStudents.ExecuteNonQuery() > 0 ) 
+                 {
+                    MessageBox.Show("Login Validated");
+                 }
+                 else
+                {
+                    MessageBox.Show("Invalid UserID or Password. Please try again.");
+                }
                 }
 
             

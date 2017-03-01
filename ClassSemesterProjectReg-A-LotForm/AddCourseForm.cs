@@ -21,87 +21,88 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             string courseName = txtCourseName.Text;
             string courseCode = txtCourseCode.Text;
-            string courseTime = cmbTimeSlot.Text;
+            string courseDepartment;
+            int courseTime;
             int conCourseCode;
+            bool errorOccoured = false;
             
-             //----------------Work in Progress
             if (txtCourseName.Text != "")
             {
-               //Store the course name
+                //Store courseName in the database
+                txtCourseName.Text = courseName;
+                if (int.TryParse(courseCode, out conCourseCode) && txtCourseCode.Text != "" && conCourseCode >= 1000 && conCourseCode <= 9999)
+                {
+                    if (cmbTimeSlot.Text == "8:00am -  9:00am" && cmbTimeSlot.Text != "")
+                    {
+                        courseTime = 800; // Store time in database
+                    }
+                    else if (cmbTimeSlot.Text == "9:30am - 10:30am" && cmbTimeSlot.Text != "")
+                    {
+                        courseTime = 930; // Store time in database
+                    }
+                    else if (cmbTimeSlot.Text == "11:00am - 12:30pm" && cmbTimeSlot.Text != "")
+                    {
+                        courseTime = 1100; // Store time in database
+                    }
+                    else if (cmbTimeSlot.Text == "1:00pm - 2:00pm" && cmbTimeSlot.Text != "")
+                    {
+                        courseTime = 1300; // Store time in database
+                    }
+                    else if (cmbTimeSlot.Text == "2:30pm - 3:30pm " && cmbTimeSlot.Text != "")
+                    {
+                        courseTime = 1530; // Store time in database
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please pick a time slot.");
+                        errorOccoured = true;
+                    }
+                        if (cmbDepartment.Text != "")
+                        {
+                            courseDepartment = cmbDepartment.Text;
 
-            }
-            else if (int.TryParse(courseCode, out conCourseCode) && txtCourseCode.Text != "")
-            {
-               // Store the Course Code
-            }
+                        }
 
-            else if (cmbTimeSlot.Text == "8:00am -  9:00am" && cmbTimeSlot.Text != "")
-            {
-                //Store the time: courseTime
-            }
-            else if (cmbTimeSlot.Text == "9:30am - 10:30am" && cmbTimeSlot.Text != "")
-            {
-                //Store the time: courseTime
-            }
-            else if (cmbTimeSlot.Text == "11:00am - 12:30pm" && cmbTimeSlot.Text != "")
-            {
-                //Store the time: courseTime
-            }
-            else if (cmbTimeSlot.Text == "1:00pm - 2:00pm" && cmbTimeSlot.Text != "")
-            {
-                //Store the time: courseTime
-            }
-            else if (cmbTimeSlot.Text == "2:30pm - 3:30pm " && cmbTimeSlot.Text != "")
-            {
-                //Store the time: courseTime
-                //MessageBox.Show("The course time is: " + courseTime);
-            }
-            // ----------------Work in Progress
+                        else
+                        {
+                            MessageBox.Show("Please enter a course department.");
+                        errorOccoured = true;
+                        }
+                    if (errorOccoured != true && MessageBox.Show("The Course has been added, would you like to add another?", "Course Added", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        txtCourseName.Clear();
+                        txtCourseCode.Clear();
+                        
+                    }
+                    else
+                    {
 
-            //else
-            //{
-            //    MessageBox.Show("Please enter a course time.");
-            //}
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Please enter a valid course code number.");
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Please enter a course name.");
-            //}
+                    }
+                }
+                
+                else
+                {
+                    MessageBox.Show("Please enter a 4 digit number for the course code.");
+                    errorOccoured = true;
+                }
 
-            //if(MessageBox.Show("Would you like to add another course?", "Add Course", MessageBoxButtons.YesNo) == DialogResult.No)
-            //{
-            //    //Return to RegistrarForm
-            //    RegistrarForm frm = new RegistrarForm();
-            //    frm.Show();
-            //    this.Hide();
-
-            //}
-            //else
-            //{
-
-            //}
-        }
-
-        private void btnDone_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Would you like to add another Course?", "Add Course", MessageBoxButtons.YesNo) == DialogResult.No)
-            {
-                //Return to RegistrarForm
-
-                RegistrarForm frm = new RegistrarForm();
-                frm.Show();
-                this.Hide();
-
+                
             }
             else
             {
-
+                MessageBox.Show("Please enter a course name.");
+                errorOccoured = true;
             }
+            }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            RegistrarForm frm = new RegistrarForm();
+            frm.Show();
+            this.Hide();
         }
     }
-}
+
+        
+        }
+ 

@@ -39,6 +39,7 @@
             this.cmbTimeSlot = new System.Windows.Forms.ComboBox();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -113,6 +114,7 @@
             // 
             // cmbTimeSlot
             // 
+            this.cmbTimeSlot.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTimeSlot.ForeColor = System.Drawing.SystemColors.InfoText;
             this.cmbTimeSlot.FormattingEnabled = true;
             this.cmbTimeSlot.Items.AddRange(new object[] {
@@ -128,6 +130,7 @@
             // 
             // cmbDepartment
             // 
+            this.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartment.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cmbDepartment.FormattingEnabled = true;
             this.cmbDepartment.Items.AddRange(new object[] {
@@ -165,11 +168,22 @@
             this.cmbDepartment.Size = new System.Drawing.Size(208, 21);
             this.cmbDepartment.TabIndex = 13;
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(231, 188);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 14;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // AddCourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(373, 226);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.cmbDepartment);
             this.Controls.Add(this.cmbTimeSlot);
             this.Controls.Add(this.label6);
@@ -200,5 +214,6 @@
         private System.Windows.Forms.ComboBox cmbTimeSlot;
         private System.Windows.Forms.ComboBox cmbDepartment;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button btnBack;
     }
 }
