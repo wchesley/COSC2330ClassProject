@@ -44,7 +44,7 @@ namespace COSC2330ClassProject
             //pass = HashPass(pass); // hash pass to match against hashed pass in DB.
             using(SqlCommand readAllStudents = connection.CreateCommand())
                 {
-                    readAllStudents.CommandText = "SELECT paddedID , Password FROM Project1.dbo.StudentDatabase where ID='"+ userID+ "'" + pass + ";";
+                    readAllStudents.CommandText = "SELECT paddedID, password; FROM Project1.dbo.StudentDatabase; WHERE ID='"+ userID+ "'" + pass + ";";
                     if(readAllStudents.ExecuteNonQuery() > 0 ) 
                  {
                     

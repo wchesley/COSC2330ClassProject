@@ -54,7 +54,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             {
                 MessageBox.Show("Please enter a valid ID.");
             }
-            loginCheck.VerifyLogin(txtID.Text, txtPassword.Text); // checking userID and password against DB. needs testing, espically wiht paswords and numbers in passwords.
+            loginCheck.VerifyLogin((string)txtID.Text, (string)txtPassword.Text); // checking userID and password against DB. needs testing, espically wiht paswords and numbers in passwords.
         }
 
         
