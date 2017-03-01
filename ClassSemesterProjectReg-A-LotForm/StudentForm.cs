@@ -48,5 +48,10 @@ namespace ClassSemesterProjectReg_A_LotForm
             frm.Show();
             this.Hide();
         }
+
+        private void lblProfilePhoneNumber_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
