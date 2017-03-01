@@ -69,6 +69,7 @@ namespace COSC2330ClassProject
             set
             {
             }
+        }
             public void PopulateCourseData(out string theCode, out string theName, out string theDepartment,
                 out int theTime, out int theCap)
         {
