@@ -19,7 +19,7 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnViewSchedule_Click(object sender, EventArgs e)
@@ -36,11 +36,11 @@ namespace ClassSemesterProjectReg_A_LotForm
             this.Hide();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+       
+
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
 
         }
-
-        
     }
 }
