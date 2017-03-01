@@ -12,7 +12,7 @@ namespace COSC2330ClassProject
     public class AddUser //Might have Registrar inherit or use this class and then they can add admin and professor
         //accounts from there. just at thought. 
     {
-        SqlConnection connection = new SqlConnection();
+        
         
         public void AddStudent(string fName, string lName, int phoneNum, string address)
         {
@@ -26,6 +26,8 @@ namespace COSC2330ClassProject
             //    insertNewStudent.ExecuteNonQuery(); 
             //}
             // Should return a message if successful and display userID to user
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
         }
 
         public string HashPass(string password) // tested; hashing is consistant 
@@ -44,7 +46,7 @@ namespace COSC2330ClassProject
             //verification system for it still. 
         }
         
-        public void VerifyLogin()
+        public void VerifyLogin(string userID, string pass)
         {
             // search DB for UserID
             // if UserID == null
@@ -53,6 +55,21 @@ namespace COSC2330ClassProject
             //agains the one we have stored in the DB
             // if they match, then go to student or professor profile page
             //else login failed, password incorrect.
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
+            pass = HashPass(pass); // hass pass to match against hashed pass in DB.
+            using(SqlCommand readAllStudents = connection.CreateCommand())
+                {
+                    readAllStudents.CommandText = "SELECT * FROM db_owner.StudentDatabase where ID='"+ userID+ "'";
+                using(SqlDataReader read = readAllStudents.ExecuteReader())
+                    {
+                        // check password if userID exists
+                        // else check ProfessorDatabase
+                    }
+                }
+
+            
+
         }
 
 
