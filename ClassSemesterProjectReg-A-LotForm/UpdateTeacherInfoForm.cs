@@ -13,7 +13,7 @@ namespace ClassSemesterProjectReg_A_LotForm
 {
     public partial class UpdateTeacherInfoForm : Form
     {
-        public InfoForm previousForm { get; set; }
+        public IUpdateableForm previousForm { get; set; }
 
         public UpdateTeacherInfoForm()
         {
@@ -25,7 +25,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             //Go to TeacherForm
             //TeacherForm frm = new TeacherForm();
             //frm.Show();
-            previousForm.Show();
+            ((Form)previousForm).Show();
             //previousForm.Popu
             previousForm.PopulateForm();
             this.Hide();

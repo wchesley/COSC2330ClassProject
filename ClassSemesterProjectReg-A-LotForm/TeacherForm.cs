@@ -11,7 +11,7 @@ using COSC2330ClassProject;
 
 namespace ClassSemesterProjectReg_A_LotForm
 {
-    public partial class TeacherForm : InfoForm
+    public partial class TeacherForm : Form, IUpdateableForm
     {
         public TeacherForm()
         {
@@ -19,7 +19,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             PopulateForm();
         }
 
-        public override void PopulateForm()
+        public void PopulateForm()
         {
             string currentName = "";
             string currentID = "";
