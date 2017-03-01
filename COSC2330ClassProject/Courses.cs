@@ -12,7 +12,7 @@ namespace COSC2330ClassProject
     public class Courses
     {
             public void PopulateCourseData(out string theCode, out string theName, out string theDepartment,
-                out int theTime, out int theCap, out int theSection)
+                out int theTime, out int theCap, out int theSection, out string theProfessor)
         {
             theCode = "";
             theName = "";
@@ -20,6 +20,7 @@ namespace COSC2330ClassProject
             theTime = 0;
             theCap = 0;
             theSection = 0;
+            theProfessor = "";
 
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
@@ -37,6 +38,7 @@ namespace COSC2330ClassProject
                         theTime = reader.GetInt32(4);
                         theCap = reader.GetInt32(5);
                         theSection = reader.GetInt32(6);
+                        theProfessor = reader.GetString(7);
                     }
             }
         }
