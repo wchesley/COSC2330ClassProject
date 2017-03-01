@@ -48,7 +48,8 @@ namespace COSC2330ClassProject
             
             using(SqlCommand insertNewProfessor = connection.CreateCommand())
                 {
-                 insertNewProfessor.CommandText = "INSERT into db_owner.Instructor VALUES (@fName,@lName,@address,@phone,@fax,@email)";
+                 insertNewProfessor.CommandText = "INSERT into dbo.InstructorDatabase VALUES '" + fName +
+                    "'" + lName + "'" + address + "'" + phone + "'" + email + "'" + fax + ";";
                 try
                 {
                     connection.Open();
