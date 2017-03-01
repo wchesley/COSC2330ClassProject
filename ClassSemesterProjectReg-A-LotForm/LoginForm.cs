@@ -60,7 +60,7 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            string password = newUser.HashPass(txtPassword.Text); // hashed password after user enteres it. 
+            //string password = newUser.HashPass(txtPassword.Text); // hashed password after user enteres it. 
         }
 
 
