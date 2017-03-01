@@ -43,7 +43,7 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void btnRegisterForSections_Click(object sender, EventArgs e)
         {
-            //Go to Rgister
+            //Go to CourseRegister
             CourseRegisterForm frm = new CourseRegisterForm();
             frm.Show();
             this.Hide();
