@@ -1,4 +1,4 @@
-﻿using System;
+﻿               using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +12,7 @@ namespace COSC2330ClassProject
     public class Courses
     {
         SqlConnection connection = new SqlConnection();
+        connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
         public int ClassTime
         {
             get
