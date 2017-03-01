@@ -137,6 +137,7 @@
             this.lblProfilePhoneNumber.Size = new System.Drawing.Size(102, 13);
             this.lblProfilePhoneNumber.TabIndex = 9;
             this.lblProfilePhoneNumber.Text = "TempPhoneNumber";
+            this.lblProfilePhoneNumber.Click += new System.EventHandler(this.lblProfilePhoneNumber_Click);
             // 
             // lblProfileAddress
             // 
