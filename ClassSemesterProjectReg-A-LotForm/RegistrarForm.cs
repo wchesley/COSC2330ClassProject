@@ -26,11 +26,19 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void btnUpdateProfessor_Click(object sender, EventArgs e)
         {
-            //AddTeacherForm frm = new AddTeacherForm();
-            UpdateTeacherInfoForm frm = new UpdateTeacherInfoForm();
-            frm.previousForm = this;
-            frm.Show();
-            this.Hide();
+            
+            //if (Check box is checked)
+            //{
+                UpdateTeacherInfoForm frm = new UpdateTeacherInfoForm();
+                frm.previousForm = this;
+                frm.Show();
+                this.Hide();
+            //}
+            //else
+            //{
+            //MessageBox.Show("Please select a professor to update.");
+            //}
+            
 
         }
 
@@ -54,12 +62,26 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void btnRemoveCourse_Click(object sender, EventArgs e)
         {
-            //Check for checked course, if course is checked, delete it from the database
+            //if (//check box is checked)
+            //{ 
+            //    //delete course from database
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Please select a course to remove.");
+            //}
         }
 
         private void btnRemoveProfessor_Click(object sender, EventArgs e)
         {
-            //Check for checked course, if course is checked, delete it from the database
+            //if (//check box is checked)
+            //{
+            //    //Delete professor from ProfessorDatabase
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Please select a professor to remove.");
+            //}
         }
 
         private void btnSearchCourse_Click(object sender, EventArgs e)
@@ -165,6 +187,32 @@ namespace ClassSemesterProjectReg_A_LotForm
             {
                 MessageBox.Show("Enter something to search by.");
             }
+        }
+
+        private void btnRemoveStudent_Click(object sender, EventArgs e)
+        {
+            //if (//check box is checked)
+            //{
+            //    //Delete student from the database
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Please select a student to remove.");
+            //}
+        }
+
+        private void btnUpdateStudent_Click(object sender, EventArgs e)
+        {
+            //if (//check box is checked)
+            //{
+            //    UpdateStudentInfoForm frm = new UpdateStudentInfoForm();
+            //    frm.Show();
+            //    this.Hide();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Please select a student to update.");
+            //}
         }
 
         public void PopulateForm()

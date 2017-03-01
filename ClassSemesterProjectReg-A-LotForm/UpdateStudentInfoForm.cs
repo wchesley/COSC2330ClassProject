@@ -12,6 +12,7 @@ namespace ClassSemesterProjectReg_A_LotForm
 {
     public partial class UpdateStudentInfoForm : Form
     {
+        public Form previousForm { get; set; }
         public UpdateStudentInfoForm()
         {
             InitializeComponent();
@@ -20,6 +21,8 @@ namespace ClassSemesterProjectReg_A_LotForm
         private void btnDone_Click(object sender, EventArgs e)
         {
             // Should return to the previous form when the button is clicked
+            previousForm.Show();
+            this.Hide();
         }
 
         private void btnUpdateFirstName_Click(object sender, EventArgs e)  // The user updates their First name

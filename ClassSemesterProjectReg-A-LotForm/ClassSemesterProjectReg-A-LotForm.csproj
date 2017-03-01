@@ -94,8 +94,17 @@
     <Compile Include="CourseRegisterForm.Designer.cs">
       <DependentUpon>CourseRegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="InfoForm.cs">
+    <Compile Include="InstructClassRegistrationForm.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructClassRegistrationForm.Designer.cs">
+      <DependentUpon>InstructClassRegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorRegistrationform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorRegistrationform.Designer.cs">
+      <DependentUpon>InstructorRegistrationform.cs</DependentUpon>
     </Compile>
     <Compile Include="IUpdateableForm.cs" />
     <Compile Include="LoginForm.cs">
@@ -168,6 +177,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CourseRegisterForm.resx">
       <DependentUpon>CourseRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructClassRegistrationForm.resx">
+      <DependentUpon>InstructClassRegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorRegistrationform.resx">
+      <DependentUpon>InstructorRegistrationform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

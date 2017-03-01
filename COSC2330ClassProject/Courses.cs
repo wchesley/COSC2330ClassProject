@@ -9,96 +9,68 @@ using System.Data.SqlClient;
 
 namespace COSC2330ClassProject
 {
-    public class Courses
-    {
-        public int ClassTime
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+    //public class Courses
+    //{
+    //    SqlConnection connection = new SqlConnection();
+    //    connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
+    //    public int ClassTime
+    //    {
+    //        get
+    //        {
+    //            throw new System.NotImplementedException();
+    //        }
 
-            set
-            {
-            }
-        }
+    //        set
+    //        {
+    //        }
+    //    }
 
-        public string CourseName
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+    //    public string CourseName
+    //    {
+    //        get
+    //        {
+    //            throw new System.NotImplementedException();
+    //        }
 
-            set
-            {
-            }
-        }
+    //        set
+    //        {
+    //        }
+    //    }
 
-        public int CourseCode
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+    //    public string CourseCode //<-- CourseCode is a varchar/string data type in the database
+    //    {
+    //        get
+    //        {
+    //            throw new System.NotImplementedException();
+    //        }
 
-            set
-            {
-            }
-        }
+    //        set
+    //        {
+    //        }
+    //    }
 
-        public int Department
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+    //    public string Department //<-- Department is a varchar/string in the database
+    //    {
+    //        get
+    //        {
+    //            throw new System.NotImplementedException();
+    //        }
 
-            set
-            {
-            }
-        }
+    //        set
+    //        {
+    //        }
+    //    }
 
-        public int Capacity
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+    //    public int Capacity
+    //    {
+    //        get
+    //        {
+    //            throw new System.NotImplementedException();
+    //        }
 
-            set
-            {
-            }
-        }
-            public void PopulateCourseData(out string theCode, out string theName, out string theDepartment,
-                out int theTime, out int theCap, out int theSection)
-        {
-            theCode = "";
-            theName = "";
-            theDepartment = "";
-            theTime = 0;
-            theCap = 0;
-            theSection = 0;
-
-            SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
-            connection.Open();
-            using (SqlCommand readCourseData = connection.CreateCommand())
-            {
-                readCourseData.CommandText = "select * from dbo.CourseDatabase";
-                using (SqlDataReader reader = readCourseData.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        theCode = reader.GetString(1);
-                        theName = reader.GetString(2);
-                        theDepartment = reader.GetString(3);
-                        theTime = reader.GetInt32(4);
-                        theCap = reader.GetInt32(5);
-                        theSection = reader.GetInt32(6);
-                    }
-            }
-        }
-        }
-    }
+    //        set
+    //        {
+    //        }
+    //    }
+    //}
 }
