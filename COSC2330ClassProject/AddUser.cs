@@ -59,12 +59,15 @@ namespace COSC2330ClassProject
             pass = HashPass(pass); // hass pass to match against hashed pass in DB.
             using(SqlCommand readAllStudents = connection.CreateCommand())
                 {
-                    readAllStudents.CommandText = "SELECT * FROM dbo.StudentDatabase where ID='"+ userID+ ";";
-                using(SqlDataReader read = readAllStudents.ExecuteReader())
-                    {
-                        // check password if userID exists
-                        // else check ProfessorDatabase
-                    }
+                    readAllStudents.CommandText = "SELECT paddedID,password FROM dbo.StudentDatabase where ID='"+ userID+ "'" + pass + ";";
+                    if(readAllStudents.ExecuteNonQuery() > 0 ) 
+                 {
+                    MessageBox.Show("Login Validated");
+                 }
+                 else
+                {
+                    MessageBox.Show("Invalid UserID or Password. Please try again.");
+                }
                 }
 
             
