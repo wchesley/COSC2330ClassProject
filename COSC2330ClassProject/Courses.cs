@@ -11,65 +11,6 @@ namespace COSC2330ClassProject
 {
     public class Courses
     {
-        public int ClassTime
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
-
-        public string CourseName
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
-
-        public int CourseCode
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
-
-        public int Department
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
-
-        public int Capacity
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
             public void PopulateCourseData(out string theCode, out string theName, out string theDepartment,
                 out int theTime, out int theCap, out int theSection)
         {
