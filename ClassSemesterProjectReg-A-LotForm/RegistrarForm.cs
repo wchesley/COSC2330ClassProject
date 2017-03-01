@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ClassSemesterProjectReg_A_LotForm
 {
-    public partial class RegistrarForm : Form
+    public partial class RegistrarForm : Form, IUpdateableForm
     {
         public RegistrarForm()
         {
@@ -213,6 +213,11 @@ namespace ClassSemesterProjectReg_A_LotForm
             //{
             //    MessageBox.Show("Please select a student to update.");
             //}
+        }
+
+        public void PopulateForm()
+        {
+            throw new NotImplementedException();
         }
     }
 }
