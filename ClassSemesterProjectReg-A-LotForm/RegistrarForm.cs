@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ClassSemesterProjectReg_A_LotForm
 {
-    public partial class RegistrarForm : InfoForm
+    public partial class RegistrarForm : Form, IUpdateableForm
     {
         public RegistrarForm()
         {
@@ -167,7 +167,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             }
         }
 
-        public override void PopulateForm()
+        public void PopulateForm()
         {
             throw new NotImplementedException();
         }
