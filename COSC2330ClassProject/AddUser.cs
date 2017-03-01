@@ -37,30 +37,34 @@ namespace COSC2330ClassProject
             //agains the one we have stored in the DB
             // if they match, then go to student or professor profile page
             //else login failed, password incorrect.
+            MessageBox.Show("VerifyLogin Method called");
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
-            pass = HashPass(pass); // hash pass to match against hashed pass in DB.
+            connection.Open();
+            //pass = HashPass(pass); // hash pass to match against hashed pass in DB.
             using(SqlCommand readAllStudents = connection.CreateCommand())
                 {
-                    readAllStudents.CommandText = "SELECT paddedID,password FROM dbo.StudentDatabase where ID='"+ userID+ "'" + pass + ";";
+                    readAllStudents.CommandText = "SELECT paddedID , Password FROM Project1.dbo.StudentDatabase where ID='"+ userID+ "'" + pass + ";";
                     if(readAllStudents.ExecuteNonQuery() > 0 ) 
                  {
+                    
                     MessageBox.Show("Login Validated");
                  }
                 else
                 {
-                    readAllStudents.CommandText = "SELECT paddedID,password FROM dbo.InstructorDatabase where ID='" + userID + "'" + pass + ";";
-                    if(readAllStudents.ExecuteNonQuery() > 0)
-                    {
-                        MessageBox.Show("Login Validated");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid ID or password Please try again. ");
-                    }
+                    MessageBox.Show("Invalid");
+                    //readAllStudents.CommandText = "SELECT ID , password FROM dbo.InstructorDatabase where ID='" + userID + "'" + pass + ";";
+                    //if(readAllStudents.ExecuteNonQuery() > 0)
+                    //{
+                    //    MessageBox.Show("Login Validated");
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("Invalid ID or password Please try again. ");
+                    //}
                     // Not sure if it will work like this. 
-                }  
-                    
+                }
+                 
                 }
 
             
