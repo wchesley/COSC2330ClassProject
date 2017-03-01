@@ -13,7 +13,7 @@ namespace ClassSemesterProjectReg_A_LotForm
 {
     public partial class LoginForm : Form
     {
-        AddUser newUser = new AddUser(); // added so we can access add user class
+       
         public LoginForm()
         {
             InitializeComponent();
