@@ -286,6 +286,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "TeacherForm";
             this.Text = "Teacher Profile";
+            this.Load += new System.EventHandler(this.TeacherForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picProfilePicture)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
