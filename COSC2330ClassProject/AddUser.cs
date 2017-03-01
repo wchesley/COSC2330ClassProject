@@ -12,23 +12,6 @@ namespace COSC2330ClassProject
     public class AddUser //Might have Registrar inherit or use this class and then they can add admin and professor
         //accounts from there. just at thought. 
     {
-        
-        
-        public void AddStudent(string fName, string lName, int phoneNum, string address)
-        {
-            // Take info from form and add to student DB, check to ensure userID doesn't already exist. 
-            // add each item to the data base, unsure how we want to store addresses. 
-            //using (SqlCommand insertNewStudent = connection.CreateCommand() )
-            //{
-            //    // adding the student information to the DB, mostly incomplete here till we get DB access. 
-            //    insertNewStudent.CommandText = "insert into databasename.Student values = ("fName + lName + pass + email + address + state + zipCode";";
-            //        //will need to fix above error, will test when DB access is aquired.
-            //    insertNewStudent.ExecuteNonQuery(); 
-            //}
-            // Should return a message if successful and display userID to user
-            SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
-        }
 
         public string HashPass(string password) // tested; hashing is consistant 
         {
@@ -56,7 +39,7 @@ namespace COSC2330ClassProject
             //else login failed, password incorrect.
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
-            pass = HashPass(pass); // hass pass to match against hashed pass in DB.
+            pass = HashPass(pass); // hash pass to match against hashed pass in DB.
             using(SqlCommand readAllStudents = connection.CreateCommand())
                 {
                     readAllStudents.CommandText = "SELECT paddedID,password FROM dbo.StudentDatabase where ID='"+ userID+ "'" + pass + ";";
@@ -64,10 +47,20 @@ namespace COSC2330ClassProject
                  {
                     MessageBox.Show("Login Validated");
                  }
-                 else
+                else
                 {
-                    MessageBox.Show("Invalid UserID or Password. Please try again.");
-                }
+                    readAllStudents.CommandText = "SELECT paddedID,password FROM dbo.InstructorDatabase where ID='" + userID + "'" + pass + ";";
+                    if(readAllStudents.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Login Validated");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid ID or password Please try again. ");
+                    }
+                    // Not sure if it will work like this. 
+                }  
+                    
                 }
 
             
