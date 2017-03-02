@@ -83,16 +83,17 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             if (MessageBox.Show("Would you like to add another Student?", "Add Student", MessageBoxButtons.YesNo) == DialogResult.No)
             {
-                //Return to RegistrarForm
-
                 RegistrarForm frm = new RegistrarForm();
                 frm.Show();
                 this.Hide();
-
             }
             else
             {
-
+                txtFirstName.Clear();
+                txtLastName.Clear();
+                txtAddress.Clear();
+                txtEmail.Clear();
+                txtPhoneNumber.Clear();
             };
         }
     }

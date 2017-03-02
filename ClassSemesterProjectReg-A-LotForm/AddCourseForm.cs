@@ -24,7 +24,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             string courseDepartment;
             int courseTime;
             int conCourseCode;
-            bool errorOccoured = false;
+            bool errorOccured = false;
             
             if (txtCourseName.Text != "")
             {
@@ -55,7 +55,7 @@ namespace ClassSemesterProjectReg_A_LotForm
                     else
                     {
                         MessageBox.Show("Please pick a time slot.");
-                        errorOccoured = true;
+                        errorOccured = true;
                     }
                         if (cmbDepartment.Text != "")
                         {
@@ -66,9 +66,9 @@ namespace ClassSemesterProjectReg_A_LotForm
                         else
                         {
                             MessageBox.Show("Please enter a course department.");
-                        errorOccoured = true;
+                        errorOccured = true;
                         }
-                    if (errorOccoured != true && MessageBox.Show("The Course has been added, would you like to add another?", "Course Added", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (errorOccured != true && MessageBox.Show("The Course has been added, would you like to add another?", "Course Added", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         txtCourseName.Clear();
                         txtCourseCode.Clear();
@@ -83,7 +83,7 @@ namespace ClassSemesterProjectReg_A_LotForm
                 else
                 {
                     MessageBox.Show("Please enter a 4 digit number for the course code.");
-                    errorOccoured = true;
+                    errorOccured = true;
                 }
 
                 
@@ -91,7 +91,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             else
             {
                 MessageBox.Show("Please enter a course name.");
-                errorOccoured = true;
+                errorOccured = true;
             }
             }
 

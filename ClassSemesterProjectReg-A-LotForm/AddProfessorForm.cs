@@ -44,6 +44,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             string userEmail = txtEmail.Text; // Stores the Email the user entered
             string userFirstName = txtFirstName.Text; // Stores the users first name
             string userLastName = txtLastName.Text; // Stores the users last name
+            bool errorOccured = false;
 
 
             if (!(double.TryParse(rawFirstName, out conFirstName)) && txtFirstName.Text != "") //If name is not a number & not blank..
@@ -63,10 +64,22 @@ namespace ClassSemesterProjectReg_A_LotForm
                                 if (int.TryParse(userFax, out conFax) && txtFax.Text != "")
                                 {
                                     // Store the information given by the end-user into the database
-                                    
-                                    registrar.AddProfessor(txtFirstName.Text, txtLastName.Text, txtAddress.Text, txtPhoneNumber.Text, txtFax.Text);
+                                     registrar.AddProfessor(txtFirstName.Text, txtLastName.Text, txtAddress.Text, txtPhoneNumber.Text, txtFax.Text);
+                                                                                //<--- I think this is where the other MessegeBoxes are appearing.
+                                    if (errorOccured != true && MessageBox.Show("The Professor has been added, would you like to add another?", "Professor Added", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                                    {
+                                        txtFirstName.Clear();
+                                        txtLastName.Clear();
+                                        txtAddress.Clear();
+                                        txtEmail.Clear();
+                                        txtPhoneNumber.Clear();
+                                        txtFax.Clear();
+                                    }
+                                    else
+                                    {
 
-                                    
+                                    }
+
 
                                 }
                                 else
@@ -119,7 +132,12 @@ namespace ClassSemesterProjectReg_A_LotForm
             }
             else
             {
-
+                txtFirstName.Clear();
+                txtLastName.Clear();
+                txtAddress.Clear();
+                txtEmail.Clear();
+                txtPhoneNumber.Clear();
+                txtFax.Clear();
             }
         }
     }

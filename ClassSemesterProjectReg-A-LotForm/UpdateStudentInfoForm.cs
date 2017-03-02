@@ -19,11 +19,10 @@ namespace ClassSemesterProjectReg_A_LotForm
             InitializeComponent();
         }
 
-        Student newStud = new Student(); // <---
+        Student newStud = new Student(); 
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            // Should return to the previous form when the button is clicked
             previousForm.Show();
             this.Hide();
         }
