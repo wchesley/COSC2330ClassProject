@@ -44,7 +44,7 @@ namespace COSC2330ClassProject
             //verification system for it still. 
         }
         
-        public void VerifyLogin()
+        public void VerifyLogin(int userID, string pass)
         {
             // search DB for UserID
             // if UserID == null
@@ -53,6 +53,10 @@ namespace COSC2330ClassProject
             //agains the one we have stored in the DB
             // if they match, then go to student or professor profile page
             //else login failed, password incorrect.
+            using (SqlCommand verifyLogin = connection.CreateCommand())
+            {
+
+            }
         }
 
 
