@@ -12,30 +12,42 @@ namespace COSC2330ClassProject
     {
         public int CurrentProfesorID { get; set; }
 
-        public void ChangeProfessorPassword()
+
+
+        public void ReadProfessorPassword(string thePassword)
         {
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
             connection.Open();
 
-            //using (SqlCommand readProfessorData = connection.CreateCommand())
-            //{
-            //    readProfessorData.CommandText = "select * from dbo.InstructorDatabase where ID = 1";
-            //    using (SqlDataReader reader = readProfessorData.ExecuteReader())
-            //    {
-            //        while (reader.Read())
-            //        {
-            //            theName = reader.GetString(1) + " " + reader.GetString(2);
-            //            theAddress = reader.GetString(3);
-            //            thePhoneNumber = reader.GetString(4);
-            //            thePassword = reader.GetString(5);
-            //            theEmail = reader.GetString(6);
-            //            theFax = reader.GetString(7);
-            //            theID = reader.GetString(8);
+            thePassword = "";
+            using (SqlCommand readProfessorData = connection.CreateCommand())
+            {
+                readProfessorData.CommandText = "select Password from dbo.InstructorDatabase where ID = 1";
+                using (SqlDataReader reader = readProfessorData.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        thePassword = reader.GetString(0);
 
-            //        }
-            //    }
-            //}
+                    }
+                }
+            }
+
+        }
+
+        public void ChangeProfessorPassword(string newPassword)
+        {
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
+            connection.Open();
+
+
+            using (SqlCommand updateProfessorPassword = connection.CreateCommand())
+            {
+                updateProfessorPassword.CommandText = "update dbo.InstructorDatabase set Password = '"+ newPassword +"' where ID = 1";
+                updateProfessorPassword.ExecuteNonQuery();
+            }
 
         }
 

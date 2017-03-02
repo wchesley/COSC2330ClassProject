@@ -24,15 +24,23 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             
             string Password = "";
+            string oldPassword = "";
 
-            if (txtOldPassword.Text != "" )
+            Professor newProf = new Professor();
+
+            //This should store the old password in the oldPassword variable. It doesn't. Idk why.
+            newProf.ReadProfessorPassword(oldPassword);
+
+            if (txtOldPassword.Text != "" && oldPassword != "")
             {
                 if (txtNewPassword.Text != "" && txtNewPassword.Text != txtOldPassword.Text )
                 {
                     if (txtNewPassword.Text == txtNewPassword2.Text)
                     {
                         Password = resetPass.HashPass(txtNewPassword2.Text); //Hashes password before storing it.
-                        
+
+                        //this shouls store the new password in the database. the code doesn't get that far because the reading of the old password doesn't work.
+                        newProf.ChangeProfessorPassword(Password);
                         // Store Password in database with the students info
                         lblPasswordUpdated.Text = "Password successfully updated.";
                     }
