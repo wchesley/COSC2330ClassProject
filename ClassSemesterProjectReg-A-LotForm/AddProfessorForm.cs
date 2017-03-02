@@ -34,8 +34,8 @@ namespace ClassSemesterProjectReg_A_LotForm
             string rawLastName = txtLastName.Text;
             string address = txtAddress.Text;
             string rawphonenumber = txtPhoneNumber.Text;
-            double conFirstName;
-            double conLastName;
+            double conFirstName; //This is just to make sure the user doesnt enter a number for a name
+            double conLastName; // This is jsut to make sure the user doesnt enter a number for a name
             string userAddress = txtAddress.Text; // Stores the address the user entered
             string userPhoneNumber = txtPhoneNumber.Text; // Stores the phone number the user entered
             int conPhoneNumber; //Stores the phonenumber as a int
@@ -56,17 +56,21 @@ namespace ClassSemesterProjectReg_A_LotForm
                     if (txtAddress.Text != "")
                     {
 
-                        if (int.TryParse(userPhoneNumber, out conPhoneNumber) && txtPhoneNumber.Text != "")
-                        {
+                        
 
                             if (txtEmail.Text != "")
                             {
-                                if (int.TryParse(userFax, out conFax) && txtFax.Text != "")
-                                {
-                                    // Store the information given by the end-user into the database
-                                     registrar.AddProfessor(txtFirstName.Text, txtLastName.Text, txtAddress.Text, txtPhoneNumber.Text, txtFax.Text);
-                                                                                //<--- I think this is where the other MessegeBoxes are appearing.
-                                    if (errorOccured != true && MessageBox.Show("The Professor has been added, would you like to add another?", "Professor Added", MessageBoxButtons.YesNo) == DialogResult.Yes)
+
+
+                            //registrar.AddProfessor(txtFirstName.Text, txtLastName.Text, txtAddress.Text, txtPhoneNumber.Text, txtFax.Text); 
+                            registrar.AddProfessor(rawFirstName, rawLastName, address, rawphonenumber, userFax);
+                            rawFirstName = txtFirstName.Text;
+                            rawLastName = txtLastName.Text;
+                            address = txtAddress.Text;
+                            rawphonenumber = txtPhoneNumber.Text;
+                            userFax = txtFax.Text;
+
+                            if (errorOccured != true && MessageBox.Show("The Professor has been added, would you like to add another?", "Professor Added", MessageBoxButtons.YesNo) == DialogResult.Yes)
                                     {
                                         txtFirstName.Clear();
                                         txtLastName.Clear();
@@ -81,11 +85,8 @@ namespace ClassSemesterProjectReg_A_LotForm
                                     }
 
 
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Please enter a valid fax number.");
-                                }
+                                
+                               
                             }
 
                             else
@@ -93,11 +94,8 @@ namespace ClassSemesterProjectReg_A_LotForm
                                 MessageBox.Show("Please enter an Email.");
 
                             }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Please enter a valid phone number.");
-                        }
+                        
+                        
                     }
                     else
                     {
@@ -121,16 +119,7 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Would you like to add another Professor?", "Add Professor", MessageBoxButtons.YesNo) == DialogResult.No)
-            {
-                //Return to RegistrarForm
-
-                RegistrarForm frm = new RegistrarForm();
-                frm.Show();
-                this.Hide();
-
-            }
-            else
+            if (MessageBox.Show("Are you done adding professors?", "Add Professor", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 txtFirstName.Clear();
                 txtLastName.Clear();
@@ -138,6 +127,16 @@ namespace ClassSemesterProjectReg_A_LotForm
                 txtEmail.Clear();
                 txtPhoneNumber.Clear();
                 txtFax.Clear();
+
+            }
+            else
+            {
+                // Return to RegistrarForm
+
+                RegistrarForm frm = new RegistrarForm();
+                frm.Show();
+                this.Hide();
+                
             }
         }
     }

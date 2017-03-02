@@ -270,6 +270,7 @@
             this.btnLogOut.TabIndex = 20;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // TeacherForm
             // 
@@ -287,7 +288,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "TeacherForm";
             this.Text = "Teacher Profile";
-            
             ((System.ComponentModel.ISupportInitialize)(this.picProfilePicture)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -137,7 +137,7 @@
             this.lblProfilePhoneNumber.Size = new System.Drawing.Size(102, 13);
             this.lblProfilePhoneNumber.TabIndex = 9;
             this.lblProfilePhoneNumber.Text = "TempPhoneNumber";
-            this.lblProfilePhoneNumber.Click += new System.EventHandler(this.lblProfilePhoneNumber_Click);
+            
             // 
             // lblProfileAddress
             // 
@@ -228,6 +228,7 @@
             this.btnLogOut.TabIndex = 18;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // StudentForm
             // 
