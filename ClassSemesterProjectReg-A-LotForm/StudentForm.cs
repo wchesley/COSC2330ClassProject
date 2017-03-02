@@ -30,6 +30,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             //Go to UpdateStudentInfoForm
             UpdateStudentInfoForm frm = new UpdateStudentInfoForm();
             frm.Show();
+            frm.previousForm = this;
             this.Hide();
         }
 
@@ -37,6 +38,7 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             //Go to ScheduleForm
             ScheduleForm frm = new ScheduleForm();
+            frm.previousForm = this;
             frm.Show();
             this.Hide();
         }

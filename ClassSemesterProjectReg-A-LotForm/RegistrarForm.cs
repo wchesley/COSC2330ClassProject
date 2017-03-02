@@ -205,9 +205,10 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             //if (//check box is checked)
             //{
-            //    UpdateStudentInfoForm frm = new UpdateStudentInfoForm();
-            //    frm.Show();
-            //    this.Hide();
+            UpdateStudentInfoForm frm = new UpdateStudentInfoForm();
+            frm.Show();
+            frm.previousForm = this;
+            this.Hide();
             //}
             //else
             //{

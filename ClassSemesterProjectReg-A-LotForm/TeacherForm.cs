@@ -60,6 +60,7 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             //Go to ScheduleForm
             ScheduleForm frm = new ScheduleForm();
+            frm.previousForm = this;
             frm.Show();
             this.Hide();
         }

@@ -22,12 +22,9 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            //Go to TeacherForm
-            //TeacherForm frm = new TeacherForm();
-            //frm.Show();
+            
             ((Form)previousForm).Show();
-            //previousForm.Popu
-            previousForm.PopulateForm();
+            previousForm.PopulateForm(); //updates teacher info
             this.Hide();
         }
 
