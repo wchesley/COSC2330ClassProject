@@ -14,6 +14,7 @@ namespace ClassSemesterProjectReg_A_LotForm
     public partial class UpdateTeacherInfoForm : Form
     {
         public IUpdateableForm previousForm { get; set; }
+        Professor newProf = new Professor();
 
         public UpdateTeacherInfoForm()
         {
@@ -34,7 +35,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             double conFirstName;
             if ( !(double.TryParse(newFirstName, out conFirstName)) && txtUpdateFirstName.Text != "")
             {
-                Professor newProf = new Professor();
+                
                 
                 newProf.UpdateInstructorFirstName(newFirstName);
                 // Add newFirstName to database to update the old one?
@@ -53,7 +54,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             double conLastName;
             if ( !(double.TryParse(newLastName, out conLastName)) && txtUpdateLastName.Text != "")
             {
-                Professor newProf = new Professor();
+                
                 newProf.UpdateInstructorLastName(newLastName);
                 // newLastName should replace the old one (probably in the database)
                 lblUpdateMessege.Text = "Last name has been updated";
@@ -70,7 +71,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             string newAddress = txtUpdateAddress.Text;
             if (txtUpdateAddress.Text != "")
             {
-                Professor newProf = new Professor();
+                
                 newProf.UpdateInstructorAddress(newAddress);
                 // newAddress should replace the old one (probably in the database)
                 lblUpdateMessege.Text = "Address has been updated.";
@@ -87,7 +88,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             long newPhoneNumber;
             if(long.TryParse(rawPhoneNumber, out newPhoneNumber) && txtUpdatePhoneNumber.Text != "")
             {
-                Professor newProf = new Professor();
+                
                 newProf.UpdateInstructorPhoneNumber(rawPhoneNumber);
                 // newPhoneNumber should replace the old one (probably in the database)
                 lblUpdateMessege.Text = "Phone number has been updated.";
@@ -103,7 +104,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             string newEmail = txtUpdateEmail.Text;
             if (txtUpdateEmail.Text != "")
             {
-                Professor newProf = new Professor();
+                
                 newProf.UpdateInstructorEmail(newEmail);
                 // newEmail should replace the old one (probably in the database)
                 lblUpdateMessege.Text = "Email has been updated.";
@@ -120,7 +121,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             long newFax;
             if (long.TryParse(rawFax, out newFax) && txtUpdateFax.Text != "")
             {
-                Professor newProf = new Professor();
+                
                 newProf.UpdateInstructorFax(rawFax);
                 // newFax should replace the old one (Probably in the databse)
                 lblUpdateMessege.Text = "Fax number updated.";
