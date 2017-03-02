@@ -23,12 +23,12 @@ namespace COSC2330ClassProject
             thePassword = "";
             using (SqlCommand readProfessorData = connection.CreateCommand())
             {
-                readProfessorData.CommandText = "select Password from dbo.InstructorDatabase where ID = 1";
+                readProfessorData.CommandText = "select * from dbo.InstructorDatabase where ID = 1";
                 using (SqlDataReader reader = readProfessorData.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        thePassword = reader.GetString(0);
+                        thePassword = reader.GetString(5);
 
                     }
                 }
