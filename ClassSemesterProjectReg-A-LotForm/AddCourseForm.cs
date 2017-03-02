@@ -24,6 +24,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             string courseDepartment;
             int courseTime;
             int conCourseCode;
+            int courseSection;
             bool errorOccured = false;
             
             if (txtCourseName.Text != "")
@@ -57,6 +58,25 @@ namespace ClassSemesterProjectReg_A_LotForm
                         MessageBox.Show("Please pick a time slot.");
                         errorOccured = true;
                     }
+
+                    if (cmbSection.Text == "1" && cmbSection.Text != "")
+                    {
+                        courseSection = 1; // Store section in database
+                    }
+                    else if (cmbSection.Text == "2" && cmbSection.Text != "")
+                    {
+                        courseSection = 2; // Store section in database
+                    }
+                    else if (cmbSection.Text == "3" && cmbSection.Text != "")
+                    {
+                        courseSection = 3; // Store section in database
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please pick a section.");
+                        errorOccured = true;
+                    }
+
                         if (cmbDepartment.Text != "")
                         {
                             courseDepartment = cmbDepartment.Text;
@@ -97,9 +117,19 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            RegistrarForm frm = new RegistrarForm();
-            frm.Show();
-            this.Hide();
+
+            if (MessageBox.Show("Are you done adding courses?", "Add Courses", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+
+            }
+            else
+            {
+                RegistrarForm frm = new RegistrarForm();
+                frm.Show();
+                this.Hide();
+
+            }
+            
         }
     }
 

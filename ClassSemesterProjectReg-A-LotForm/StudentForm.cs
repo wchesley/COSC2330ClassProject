@@ -12,6 +12,7 @@ namespace ClassSemesterProjectReg_A_LotForm
 {
     public partial class StudentForm : Form
     {
+        
         public StudentForm()
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             //Go to ChangePasswordForm
             ChangePasswordForm frm = new ChangePasswordForm();
+            frm.PreviousForm = this;
             frm.Show();
             this.Hide();
         }
@@ -51,9 +53,21 @@ namespace ClassSemesterProjectReg_A_LotForm
             this.Hide();
         }
 
-        private void lblProfilePhoneNumber_Click(object sender, EventArgs e)
-        {
+        
 
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to log out?", "Log Out", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+
+            }
+            else
+            {
+                LoginForm frm = new LoginForm();
+                frm.Show();
+                this.Close();
+                // Clear login/profile information
+            }
         }
     }
 }

@@ -13,7 +13,11 @@ using COSC2330ClassProject; //Added reference to this dll in ClassSemesterProjec
 namespace ClassSemesterProjectReg_A_LotForm
 {
     public partial class ChangePasswordForm : Form
+
+        
     {
+        public Form PreviousForm { get; set; }
+
         AddUser resetPass = new AddUser(); 
         public ChangePasswordForm()
         {
@@ -54,7 +58,8 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            PreviousForm.Show();
+            this.Hide();
         }
 
         private void lblPasswordUpdated_Click(object sender, EventArgs e)

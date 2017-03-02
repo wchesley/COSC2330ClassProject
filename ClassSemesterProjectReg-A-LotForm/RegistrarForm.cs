@@ -44,7 +44,18 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Are you sure you want to log out?", "Log Out", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+
+            }
+            else
+            {
+                LoginForm frm = new LoginForm();
+                frm.Show();
+                this.Close();
+                // Clear login/profile information
+            }
+            
         }
 
         private void btnAddCourse_Click(object sender, EventArgs e)
@@ -58,6 +69,7 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             AddStudentForm frm = new AddStudentForm();
             frm.Show();
+            this.Close();
         }
 
         private void btnRemoveCourse_Click(object sender, EventArgs e)

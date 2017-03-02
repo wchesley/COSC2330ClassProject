@@ -43,6 +43,7 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             // Go to ChangePasswordForm
             ChangePasswordForm frm = new ChangePasswordForm();
+            frm.PreviousForm = this;
             frm.Show();
             this.Hide();
         }
@@ -80,6 +81,21 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         }
 
-        
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("Are you sure you want to log out?", "Log Out", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+            
+            }
+            else
+            {
+                LoginForm frm = new LoginForm();
+                frm.Show();
+                this.Close();
+                // Clear login/profile information
+            }
+            
+        }
     }
 }

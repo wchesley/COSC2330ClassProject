@@ -47,8 +47,7 @@ namespace ClassSemesterProjectReg_A_LotForm
 
                             if (txtEmail.Text != "")
                             {
-                                MessageBox.Show("The student has been added"); //<---- replace this with the proper equivalent of: 
-                                                                                //registrar.AddStudent(txtFirstName.Text, txtLastName.Text, txtAddress.Text, txtPhoneNumber.Text,);
+                                MessageBox.Show("The student has been added"); 
                             }
 
                             else
@@ -81,19 +80,20 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Would you like to add another Student?", "Add Student", MessageBoxButtons.YesNo) == DialogResult.No)
-            {
-                RegistrarForm frm = new RegistrarForm();
-                frm.Show();
-                this.Hide();
-            }
-            else
+            if (MessageBox.Show("Are you done adding students?", "Add Student", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 txtFirstName.Clear();
                 txtLastName.Clear();
                 txtAddress.Clear();
                 txtEmail.Clear();
                 txtPhoneNumber.Clear();
+            }
+            else
+            {
+                RegistrarForm frm = new RegistrarForm();
+                frm.Show();
+                this.Hide();
+                
             };
         }
     }
