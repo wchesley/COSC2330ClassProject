@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.lblPasswordUpdated = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -92,7 +93,7 @@
             // 
             // btnChangePassword
             // 
-            this.btnChangePassword.Location = new System.Drawing.Point(110, 206);
+            this.btnChangePassword.Location = new System.Drawing.Point(178, 206);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(119, 23);
             this.btnChangePassword.TabIndex = 6;
@@ -110,21 +111,33 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Update Password";
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(34, 206);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(119, 23);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.button1_Click);
+            // 
             // lblPasswordUpdated
             // 
             this.lblPasswordUpdated.AutoSize = true;
             this.lblPasswordUpdated.ForeColor = System.Drawing.Color.Red;
-            this.lblPasswordUpdated.Location = new System.Drawing.Point(110, 236);
+            this.lblPasswordUpdated.Location = new System.Drawing.Point(155, 248);
             this.lblPasswordUpdated.Name = "lblPasswordUpdated";
             this.lblPasswordUpdated.Size = new System.Drawing.Size(22, 13);
             this.lblPasswordUpdated.TabIndex = 8;
             this.lblPasswordUpdated.Text = ". . .";
+            this.lblPasswordUpdated.Click += new System.EventHandler(this.lblPasswordUpdated_Click);
             // 
             // ChangePasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 262);
+            this.ClientSize = new System.Drawing.Size(338, 289);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblPasswordUpdated);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnChangePassword);
@@ -151,6 +164,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblPasswordUpdated;
     }
 }

@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtStudentID = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -62,12 +62,12 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Please Login to continue";
             // 
-            // txtStudentID
+            // txtID
             // 
-            this.txtStudentID.Location = new System.Drawing.Point(176, 152);
-            this.txtStudentID.Name = "txtStudentID";
-            this.txtStudentID.Size = new System.Drawing.Size(170, 20);
-            this.txtStudentID.TabIndex = 2;
+            this.txtID.Location = new System.Drawing.Point(176, 152);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(170, 20);
+            this.txtID.TabIndex = 2;
             // 
             // txtPassword
             // 
@@ -179,7 +179,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtStudentID);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "LoginForm";
@@ -193,7 +193,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtStudentID;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

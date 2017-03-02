@@ -44,7 +44,6 @@
             this.picProfilePicture = new System.Windows.Forms.PictureBox();
             this.btnViewSchedule = new System.Windows.Forms.Button();
             this.btnRegisterForSections = new System.Windows.Forms.Button();
-            this.btnDropSections = new System.Windows.Forms.Button();
             this.lnkChangePassword = new System.Windows.Forms.LinkLabel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -138,6 +137,7 @@
             this.lblProfilePhoneNumber.Size = new System.Drawing.Size(102, 13);
             this.lblProfilePhoneNumber.TabIndex = 9;
             this.lblProfilePhoneNumber.Text = "TempPhoneNumber";
+            this.lblProfilePhoneNumber.Click += new System.EventHandler(this.lblProfilePhoneNumber_Click);
             // 
             // lblProfileAddress
             // 
@@ -191,7 +191,7 @@
             // 
             // btnViewSchedule
             // 
-            this.btnViewSchedule.Location = new System.Drawing.Point(27, 251);
+            this.btnViewSchedule.Location = new System.Drawing.Point(86, 255);
             this.btnViewSchedule.Name = "btnViewSchedule";
             this.btnViewSchedule.Size = new System.Drawing.Size(158, 52);
             this.btnViewSchedule.TabIndex = 9;
@@ -201,21 +201,13 @@
             // 
             // btnRegisterForSections
             // 
-            this.btnRegisterForSections.Location = new System.Drawing.Point(200, 251);
+            this.btnRegisterForSections.Location = new System.Drawing.Point(259, 255);
             this.btnRegisterForSections.Name = "btnRegisterForSections";
-            this.btnRegisterForSections.Size = new System.Drawing.Size(158, 52);
+            this.btnRegisterForSections.Size = new System.Drawing.Size(216, 52);
             this.btnRegisterForSections.TabIndex = 10;
-            this.btnRegisterForSections.Text = "Register for Sections";
+            this.btnRegisterForSections.Text = "Register / Drop Sections";
             this.btnRegisterForSections.UseVisualStyleBackColor = true;
-            // 
-            // btnDropSections
-            // 
-            this.btnDropSections.Location = new System.Drawing.Point(373, 251);
-            this.btnDropSections.Name = "btnDropSections";
-            this.btnDropSections.Size = new System.Drawing.Size(158, 52);
-            this.btnDropSections.TabIndex = 11;
-            this.btnDropSections.Text = "Drop Sections";
-            this.btnDropSections.UseVisualStyleBackColor = true;
+            this.btnRegisterForSections.Click += new System.EventHandler(this.btnRegisterForSections_Click);
             // 
             // lnkChangePassword
             // 
@@ -244,7 +236,6 @@
             this.ClientSize = new System.Drawing.Size(558, 336);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.lnkChangePassword);
-            this.Controls.Add(this.btnDropSections);
             this.Controls.Add(this.btnRegisterForSections);
             this.Controls.Add(this.btnViewSchedule);
             this.Controls.Add(this.picProfilePicture);
@@ -277,7 +268,6 @@
         private System.Windows.Forms.PictureBox picProfilePicture;
         private System.Windows.Forms.Button btnViewSchedule;
         private System.Windows.Forms.Button btnRegisterForSections;
-        private System.Windows.Forms.Button btnDropSections;
         private System.Windows.Forms.LinkLabel lnkChangePassword;
         private System.Windows.Forms.Button btnLogOut;
     }

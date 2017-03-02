@@ -30,12 +30,30 @@ namespace ClassSemesterProjectReg_A_LotForm
             //Go to UpdateStudentInfoForm
             UpdateStudentInfoForm frm = new UpdateStudentInfoForm();
             frm.Show();
+            frm.previousForm = this;
             this.Hide();
         }
 
         private void btnViewSchedule_Click(object sender, EventArgs e)
         {
             //Go to ScheduleForm
+            ScheduleForm frm = new ScheduleForm();
+            frm.previousForm = this;
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnRegisterForSections_Click(object sender, EventArgs e)
+        {
+            //Go to CourseRegister
+            CourseRegisterForm frm = new CourseRegisterForm();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void lblProfilePhoneNumber_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

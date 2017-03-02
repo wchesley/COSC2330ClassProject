@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label8 = new System.Windows.Forms.Label();
-            this.btnDone = new System.Windows.Forms.Button();
             this.lblTempPassword = new System.Windows.Forms.Label();
             this.lblStudentID = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,48 +49,34 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtFax = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnDone = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(322, 71);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label8.Location = new System.Drawing.Point(161, 37);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(234, 37);
+            this.label8.Size = new System.Drawing.Size(123, 20);
             this.label8.TabIndex = 41;
             this.label8.Text = "Add Professor";
-            // 
-            // btnDone
-            // 
-            this.btnDone.Location = new System.Drawing.Point(372, 1062);
-            this.btnDone.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(150, 44);
-            this.btnDone.TabIndex = 40;
-            this.btnDone.Text = "Done";
-            this.btnDone.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDone.UseVisualStyleBackColor = true;
-            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // lblTempPassword
             // 
             this.lblTempPassword.AutoSize = true;
-            this.lblTempPassword.Location = new System.Drawing.Point(382, 919);
-            this.lblTempPassword.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblTempPassword.Location = new System.Drawing.Point(191, 478);
             this.lblTempPassword.Name = "lblTempPassword";
-            this.lblTempPassword.Size = new System.Drawing.Size(42, 25);
+            this.lblTempPassword.Size = new System.Drawing.Size(22, 13);
             this.lblTempPassword.TabIndex = 39;
             this.lblTempPassword.Text = ". . .";
             // 
             // lblStudentID
             // 
             this.lblStudentID.AutoSize = true;
-            this.lblStudentID.Location = new System.Drawing.Point(382, 883);
-            this.lblStudentID.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblStudentID.Location = new System.Drawing.Point(191, 459);
             this.lblStudentID.Name = "lblStudentID";
-            this.lblStudentID.Size = new System.Drawing.Size(42, 25);
+            this.lblStudentID.Size = new System.Drawing.Size(22, 13);
             this.lblStudentID.TabIndex = 38;
             this.lblStudentID.Text = ". . .";
             // 
@@ -99,10 +84,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(176, 992);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Location = new System.Drawing.Point(88, 516);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(546, 50);
+            this.label5.Size = new System.Drawing.Size(269, 26);
             this.label5.TabIndex = 37;
             this.label5.Text = "An Email with the instructor ID and temporary password \r\nwill be sent to the Emai" +
     "l provided.";
@@ -111,39 +95,35 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(204, 919);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(102, 478);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 25);
+            this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 36;
             this.label4.Text = "Password:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(204, 881);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(102, 458);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 25);
+            this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 35;
             this.label3.Text = "Instructor ID:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(220, 783);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(110, 407);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(453, 25);
+            this.label2.Size = new System.Drawing.Size(224, 13);
             this.label2.TabIndex = 34;
             this.label2.Text = "Instructor ID number and temporary password:";
             // 
             // btnCreateAccount
             // 
-            this.btnCreateAccount.Location = new System.Drawing.Point(310, 715);
-            this.btnCreateAccount.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCreateAccount.Location = new System.Drawing.Point(155, 372);
             this.btnCreateAccount.Name = "btnCreateAccount";
-            this.btnCreateAccount.Size = new System.Drawing.Size(274, 44);
+            this.btnCreateAccount.Size = new System.Drawing.Size(137, 23);
             this.btnCreateAccount.TabIndex = 33;
             this.btnCreateAccount.Text = "Create Professor";
             this.btnCreateAccount.UseVisualStyleBackColor = true;
@@ -151,101 +131,90 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(150, 444);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(75, 231);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(590, 31);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(297, 20);
             this.txtPhoneNumber.TabIndex = 32;
             // 
             // lblPhoneNumber
             // 
             this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(150, 415);
-            this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(75, 216);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(161, 25);
+            this.lblPhoneNumber.Size = new System.Drawing.Size(81, 13);
             this.lblPhoneNumber.TabIndex = 31;
             this.lblPhoneNumber.Text = "Phone Number:";
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(150, 352);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtAddress.Location = new System.Drawing.Point(75, 183);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(590, 31);
+            this.txtAddress.Size = new System.Drawing.Size(297, 20);
             this.txtAddress.TabIndex = 30;
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(150, 323);
-            this.lblAddress.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblAddress.Location = new System.Drawing.Point(75, 168);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(97, 25);
+            this.lblAddress.Size = new System.Drawing.Size(48, 13);
             this.lblAddress.TabIndex = 29;
             this.lblAddress.Text = "Address:";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(150, 525);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtEmail.Location = new System.Drawing.Point(75, 273);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(590, 31);
+            this.txtEmail.Size = new System.Drawing.Size(297, 20);
             this.txtEmail.TabIndex = 28;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(150, 496);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblEmail.Location = new System.Drawing.Point(75, 258);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(71, 25);
+            this.lblEmail.Size = new System.Drawing.Size(35, 13);
             this.lblEmail.TabIndex = 27;
             this.lblEmail.Text = "Email:";
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(468, 252);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtLastName.Location = new System.Drawing.Point(234, 131);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(272, 31);
+            this.txtLastName.Size = new System.Drawing.Size(138, 20);
             this.txtLastName.TabIndex = 26;
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(462, 223);
-            this.lblLastName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblLastName.Location = new System.Drawing.Point(231, 116);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(121, 25);
+            this.lblLastName.Size = new System.Drawing.Size(61, 13);
             this.lblLastName.TabIndex = 25;
             this.lblLastName.Text = "Last Name:";
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(150, 252);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtFirstName.Location = new System.Drawing.Point(75, 131);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(272, 31);
+            this.txtFirstName.Size = new System.Drawing.Size(138, 20);
             this.txtFirstName.TabIndex = 24;
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(144, 223);
-            this.lblFirstName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblFirstName.Location = new System.Drawing.Point(72, 116);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(122, 25);
+            this.lblFirstName.Size = new System.Drawing.Size(60, 13);
             this.lblFirstName.TabIndex = 23;
             this.lblFirstName.Text = "First Name:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(106, 142);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(53, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(689, 50);
+            this.label1.Size = new System.Drawing.Size(339, 26);
             this.label1.TabIndex = 22;
             this.label1.Text = "Please fill in the information below to make an account for a preofessor\r\nand rec" +
     "eive their instructor ID and temporary password to login.";
@@ -253,31 +222,39 @@
             // 
             // txtFax
             // 
-            this.txtFax.Location = new System.Drawing.Point(148, 615);
-            this.txtFax.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtFax.Location = new System.Drawing.Point(74, 320);
             this.txtFax.Name = "txtFax";
-            this.txtFax.Size = new System.Drawing.Size(590, 31);
+            this.txtFax.Size = new System.Drawing.Size(297, 20);
             this.txtFax.TabIndex = 43;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(148, 587);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Location = new System.Drawing.Point(74, 305);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 25);
+            this.label6.Size = new System.Drawing.Size(27, 13);
             this.label6.TabIndex = 42;
             this.label6.Text = "Fax:";
             // 
+            // btnDone
+            // 
+            this.btnDone.Location = new System.Drawing.Point(151, 565);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.Size = new System.Drawing.Size(142, 23);
+            this.btnDone.TabIndex = 44;
+            this.btnDone.Text = "Back to Registrar Actions";
+            this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AddProfessorForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 1177);
+            this.ClientSize = new System.Drawing.Size(444, 600);
+            this.Controls.Add(this.btnDone);
             this.Controls.Add(this.txtFax);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.btnDone);
             this.Controls.Add(this.lblTempPassword);
             this.Controls.Add(this.lblStudentID);
             this.Controls.Add(this.label5);
@@ -296,7 +273,6 @@
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "AddProfessorForm";
             this.Text = "AddProfessorForm";
             this.ResumeLayout(false);
@@ -307,7 +283,6 @@
         #endregion
 
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.Label lblTempPassword;
         private System.Windows.Forms.Label lblStudentID;
         private System.Windows.Forms.Label label5;
@@ -328,5 +303,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFax;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnDone;
     }
 }

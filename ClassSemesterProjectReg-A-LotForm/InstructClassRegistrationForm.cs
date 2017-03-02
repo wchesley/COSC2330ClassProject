@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ClassSemesterProjectReg_A_LotForm
 {
-    public partial class TeacherScheduleForm : Form
+    public partial class InstructClassRegistrationForm : Form
     {
-        public TeacherScheduleForm()
+        public InstructClassRegistrationForm()
         {
             InitializeComponent();
         }
