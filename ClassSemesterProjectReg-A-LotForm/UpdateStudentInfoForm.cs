@@ -7,19 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using COSC2330ClassProject;
 
 namespace ClassSemesterProjectReg_A_LotForm
 {
     public partial class UpdateStudentInfoForm : Form
     {
+        public Form previousForm { get; set; }
         public UpdateStudentInfoForm()
         {
             InitializeComponent();
         }
 
+        Student newStud = new Student(); 
+
         private void btnDone_Click(object sender, EventArgs e)
         {
-            // Should return to the previous form when the button is clicked
+            previousForm.Show();
+            this.Hide();
         }
 
         private void btnUpdateFirstName_Click(object sender, EventArgs e)  // The user updates their First name
@@ -29,6 +34,8 @@ namespace ClassSemesterProjectReg_A_LotForm
             double conFirstName;
             if ( !(double.TryParse(newFistName, out conFirstName)) && txtUpdateFirstName.Text != "" )
             {
+                
+                newStud.UpdateStudentNames(newFistName);
                 lblUpdateMessege.Text = "First name has been updated.";
             }
             else
@@ -45,6 +52,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             double conLastName;
             if ( !(double.TryParse(newLastName, out conLastName)) && txtUpdateLastName.Text != "" )
             {
+                newStud.UpdateStudentLastNames(newLastName);
                 lblUpdateMessege.Text = "Last name has been updated.";
             }
             else
@@ -56,9 +64,11 @@ namespace ClassSemesterProjectReg_A_LotForm
         private void btnUpdateAddress_Click(object sender, EventArgs e) // the user updates their address
         {
             //txtUpdateAddress
+            
             string newAddress = txtUpdateAddress.Text;
             if (txtUpdateAddress.Text != "")
             {
+                newStud.UpdateStudentAddress(newAddress);
                 lblUpdateMessege.Text = "Address has been updated.";
             }
             else
@@ -70,10 +80,12 @@ namespace ClassSemesterProjectReg_A_LotForm
         private void btnUpdatePhoneNumber_Click(object sender, EventArgs e) // the user updates their phone number
         {
             //txtUpdatePhoneNumber
+            
             string rawPhoneNumber = txtUpdatePhoneNumber.Text;
             int newPhoneNumber;
             if (int.TryParse(rawPhoneNumber, out newPhoneNumber) && txtUpdatePhoneNumber.Text != "")
             {
+                // newStud.UpdateStudentPhoneNumber(newPhoneNumber); //<-- Can't convert int to String
                 lblUpdateMessege.Text = "Phone number has been updated.";
             }
             else
@@ -88,6 +100,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             string newEmail = txtUpdateEmail.Text;
             if (txtUpdateEmail.Text != "")
             {
+                newStud.UpdateStudenEmail(newEmail);
                 lblUpdateMessege.Text = "Email has been updated.";
             }
             else

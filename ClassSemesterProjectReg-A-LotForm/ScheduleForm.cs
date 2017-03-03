@@ -12,6 +12,7 @@ namespace ClassSemesterProjectReg_A_LotForm
 {
     public partial class ScheduleForm : Form
     {
+        public Form previousForm { get; set; }
         public ScheduleForm()
         {
             InitializeComponent();
@@ -19,7 +20,9 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-
+            previousForm.Show();
+            this.Hide();
+         
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

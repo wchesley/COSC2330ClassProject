@@ -13,7 +13,11 @@ using COSC2330ClassProject; //Added reference to this dll in ClassSemesterProjec
 namespace ClassSemesterProjectReg_A_LotForm
 {
     public partial class ChangePasswordForm : Form
+
+        
     {
+        public Form PreviousForm { get; set; }
+
         AddUser resetPass = new AddUser(); 
         public ChangePasswordForm()
         {
@@ -24,15 +28,23 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             
             string Password = "";
+            string oldPassword = "";
 
-            if (txtOldPassword.Text != "" )
+            Professor newProf = new Professor();
+
+            //This should store the old password in the oldPassword variable. It doesn't. Idk why.
+            newProf.ReadProfessorPassword(oldPassword);
+
+            if (txtOldPassword.Text != "")
             {
                 if (txtNewPassword.Text != "" && txtNewPassword.Text != txtOldPassword.Text )
                 {
                     if (txtNewPassword.Text == txtNewPassword2.Text)
                     {
-                        Password = resetPass.HashPass(txtNewPassword2.Text); //Hashes password before storing it.
-                        
+                        /*Password = resetPass.HashPass(txtNewPassword2.Text);*/ //Hashes password before storing it.
+                        Password = txtNewPassword2.Text;
+                        //this shouls store the new password in the database. the code doesn't get that far because the reading of the old password doesn't work.
+                        newProf.ChangeProfessorPassword(Password);
                         // Store Password in database with the students info
                         lblPasswordUpdated.Text = "Password successfully updated.";
                     }
@@ -54,7 +66,8 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            PreviousForm.Show();
+            this.Hide();
         }
 
         private void lblPasswordUpdated_Click(object sender, EventArgs e)

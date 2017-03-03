@@ -21,69 +21,118 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             string courseName = txtCourseName.Text;
             string courseCode = txtCourseCode.Text;
+            string courseDepartment;
+            int courseTime;
             int conCourseCode;
-            // Course time, and Department are stored in Combobox. Do you think that would work?
+            int courseSection;
+            bool errorOccured = false;
             
-
             if (txtCourseName.Text != "")
             {
-                if (int.TryParse(courseCode, out conCourseCode) && txtCourseCode.Text != "")
+                //Store courseName in the database
+                txtCourseName.Text = courseName;
+                if (int.TryParse(courseCode, out conCourseCode) && txtCourseCode.Text != "" && conCourseCode >= 1000 && conCourseCode <= 9999)
                 {
-                    //if (ComboBox FOR TIME)
-                    //{
-                    //    if (ComboBox FOR DEPARTMENT)
-                    //    {
+                    if (cmbTimeSlot.Text == "8:00am -  9:00am" && cmbTimeSlot.Text != "")
+                    {
+                        courseTime = 800; // Store time in database
+                    }
+                    else if (cmbTimeSlot.Text == "9:30am - 10:30am" && cmbTimeSlot.Text != "")
+                    {
+                        courseTime = 930; // Store time in database
+                    }
+                    else if (cmbTimeSlot.Text == "11:00am - 12:30pm" && cmbTimeSlot.Text != "")
+                    {
+                        courseTime = 1100; // Store time in database
+                    }
+                    else if (cmbTimeSlot.Text == "1:00pm - 2:00pm" && cmbTimeSlot.Text != "")
+                    {
+                        courseTime = 1300; // Store time in database
+                    }
+                    else if (cmbTimeSlot.Text == "2:30pm - 3:30pm " && cmbTimeSlot.Text != "")
+                    {
+                        courseTime = 1530; // Store time in database
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please pick a time slot.");
+                        errorOccured = true;
+                    }
 
-                    //    }
-                    //    else
-                    //    {
+                    if (cmbSection.Text == "1" && cmbSection.Text != "")
+                    {
+                        courseSection = 1; // Store section in database
+                    }
+                    else if (cmbSection.Text == "2" && cmbSection.Text != "")
+                    {
+                        courseSection = 2; // Store section in database
+                    }
+                    else if (cmbSection.Text == "3" && cmbSection.Text != "")
+                    {
+                        courseSection = 3; // Store section in database
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please pick a section.");
+                        errorOccured = true;
+                    }
 
-                    //    }
-                    //}
-                    //else
-                    //{
+                        if (cmbDepartment.Text != "")
+                        {
+                            courseDepartment = cmbDepartment.Text;
 
-                    //}
+                        }
+
+                        else
+                        {
+                            MessageBox.Show("Please enter a course department.");
+                        errorOccured = true;
+                        }
+                    if (errorOccured != true && MessageBox.Show("The Course has been added, would you like to add another?", "Course Added", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        txtCourseName.Clear();
+                        txtCourseCode.Clear();
+                        
+                    }
+                    else
+                    {
+
+                    }
                 }
+                
                 else
                 {
-                    MessageBox.Show("Please enter a valid course code number.");
+                    MessageBox.Show("Please enter a 4 digit number for the course code.");
+                    errorOccured = true;
                 }
+
+                
             }
             else
             {
                 MessageBox.Show("Please enter a course name.");
+                errorOccured = true;
+            }
             }
 
-            if(MessageBox.Show("Would you like to add another course?", "Add Course", MessageBoxButtons.YesNo) == DialogResult.No)
-            {
-                //Return to RegistrarForm
-                RegistrarForm frm = new RegistrarForm();
-                frm.Show();
-                this.Hide();
-
-            }
-            else
-            {
-
-            }
-        }
-
-        private void btnDone_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Would you like to add another Course?", "Add Course", MessageBoxButtons.YesNo) == DialogResult.No)
-            {
-                //Return to RegistrarForm
 
+            if (MessageBox.Show("Are you done adding courses?", "Add Courses", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+
+            }
+            else
+            {
                 RegistrarForm frm = new RegistrarForm();
                 frm.Show();
                 this.Hide();
 
             }
-            else
-            {
-
-            }
+            
         }
     }
-}
+
+        
+        }
+ 

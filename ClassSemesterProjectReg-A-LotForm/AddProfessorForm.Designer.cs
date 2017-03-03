@@ -30,7 +30,7 @@
         {
             this.label8 = new System.Windows.Forms.Label();
             this.lblTempPassword = new System.Windows.Forms.Label();
-            this.lblStudentID = new System.Windows.Forms.Label();
+            this.lblProfessorID = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -71,14 +71,14 @@
             this.lblTempPassword.TabIndex = 39;
             this.lblTempPassword.Text = ". . .";
             // 
-            // lblStudentID
+            // lblProfessorID
             // 
-            this.lblStudentID.AutoSize = true;
-            this.lblStudentID.Location = new System.Drawing.Point(191, 459);
-            this.lblStudentID.Name = "lblStudentID";
-            this.lblStudentID.Size = new System.Drawing.Size(22, 13);
-            this.lblStudentID.TabIndex = 38;
-            this.lblStudentID.Text = ". . .";
+            this.lblProfessorID.AutoSize = true;
+            this.lblProfessorID.Location = new System.Drawing.Point(191, 459);
+            this.lblProfessorID.Name = "lblProfessorID";
+            this.lblProfessorID.Size = new System.Drawing.Size(22, 13);
+            this.lblProfessorID.TabIndex = 38;
+            this.lblProfessorID.Text = ". . .";
             // 
             // label5
             // 
@@ -256,7 +256,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblTempPassword);
-            this.Controls.Add(this.lblStudentID);
+            this.Controls.Add(this.lblProfessorID);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -284,7 +284,7 @@
 
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblTempPassword;
-        private System.Windows.Forms.Label lblStudentID;
+        private System.Windows.Forms.Label lblProfessorID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

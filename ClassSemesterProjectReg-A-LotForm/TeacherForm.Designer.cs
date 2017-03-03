@@ -249,6 +249,7 @@
             this.btnViewInstructionSchedule.TabIndex = 19;
             this.btnViewInstructionSchedule.Text = "View Instruction Schedule";
             this.btnViewInstructionSchedule.UseVisualStyleBackColor = true;
+            this.btnViewInstructionSchedule.Click += new System.EventHandler(this.btnViewInstructionSchedule_Click);
             // 
             // lnkChangePassword
             // 
@@ -269,6 +270,7 @@
             this.btnLogOut.TabIndex = 20;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // TeacherForm
             // 
