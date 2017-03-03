@@ -137,7 +137,6 @@
             this.lblProfilePhoneNumber.Size = new System.Drawing.Size(102, 13);
             this.lblProfilePhoneNumber.TabIndex = 9;
             this.lblProfilePhoneNumber.Text = "TempPhoneNumber";
-            
             // 
             // lblProfileAddress
             // 
@@ -156,6 +155,7 @@
             this.lblStudentProfileID.Size = new System.Drawing.Size(82, 13);
             this.lblStudentProfileID.TabIndex = 7;
             this.lblStudentProfileID.Text = "TempStudentID";
+            this.lblStudentProfileID.Click += new System.EventHandler(this.lblStudentProfileID_Click);
             // 
             // lblProfileName
             // 
@@ -244,6 +244,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "StudentForm";
             this.Text = "Student Profile";
+            this.Shown += new System.EventHandler(this.StudentForm_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfilePicture)).EndInit();
