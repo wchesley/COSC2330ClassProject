@@ -33,21 +33,5 @@ namespace ClassSemesterProjectReg_A_LotForm
             frm.Show();
             this.Hide();
         }
-
-        private void btnViewSchedule_Click(object sender, EventArgs e)
-        {
-            //Go to ScheduleForm
-            ScheduleForm frm = new ScheduleForm();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void btnRegisterForSections_Click(object sender, EventArgs e)
-        {
-            //Go to Rgister
-            CourseRegisterForm frm = new CourseRegisterForm();
-            frm.Show();
-            this.Hide();
-        }
     }
 }
