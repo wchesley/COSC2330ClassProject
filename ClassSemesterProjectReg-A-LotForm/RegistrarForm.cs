@@ -232,5 +232,10 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             throw new NotImplementedException();
         }
+
+        private void cmbSearchStudent_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
