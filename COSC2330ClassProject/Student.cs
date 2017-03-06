@@ -38,6 +38,11 @@ namespace COSC2330ClassProject
                     while (reader.Read())
                     {
                         name = reader.GetString(1) + " " + reader.GetString(2);
+                        address = reader.GetString(3);
+                        phoneNumber = reader.GetString(4);
+                        password = reader.GetString(5);
+                        email = reader.GetString(6);
+                        ID = reader.GetString(7);
                     }
                 }
             }
