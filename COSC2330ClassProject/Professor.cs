@@ -69,7 +69,7 @@ namespace COSC2330ClassProject
             connection.Open();
             using (SqlCommand readProfessorData = connection.CreateCommand())
             {
-                readProfessorData.CommandText = "select * from dbo.InstructorDatabase where PaddedID = '"+ theProfessor.CurrentProfesorID +"'";
+                readProfessorData.CommandText = "select * from dbo.InstructorDatabase where PaddedID = '"+ theProfessor.CurrentProfesorID.ToString() +"'";
                 using (SqlDataReader reader = readProfessorData.ExecuteReader())
                 {
                     while (reader.Read())
@@ -85,7 +85,7 @@ namespace COSC2330ClassProject
                     }
                 }
             }
-            MessageBox.Show(CurrentProfesorID);
+            MessageBox.Show(CurrentProfesorID.ToString());
         }
 
         //Currently Update only works on the Professor with ID of 1. When we get the login working I can update the code to update where Id = whoever is currently logged in.
@@ -101,7 +101,7 @@ namespace COSC2330ClassProject
             
             using(SqlCommand updateProfessorFirstName = connection.CreateCommand())
             {
-                updateProfessorFirstName.CommandText = "update dbo.InstructorDatabase set FirstName = '" + fName + "' where PaddedID = '"+ CurrentProfesorID +"'";
+                updateProfessorFirstName.CommandText = "update dbo.InstructorDatabase set FirstName = '" + fName + "' where PaddedID = '"+ CurrentProfesorID.ToString() +"'";
                 updateProfessorFirstName.ExecuteNonQuery();
             }
 

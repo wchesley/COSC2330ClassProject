@@ -11,7 +11,7 @@ namespace COSC2330ClassProject
 {
     public class Student
     {
-        public int CurrentStudentID { get; set; }
+        public string CurrentStudentID { get; set; }
         SqlConnection connection = new SqlConnection(); 
         public void PopulateStudentRecord(out string name, out string address, out string phoneNumber, out string password, 
             out string email, out string ID)
