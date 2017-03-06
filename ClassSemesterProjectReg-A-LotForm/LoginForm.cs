@@ -39,7 +39,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             {
                 if (txtPassword.Text != "") // if the password field is not empty
                 {
-                   if( loginCheck.VerifyLogin((string)txtID.Text, (string)txtPassword.Text) == true)  // checking userID and password against DB. needs testing, espically wiht paswords and numbers in passwords.
+                   if( loginCheck.VerifyLogin((string)txtID.Text, (string)txtPassword.Text) == true)  // checking userID and password against DB. needs testing, espically with paswords and numbers in passwords.
                     {
 
                         MessageBox.Show("Retreiving your data...");
