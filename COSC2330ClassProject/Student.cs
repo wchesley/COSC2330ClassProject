@@ -11,7 +11,7 @@ namespace COSC2330ClassProject
 {
     public class Student
     {
-        public int CurrentStudentID { get; set; }
+        public string CurrentStudentID { get; set; }
 
         public List<string> SelectStudentRecord()
         {

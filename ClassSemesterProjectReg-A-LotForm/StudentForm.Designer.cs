@@ -244,7 +244,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "StudentForm";
             this.Text = "Student Profile";
-            this.Shown += new System.EventHandler(this.StudentForm_Shown);
+            
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfilePicture)).EndInit();

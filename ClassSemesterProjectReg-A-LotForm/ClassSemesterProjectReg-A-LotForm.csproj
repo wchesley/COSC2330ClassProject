@@ -106,6 +106,7 @@
     <Compile Include="InstructorRegistrationform.Designer.cs">
       <DependentUpon>InstructorRegistrationform.cs</DependentUpon>
     </Compile>
+    <Compile Include="IStorableID.cs" />
     <Compile Include="IUpdateableForm.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>

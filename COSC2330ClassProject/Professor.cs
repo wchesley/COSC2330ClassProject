@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 using System.Data.SqlClient;
 using System.Data.Sql;
@@ -10,7 +11,7 @@ namespace COSC2330ClassProject
 {
     public class Professor
     {
-        public int CurrentProfesorID { get; set; }
+        public string CurrentProfesorID { get; set; }
 
 
 
@@ -21,6 +22,7 @@ namespace COSC2330ClassProject
             connection.Open();
 
             thePassword = "";
+            
             using (SqlCommand readProfessorData = connection.CreateCommand())
             {
                 readProfessorData.CommandText = "select * from dbo.InstructorDatabase where ID = 1";
@@ -52,7 +54,7 @@ namespace COSC2330ClassProject
         }
 
         public void PopulateProfessorProfileData(out string theName, out string theAddress, out string thePhoneNumber, 
-            out string thePassword, out string theEmail, out string theFax, out string theID)
+            out string thePassword, out string theEmail, out string theFax, out string theID, Professor theProfessor)
         {
             theName = "";
             theAddress = "";
@@ -67,7 +69,7 @@ namespace COSC2330ClassProject
             connection.Open();
             using (SqlCommand readProfessorData = connection.CreateCommand())
             {
-                readProfessorData.CommandText = "select * from dbo.InstructorDatabase where ID = 1";
+                readProfessorData.CommandText = "select * from dbo.InstructorDatabase where PaddedID = '"+ theProfessor.CurrentProfesorID +"'";
                 using (SqlDataReader reader = readProfessorData.ExecuteReader())
                 {
                     while (reader.Read())
@@ -83,6 +85,7 @@ namespace COSC2330ClassProject
                     }
                 }
             }
+            MessageBox.Show(CurrentProfesorID);
         }
 
         //Currently Update only works on the Professor with ID of 1. When we get the login working I can update the code to update where Id = whoever is currently logged in.
@@ -93,10 +96,12 @@ namespace COSC2330ClassProject
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
             connection.Open();
-           
+
+            fName = "";
+            
             using(SqlCommand updateProfessorFirstName = connection.CreateCommand())
             {
-                updateProfessorFirstName.CommandText = "update dbo.InstructorDatabase set FirstName = '" + fName + "' where ID = 1";
+                updateProfessorFirstName.CommandText = "update dbo.InstructorDatabase set FirstName = '" + fName + "' where PaddedID = '"+ CurrentProfesorID +"'";
                 updateProfessorFirstName.ExecuteNonQuery();
             }
 

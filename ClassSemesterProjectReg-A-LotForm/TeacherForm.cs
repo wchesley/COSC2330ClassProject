@@ -30,7 +30,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             string currentFax = "";
             Professor newProf = new Professor();
             newProf.PopulateProfessorProfileData(out currentName, out currentAddress, out currentPhoneNumber, out currentPassword,
-                out currentEmail, out currentFax, out currentID);
+                out currentEmail, out currentFax, out currentID, newProf);
 
             lblTeacherProfileName.Text = currentName;
             lblTeacherProfileID.Text = currentID.ToString();

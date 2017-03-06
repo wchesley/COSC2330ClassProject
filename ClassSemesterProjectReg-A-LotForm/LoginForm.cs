@@ -41,7 +41,10 @@ namespace ClassSemesterProjectReg_A_LotForm
                 {
                    if( loginCheck.VerifyLogin((string)txtID.Text, (string)txtPassword.Text) == true)  // checking userID and password against DB. needs testing, espically wiht paswords and numbers in passwords.
                     {
-                        MessageBox.Show("Retreiving your data..."); 
+
+                        MessageBox.Show("Retreiving your data...");
+                        this.Hide();
+                       
                     }
 
                 }

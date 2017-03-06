@@ -6,7 +6,9 @@ using System.Security.Cryptography;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Data; 
-using System.Windows.Forms; 
+using System.Windows.Forms;
+
+using ClassSemesterProjectReg_A_LotForm;
 
 namespace COSC2330ClassProject
 {
@@ -54,7 +56,14 @@ namespace COSC2330ClassProject
                     exists = reader.HasRows;
                     if (exists == true)
                     {
-                        MessageBox.Show("Login Validated"); 
+                        Student newStud = new Student();
+                        newStud.CurrentStudentID = userID;
+                        MessageBox.Show("Login Validated");
+
+                        StudentForm frm = new StudentForm();
+                        frm.Show();
+
+                        
                     }
                     else
                     {
@@ -69,7 +78,13 @@ namespace COSC2330ClassProject
                             exists = ProfReader.HasRows;
                             if(exists == true)
                             {
+                                Professor newProf = new Professor();
+                                newProf.CurrentProfesorID = userID;
                                 MessageBox.Show("Instructor login validated");
+                                TeacherForm frm = new TeacherForm();
+                                frm.Show();
+                                
+                                
                                 //I think login is working, need to test further by actually pulling up data from the DB
                                 
                             }
