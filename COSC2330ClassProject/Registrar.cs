@@ -61,7 +61,7 @@ namespace COSC2330ClassProject
                 }
                 finally
                 {
-                    MessageBox.Show(fName + " " + lName + " was added successfully!");
+                    //MessageBox.Show(fName + " " + lName + " was added successfully!");
                     connection.Close();
                 }
 

@@ -99,7 +99,7 @@
             this.btnAddCourse.Location = new System.Drawing.Point(149, 188);
             this.btnAddCourse.Name = "btnAddCourse";
             this.btnAddCourse.Size = new System.Drawing.Size(75, 23);
-            this.btnAddCourse.TabIndex = 10;
+            this.btnAddCourse.TabIndex = 14;
             this.btnAddCourse.Text = "Add Course";
             this.btnAddCourse.UseVisualStyleBackColor = true;
             this.btnAddCourse.Click += new System.EventHandler(this.btnAddCourse_Click);
@@ -175,7 +175,7 @@
             this.btnBack.Location = new System.Drawing.Point(231, 188);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 14;
+            this.btnBack.TabIndex = 15;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -192,7 +192,7 @@
             this.cmbSection.Location = new System.Drawing.Point(108, 101);
             this.cmbSection.Name = "cmbSection";
             this.cmbSection.Size = new System.Drawing.Size(208, 21);
-            this.cmbSection.TabIndex = 16;
+            this.cmbSection.TabIndex = 7;
             // 
             // label3
             // 

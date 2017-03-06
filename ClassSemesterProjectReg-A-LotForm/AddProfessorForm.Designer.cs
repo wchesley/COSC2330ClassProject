@@ -134,7 +134,7 @@
             this.txtPhoneNumber.Location = new System.Drawing.Point(75, 231);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(297, 20);
-            this.txtPhoneNumber.TabIndex = 32;
+            this.txtPhoneNumber.TabIndex = 27;
             // 
             // lblPhoneNumber
             // 
@@ -150,7 +150,7 @@
             this.txtAddress.Location = new System.Drawing.Point(75, 183);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(297, 20);
-            this.txtAddress.TabIndex = 30;
+            this.txtAddress.TabIndex = 26;
             // 
             // lblAddress
             // 
@@ -182,7 +182,7 @@
             this.txtLastName.Location = new System.Drawing.Point(234, 131);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(138, 20);
-            this.txtLastName.TabIndex = 26;
+            this.txtLastName.TabIndex = 25;
             // 
             // lblLastName
             // 
@@ -225,7 +225,7 @@
             this.txtFax.Location = new System.Drawing.Point(74, 320);
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(297, 20);
-            this.txtFax.TabIndex = 43;
+            this.txtFax.TabIndex = 29;
             // 
             // label6
             // 

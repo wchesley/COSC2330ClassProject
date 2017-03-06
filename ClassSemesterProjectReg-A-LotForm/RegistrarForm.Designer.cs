@@ -29,31 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.dataGridProfessors = new System.Windows.Forms.TabControl();
             this.tabManageCourses = new System.Windows.Forms.TabPage();
-            this.txtBoxUserSearch = new System.Windows.Forms.TextBox();
-            this.cmbSearchCourse = new System.Windows.Forms.ComboBox();
-            this.btnSearchCourse = new System.Windows.Forms.Button();
-            this.btnRemoveCourse = new System.Windows.Forms.Button();
-            this.btnAddCourse = new System.Windows.Forms.Button();
-            this.tabManageProfessors = new System.Windows.Forms.TabPage();
-            this.txtUserSearchProfessor = new System.Windows.Forms.TextBox();
-            this.cmbSearchProfessor = new System.Windows.Forms.ComboBox();
-            this.btnSearchProfessor = new System.Windows.Forms.Button();
-            this.btnUpdateProfessor = new System.Windows.Forms.Button();
-            this.btnRemoveProfessor = new System.Windows.Forms.Button();
-            this.btnAddProfessor = new System.Windows.Forms.Button();
-            this.tabManageStudents = new System.Windows.Forms.TabPage();
-            this.txtUserSearchStudent = new System.Windows.Forms.TextBox();
-            this.cmbSearchStudent = new System.Windows.Forms.ComboBox();
-            this.btnSearchStudent = new System.Windows.Forms.Button();
-            this.btnUpdateStudent = new System.Windows.Forms.Button();
-            this.btnRemoveStudent = new System.Windows.Forms.Button();
-            this.btnAddStudent = new System.Windows.Forms.Button();
-            this.btnLogOut = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridCourse = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +40,13 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtBoxUserSearch = new System.Windows.Forms.TextBox();
+            this.cmbSearchCourse = new System.Windows.Forms.ComboBox();
+            this.btnSearchCourse = new System.Windows.Forms.Button();
+            this.btnRemoveCourse = new System.Windows.Forms.Button();
+            this.btnAddCourse = new System.Windows.Forms.Button();
+            this.tabManageProfessors = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +55,14 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtUserSearchProfessor = new System.Windows.Forms.TextBox();
+            this.cmbSearchProfessor = new System.Windows.Forms.ComboBox();
+            this.btnSearchProfessor = new System.Windows.Forms.Button();
+            this.btnUpdateProfessor = new System.Windows.Forms.Button();
+            this.btnRemoveProfessor = new System.Windows.Forms.Button();
+            this.btnAddProfessor = new System.Windows.Forms.Button();
+            this.tabManageStudents = new System.Windows.Forms.TabPage();
+            this.dataGridStudent = new System.Windows.Forms.DataGridView();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,13 +70,20 @@
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabControl1.SuspendLayout();
+            this.txtUserSearchStudent = new System.Windows.Forms.TextBox();
+            this.cmbSearchStudent = new System.Windows.Forms.ComboBox();
+            this.btnSearchStudent = new System.Windows.Forms.Button();
+            this.btnUpdateStudent = new System.Windows.Forms.Button();
+            this.btnRemoveStudent = new System.Windows.Forms.Button();
+            this.btnAddStudent = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.dataGridProfessors.SuspendLayout();
             this.tabManageCourses.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCourse)).BeginInit();
             this.tabManageProfessors.SuspendLayout();
-            this.tabManageStudents.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tabManageStudents.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridStudent)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -96,20 +96,20 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Registrar Actions";
             // 
-            // tabControl1
+            // dataGridProfessors
             // 
-            this.tabControl1.Controls.Add(this.tabManageCourses);
-            this.tabControl1.Controls.Add(this.tabManageProfessors);
-            this.tabControl1.Controls.Add(this.tabManageStudents);
-            this.tabControl1.Location = new System.Drawing.Point(29, 54);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(866, 468);
-            this.tabControl1.TabIndex = 21;
+            this.dataGridProfessors.Controls.Add(this.tabManageCourses);
+            this.dataGridProfessors.Controls.Add(this.tabManageProfessors);
+            this.dataGridProfessors.Controls.Add(this.tabManageStudents);
+            this.dataGridProfessors.Location = new System.Drawing.Point(29, 54);
+            this.dataGridProfessors.Name = "dataGridProfessors";
+            this.dataGridProfessors.SelectedIndex = 0;
+            this.dataGridProfessors.Size = new System.Drawing.Size(866, 468);
+            this.dataGridProfessors.TabIndex = 21;
             // 
             // tabManageCourses
             // 
-            this.tabManageCourses.Controls.Add(this.dataGridView2);
+            this.tabManageCourses.Controls.Add(this.dataGridCourse);
             this.tabManageCourses.Controls.Add(this.txtBoxUserSearch);
             this.tabManageCourses.Controls.Add(this.cmbSearchCourse);
             this.tabManageCourses.Controls.Add(this.btnSearchCourse);
@@ -122,6 +122,63 @@
             this.tabManageCourses.TabIndex = 0;
             this.tabManageCourses.Text = "Manage Courses";
             this.tabManageCourses.UseVisualStyleBackColor = true;
+            // 
+            // dataGridCourse
+            // 
+            this.dataGridCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCourse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.Column9});
+            this.dataGridCourse.Location = new System.Drawing.Point(6, 6);
+            this.dataGridCourse.Name = "dataGridCourse";
+            this.dataGridCourse.Size = new System.Drawing.Size(843, 359);
+            this.dataGridCourse.TabIndex = 49;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Course ID #";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Section";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Professor";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Department";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Time";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "Capacity";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Select";
+            this.Column9.Name = "Column9";
             // 
             // txtBoxUserSearch
             // 
@@ -190,6 +247,63 @@
             this.tabManageProfessors.Text = "Manage Professors";
             this.tabManageProfessors.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column7,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column10});
+            this.dataGridView1.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(846, 359);
+            this.dataGridView1.TabIndex = 23;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Instructor ID #";
+            this.Column7.Name = "Column7";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "First Name";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Last Name";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Address";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Phone #";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Email";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Fax";
+            this.Column6.Name = "Column6";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Select";
+            this.Column10.Name = "Column10";
+            // 
             // txtUserSearchProfessor
             // 
             this.txtUserSearchProfessor.Location = new System.Drawing.Point(245, 410);
@@ -251,7 +365,7 @@
             // 
             // tabManageStudents
             // 
-            this.tabManageStudents.Controls.Add(this.dataGridView3);
+            this.tabManageStudents.Controls.Add(this.dataGridStudent);
             this.tabManageStudents.Controls.Add(this.txtUserSearchStudent);
             this.tabManageStudents.Controls.Add(this.cmbSearchStudent);
             this.tabManageStudents.Controls.Add(this.btnSearchStudent);
@@ -265,6 +379,57 @@
             this.tabManageStudents.TabIndex = 2;
             this.tabManageStudents.Text = "Manage Students";
             this.tabManageStudents.UseVisualStyleBackColor = true;
+            // 
+            // dataGridStudent
+            // 
+            this.dataGridStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column8,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.Column11});
+            this.dataGridStudent.Location = new System.Drawing.Point(6, 6);
+            this.dataGridStudent.Name = "dataGridStudent";
+            this.dataGridStudent.Size = new System.Drawing.Size(846, 359);
+            this.dataGridStudent.TabIndex = 24;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Student ID #";
+            this.Column8.Name = "Column8";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "First Name";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "Last Name";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "Address";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "Phone #";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Select";
+            this.Column11.Name = "Column11";
             // 
             // txtUserSearchStudent
             // 
@@ -327,7 +492,7 @@
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(425, 557);
+            this.btnLogOut.Location = new System.Drawing.Point(816, 528);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(75, 23);
             this.btnLogOut.TabIndex = 20;
@@ -335,191 +500,26 @@
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.Column9});
-            this.dataGridView2.Location = new System.Drawing.Point(6, 6);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(843, 359);
-            this.dataGridView2.TabIndex = 49;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column7,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column10});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(846, 359);
-            this.dataGridView1.TabIndex = 23;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column8,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.Column11});
-            this.dataGridView3.Location = new System.Drawing.Point(6, 6);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(846, 359);
-            this.dataGridView3.TabIndex = 24;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Course ID #";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Section";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Professor";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Department";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Time";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Capacity";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Select";
-            this.Column9.Name = "Column9";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Instructor ID #";
-            this.Column7.Name = "Column7";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "First Name";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Last Name";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Address";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Phone #";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Email";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Fax";
-            this.Column6.Name = "Column6";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Select";
-            this.Column10.Name = "Column10";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Student ID #";
-            this.Column8.Name = "Column8";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "First Name";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Last Name";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Address";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Phone #";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Select";
-            this.Column11.Name = "Column11";
-            // 
             // RegistrarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 592);
+            this.ClientSize = new System.Drawing.Size(924, 563);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.dataGridProfessors);
             this.Controls.Add(this.btnLogOut);
             this.Name = "RegistrarForm";
             this.Text = "Registrar Actions";
-            this.tabControl1.ResumeLayout(false);
+            this.dataGridProfessors.ResumeLayout(false);
             this.tabManageCourses.ResumeLayout(false);
             this.tabManageCourses.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCourse)).EndInit();
             this.tabManageProfessors.ResumeLayout(false);
             this.tabManageProfessors.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabManageStudents.ResumeLayout(false);
             this.tabManageStudents.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridStudent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -528,7 +528,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl dataGridProfessors;
         private System.Windows.Forms.TabPage tabManageCourses;
         private System.Windows.Forms.Button btnSearchCourse;
         private System.Windows.Forms.Button btnRemoveCourse;
@@ -550,9 +550,9 @@
         private System.Windows.Forms.TextBox txtBoxUserSearch;
         private System.Windows.Forms.TextBox txtUserSearchProfessor;
         private System.Windows.Forms.TextBox txtUserSearchStudent;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridCourse;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dataGridStudent;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
