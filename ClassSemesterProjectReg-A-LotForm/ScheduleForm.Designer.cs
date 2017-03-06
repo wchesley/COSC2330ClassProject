@@ -144,6 +144,7 @@
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "ScheduleForm";
             this.Text = "Course Schedule";
+            
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
