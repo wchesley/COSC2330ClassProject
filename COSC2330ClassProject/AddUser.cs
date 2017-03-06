@@ -10,8 +10,7 @@ using System.Windows.Forms;
 
 namespace COSC2330ClassProject
 {
-    public class AddUser //Might have Registrar inherit or use this class and then they can add admin and professor
-        //accounts from there. just at thought. 
+    public class AddUser  
     {
 
         public string HashPass(string password) // tested; hashing is consistant 
@@ -47,7 +46,7 @@ namespace COSC2330ClassProject
                 {
                     readAllStudents.CommandText = "SELECT paddedID, password FROM Project1.dbo.StudentDatabase WHERE paddedID= @ID AND Password = @Password";
                 
-                    readAllStudents.Parameters.Add("@ID", SqlDbType.Int).Value = Convert.ToInt32(userID);
+                    readAllStudents.Parameters.Add("@ID", SqlDbType.Int).Value = Convert.ToInt32(userID); // Assigns the @ID param in the readAllStudents call. also converts it the SQL data type.
                     readAllStudents.Parameters.Add("@Password", SqlDbType.VarChar, 50).Value = pass; 
                     connection.Open();
                 using (SqlDataReader reader = readAllStudents.ExecuteReader()) 
@@ -59,10 +58,11 @@ namespace COSC2330ClassProject
                     }
                     else
                     {
-                        readAllStudents.CommandText = "SELECT paddedID, password FROM Project1.dbo.InstructorDatabase WHERE paddedID= @ID AND Password = @Password";
+                        connection.Close(); // if student login fails, check instructor, this is closing the student DB so we can open the instructor. 
+                        readAllStudents.CommandText = "SELECT paddedID, password FROM Project1.dbo.InstructorDatabase WHERE paddedID= @ProfID AND Password = @ProfPassword";
 
-                        readAllStudents.Parameters.Add("@ID", SqlDbType.Int).Value = Convert.ToInt32(userID);
-                        readAllStudents.Parameters.Add("@Password", SqlDbType.VarChar, 50).Value = pass;
+                        readAllStudents.Parameters.Add("@ProfID", SqlDbType.Int).Value = Convert.ToInt32(userID);  
+                        readAllStudents.Parameters.Add("@ProfPassword", SqlDbType.VarChar, 50).Value = pass;
                         connection.Open();
                         using (SqlDataReader ProfReader = readAllStudents.ExecuteReader())
                         {
