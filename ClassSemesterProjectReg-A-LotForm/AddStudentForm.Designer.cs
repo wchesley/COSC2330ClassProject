@@ -122,7 +122,7 @@
             this.btnAddStudent.Location = new System.Drawing.Point(155, 317);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(137, 23);
-            this.btnAddStudent.TabIndex = 55;
+            this.btnAddStudent.TabIndex = 52;
             this.btnAddStudent.Text = "Create Student";
             this.btnAddStudent.UseVisualStyleBackColor = true;
             this.btnAddStudent.Click += new System.EventHandler(this.btnCreateAccount_Click);
@@ -132,7 +132,7 @@
             this.txtPhoneNumber.Location = new System.Drawing.Point(75, 226);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(297, 20);
-            this.txtPhoneNumber.TabIndex = 54;
+            this.txtPhoneNumber.TabIndex = 50;
             // 
             // lblPhoneNumber
             // 
@@ -148,7 +148,7 @@
             this.txtAddress.Location = new System.Drawing.Point(75, 178);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(297, 20);
-            this.txtAddress.TabIndex = 52;
+            this.txtAddress.TabIndex = 48;
             // 
             // lblAddress
             // 
@@ -164,7 +164,7 @@
             this.txtEmail.Location = new System.Drawing.Point(75, 268);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(297, 20);
-            this.txtEmail.TabIndex = 50;
+            this.txtEmail.TabIndex = 51;
             // 
             // lblEmail
             // 
@@ -180,7 +180,7 @@
             this.txtLastName.Location = new System.Drawing.Point(234, 126);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(138, 20);
-            this.txtLastName.TabIndex = 48;
+            this.txtLastName.TabIndex = 47;
             // 
             // lblLastName
             // 

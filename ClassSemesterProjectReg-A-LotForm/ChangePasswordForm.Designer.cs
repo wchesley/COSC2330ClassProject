@@ -96,7 +96,7 @@
             this.btnChangePassword.Location = new System.Drawing.Point(178, 206);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(119, 23);
-            this.btnChangePassword.TabIndex = 6;
+            this.btnChangePassword.TabIndex = 7;
             this.btnChangePassword.Text = "Change Password";
             this.btnChangePassword.UseVisualStyleBackColor = true;
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
@@ -116,7 +116,7 @@
             this.btnCancel.Location = new System.Drawing.Point(34, 206);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(119, 23);
-            this.btnCancel.TabIndex = 9;
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.button1_Click);

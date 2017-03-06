@@ -107,7 +107,7 @@
             this.txtEmail.Location = new System.Drawing.Point(73, 262);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(297, 20);
-            this.txtEmail.TabIndex = 6;
+            this.txtEmail.TabIndex = 7;
             // 
             // lblAddress
             // 
@@ -123,7 +123,7 @@
             this.txtAddress.Location = new System.Drawing.Point(73, 172);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(297, 20);
-            this.txtAddress.TabIndex = 10;
+            this.txtAddress.TabIndex = 5;
             // 
             // lblPhoneNumber
             // 
@@ -139,7 +139,7 @@
             this.txtPhoneNumber.Location = new System.Drawing.Point(73, 220);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(297, 20);
-            this.txtPhoneNumber.TabIndex = 12;
+            this.txtPhoneNumber.TabIndex = 6;
             // 
             // btnCreateAccount
             // 

@@ -237,7 +237,7 @@
             this.btnPickCoursesToTeach.Location = new System.Drawing.Point(286, 323);
             this.btnPickCoursesToTeach.Name = "btnPickCoursesToTeach";
             this.btnPickCoursesToTeach.Size = new System.Drawing.Size(158, 52);
-            this.btnPickCoursesToTeach.TabIndex = 18;
+            this.btnPickCoursesToTeach.TabIndex = 20;
             this.btnPickCoursesToTeach.Text = "Register to \r\nInstruct Sections";
             this.btnPickCoursesToTeach.UseVisualStyleBackColor = true;
             // 
@@ -267,7 +267,7 @@
             this.btnLogOut.Location = new System.Drawing.Point(454, 208);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(75, 23);
-            this.btnLogOut.TabIndex = 20;
+            this.btnLogOut.TabIndex = 21;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);

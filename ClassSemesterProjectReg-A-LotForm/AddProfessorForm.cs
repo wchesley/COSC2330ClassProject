@@ -69,6 +69,7 @@ namespace ClassSemesterProjectReg_A_LotForm
                             address = txtAddress.Text;
                             rawphonenumber = txtPhoneNumber.Text;
                             userFax = txtFax.Text;
+                            errorOccured = false;
 
                             if (errorOccured != true && MessageBox.Show("The Professor has been added, would you like to add another?", "Professor Added", MessageBoxButtons.YesNo) == DialogResult.Yes)
                                     {
