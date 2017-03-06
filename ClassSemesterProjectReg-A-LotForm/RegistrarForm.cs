@@ -108,7 +108,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             else if (cmbSearchCourse.Text == "By Course Name" && txtBoxUserSearch.Text != "")
             {
                 //Query over Course database by Course name
-                // Display course that match what the user put in. userSearch
+                // Display course that match what the user put in into the Datagrid. userSearch
 
             }
             else if (cmbSearchCourse.Text == "By Professor" && txtBoxUserSearch.Text != "")

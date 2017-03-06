@@ -63,14 +63,14 @@ namespace ClassSemesterProjectReg_A_LotForm
 
 
                             //registrar.AddProfessor(txtFirstName.Text, txtLastName.Text, txtAddress.Text, txtPhoneNumber.Text, txtFax.Text); 
-                           
+                            registrar.AddProfessor(rawFirstName, rawLastName, address, rawphonenumber, userFax);
                             rawFirstName = txtFirstName.Text;
                             rawLastName = txtLastName.Text;
                             address = txtAddress.Text;
                             rawphonenumber = txtPhoneNumber.Text;
                             userFax = txtFax.Text;
-                            string email = txtEmail.Text; 
-                            registrar.AddProfessor(rawFirstName, rawLastName, address, rawphonenumber, email, userFax);
+                            errorOccured = false;
+
                             if (errorOccured != true && MessageBox.Show("The Professor has been added, would you like to add another?", "Professor Added", MessageBoxButtons.YesNo) == DialogResult.Yes)
                                     {
                                         txtFirstName.Clear();
