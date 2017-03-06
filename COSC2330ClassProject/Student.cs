@@ -13,6 +13,40 @@ namespace COSC2330ClassProject
     {
         public int CurrentStudentID { get; set; }
 
+        public List<string> SelectStudentRecord()
+        {
+            List<string> studentRecord = new List<string>();
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
+            connection.Open();
+
+            using (SqlCommand readAllProfessorRecords = connection.CreateCommand())
+
+                //This code will select what ever the current student ID is.
+            {
+                readAllProfessorRecords.CommandText = string.Format("SELECT * FROM [dbo].[StudentDatabase] WHERE ID='{0}';", CurrentStudentID);
+
+                using (SqlDataReader reader = readAllProfessorRecords.ExecuteReader())
+                {         
+                    while (reader.Read())
+                    {
+                        for (int i = 0; i <= 7; i++)
+                        {
+                            if (i == 0)
+                                studentRecord.Add(reader.GetInt32(i).ToString());
+                            else
+                                                     
+                           studentRecord.Add(reader.GetString(i));
+                            
+                        }
+                    }
+                }
+            }
+
+
+            connection.Close();
+            return studentRecord;
+        }
         public void UpdateStudentNames(string fname)
         {
 

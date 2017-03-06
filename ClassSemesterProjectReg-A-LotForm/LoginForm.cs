@@ -39,10 +39,10 @@ namespace ClassSemesterProjectReg_A_LotForm
             {
                 if (txtPassword.Text != "") // if the password field is not empty
                 {
-                    loginCheck.VerifyLogin((string)txtID.Text, (string)txtPassword.Text); // checking userID and password against DB. needs testing, espically wiht paswords and numbers in passwords.
-                    //will check DB and match ID and pass that way, loops through each DB to check ID && pass. 
-                    // Identify student / Professor / Registrar login code
-                    // open up apprropriate form: RegistrarForm / StudentForm or TeacherForm
+                   if( loginCheck.VerifyLogin((string)txtID.Text, (string)txtPassword.Text) == true)  // checking userID and password against DB. needs testing, espically wiht paswords and numbers in passwords.
+                    {
+                        MessageBox.Show("Retreiving your data..."); 
+                    }
 
                 }
                 else
