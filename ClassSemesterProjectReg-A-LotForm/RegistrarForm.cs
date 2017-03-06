@@ -237,5 +237,20 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
 
         }
+
+        private void tblCourseData_Paint(object sender, PaintEventArgs e)
+        {
+            // populate Course data here
+        }
+
+        private void tblProfessorData_Paint(object sender, PaintEventArgs e)
+        {
+            // populate professor data here
+        }
+
+        private void tblStudentData_Paint(object sender, PaintEventArgs e)
+        {
+            // populate student data here
+        }
     }
 }

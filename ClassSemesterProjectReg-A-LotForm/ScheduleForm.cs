@@ -36,5 +36,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             frm.Show();
             this.Hide();
         }
+
+       
     }
 }
