@@ -15,7 +15,7 @@ namespace COSC2330ClassProject
     {
 
         public string HashPass(string password) // tested; hashing is consistant 
-        {
+        {  //might just remove this function due to time constrants. 
             SHA256 sha = new SHA256CryptoServiceProvider();
             sha.ComputeHash(ASCIIEncoding.ASCII.GetBytes(password)); //compute hash from text entered
             byte[] result = sha.Hash; // store the hash result
@@ -29,7 +29,7 @@ namespace COSC2330ClassProject
             
         }
         
-        public void VerifyLogin(string userID, string pass)
+        public bool VerifyLogin(string userID, string pass)
         {
             // search DB for UserID
             // if UserID == null
@@ -38,7 +38,7 @@ namespace COSC2330ClassProject
             //agains the one we have stored in the DB
             // if they match, then go to student or professor profile page
             //else login failed, password incorrect.
-           
+            bool exists; 
             SqlConnection connection = new SqlConnection();
             connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
             
@@ -52,10 +52,10 @@ namespace COSC2330ClassProject
                     connection.Open();
                 using (SqlDataReader reader = readAllStudents.ExecuteReader()) 
                 {
-                    bool exists = reader.HasRows;
+                    exists = reader.HasRows;
                     if (exists == true)
                     {
-                        // load relative student profile page
+                        MessageBox.Show("Login Validated"); 
                     }
                     else
                     {
@@ -69,20 +69,24 @@ namespace COSC2330ClassProject
                             exists = ProfReader.HasRows;
                             if(exists == true)
                             {
-                                // load profesor information
+                                MessageBox.Show("Instructor login validated");
+                                //I think login is working, need to test further by actually pulling up data from the DB
+                                
                             }
                             else
                             {
                                 MessageBox.Show("Invalid User ID or Password, Please try again. "); 
                             }
+                            connection.Close();
+                            
                         }
                     }
                      
                 }
-                
-                    
-                
-                }
+                return exists; 
+               
+
+            }
 
             
 
