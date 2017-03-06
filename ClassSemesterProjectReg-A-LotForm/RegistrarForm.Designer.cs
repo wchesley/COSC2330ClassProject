@@ -104,7 +104,7 @@
             this.tabControl1.Controls.Add(this.tabManageProfessors);
             this.tabControl1.Controls.Add(this.tabManageStudents);
             this.tabControl1.Location = new System.Drawing.Point(68, 120);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(7);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1108, 1044);
@@ -119,9 +119,9 @@
             this.tabManageCourses.Controls.Add(this.btnAddCourse);
             this.tabManageCourses.Controls.Add(this.tblCourseData);
             this.tabManageCourses.Location = new System.Drawing.Point(10, 47);
-            this.tabManageCourses.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tabManageCourses.Margin = new System.Windows.Forms.Padding(7);
             this.tabManageCourses.Name = "tabManageCourses";
-            this.tabManageCourses.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tabManageCourses.Padding = new System.Windows.Forms.Padding(7);
             this.tabManageCourses.Size = new System.Drawing.Size(1088, 987);
             this.tabManageCourses.TabIndex = 0;
             this.tabManageCourses.Text = "Manage Courses";
@@ -130,7 +130,7 @@
             // txtBoxUserSearch
             // 
             this.txtBoxUserSearch.Location = new System.Drawing.Point(572, 915);
-            this.txtBoxUserSearch.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.txtBoxUserSearch.Margin = new System.Windows.Forms.Padding(7);
             this.txtBoxUserSearch.Name = "txtBoxUserSearch";
             this.txtBoxUserSearch.Size = new System.Drawing.Size(228, 35);
             this.txtBoxUserSearch.TabIndex = 26;
@@ -146,7 +146,7 @@
             "By Department",
             "Reset table"});
             this.cmbSearchCourse.Location = new System.Drawing.Point(819, 915);
-            this.cmbSearchCourse.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.cmbSearchCourse.Margin = new System.Windows.Forms.Padding(7);
             this.cmbSearchCourse.Name = "cmbSearchCourse";
             this.cmbSearchCourse.Size = new System.Drawing.Size(249, 37);
             this.cmbSearchCourse.TabIndex = 25;
@@ -154,7 +154,7 @@
             // btnSearchCourse
             // 
             this.btnSearchCourse.Location = new System.Drawing.Point(819, 828);
-            this.btnSearchCourse.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.btnSearchCourse.Margin = new System.Windows.Forms.Padding(7);
             this.btnSearchCourse.Name = "btnSearchCourse";
             this.btnSearchCourse.Size = new System.Drawing.Size(254, 71);
             this.btnSearchCourse.TabIndex = 3;
@@ -165,7 +165,7 @@
             // btnRemoveCourse
             // 
             this.btnRemoveCourse.Location = new System.Drawing.Point(285, 828);
-            this.btnRemoveCourse.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.btnRemoveCourse.Margin = new System.Windows.Forms.Padding(7);
             this.btnRemoveCourse.Name = "btnRemoveCourse";
             this.btnRemoveCourse.Size = new System.Drawing.Size(254, 71);
             this.btnRemoveCourse.TabIndex = 2;
@@ -176,7 +176,7 @@
             // btnAddCourse
             // 
             this.btnAddCourse.Location = new System.Drawing.Point(16, 828);
-            this.btnAddCourse.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.btnAddCourse.Margin = new System.Windows.Forms.Padding(7);
             this.btnAddCourse.Name = "btnAddCourse";
             this.btnAddCourse.Size = new System.Drawing.Size(254, 71);
             this.btnAddCourse.TabIndex = 1;
@@ -205,13 +205,14 @@
             this.tblCourseData.Controls.Add(this.label7, 2, 0);
             this.tblCourseData.Controls.Add(this.label23, 1, 1);
             this.tblCourseData.Location = new System.Drawing.Point(14, 13);
-            this.tblCourseData.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tblCourseData.Margin = new System.Windows.Forms.Padding(7);
             this.tblCourseData.Name = "tblCourseData";
             this.tblCourseData.RowCount = 2;
             this.tblCourseData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.73259F));
             this.tblCourseData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.26741F));
             this.tblCourseData.Size = new System.Drawing.Size(1059, 801);
             this.tblCourseData.TabIndex = 0;
+            this.tblCourseData.Paint += new System.Windows.Forms.PaintEventHandler(this.tblCourseData_Paint);
             // 
             // label8
             // 
@@ -313,9 +314,9 @@
             this.tabManageProfessors.Controls.Add(this.btnRemoveProfessor);
             this.tabManageProfessors.Controls.Add(this.btnAddProfessor);
             this.tabManageProfessors.Location = new System.Drawing.Point(10, 47);
-            this.tabManageProfessors.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tabManageProfessors.Margin = new System.Windows.Forms.Padding(7);
             this.tabManageProfessors.Name = "tabManageProfessors";
-            this.tabManageProfessors.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tabManageProfessors.Padding = new System.Windows.Forms.Padding(7);
             this.tabManageProfessors.Size = new System.Drawing.Size(1088, 987);
             this.tabManageProfessors.TabIndex = 1;
             this.tabManageProfessors.Text = "Manage Professors";
@@ -324,7 +325,7 @@
             // txtUserSearchProfessor
             // 
             this.txtUserSearchProfessor.Location = new System.Drawing.Point(572, 915);
-            this.txtUserSearchProfessor.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.txtUserSearchProfessor.Margin = new System.Windows.Forms.Padding(7);
             this.txtUserSearchProfessor.Name = "txtUserSearchProfessor";
             this.txtUserSearchProfessor.Size = new System.Drawing.Size(228, 35);
             this.txtUserSearchProfessor.TabIndex = 26;
@@ -337,7 +338,7 @@
             "By Last Name",
             "Reset table"});
             this.cmbSearchProfessor.Location = new System.Drawing.Point(819, 915);
-            this.cmbSearchProfessor.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.cmbSearchProfessor.Margin = new System.Windows.Forms.Padding(7);
             this.cmbSearchProfessor.Name = "cmbSearchProfessor";
             this.cmbSearchProfessor.Size = new System.Drawing.Size(249, 37);
             this.cmbSearchProfessor.TabIndex = 25;
@@ -345,7 +346,7 @@
             // btnSearchProfessor
             // 
             this.btnSearchProfessor.Location = new System.Drawing.Point(819, 828);
-            this.btnSearchProfessor.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.btnSearchProfessor.Margin = new System.Windows.Forms.Padding(7);
             this.btnSearchProfessor.Name = "btnSearchProfessor";
             this.btnSearchProfessor.Size = new System.Drawing.Size(254, 71);
             this.btnSearchProfessor.TabIndex = 24;
@@ -356,7 +357,7 @@
             // btnUpdateProfessor
             // 
             this.btnUpdateProfessor.Location = new System.Drawing.Point(553, 828);
-            this.btnUpdateProfessor.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.btnUpdateProfessor.Margin = new System.Windows.Forms.Padding(7);
             this.btnUpdateProfessor.Name = "btnUpdateProfessor";
             this.btnUpdateProfessor.Size = new System.Drawing.Size(254, 71);
             this.btnUpdateProfessor.TabIndex = 21;
@@ -383,13 +384,14 @@
             this.tblProfessorData.Controls.Add(this.label12, 3, 0);
             this.tblProfessorData.Controls.Add(this.label24, 1, 1);
             this.tblProfessorData.Location = new System.Drawing.Point(14, 13);
-            this.tblProfessorData.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tblProfessorData.Margin = new System.Windows.Forms.Padding(7);
             this.tblProfessorData.Name = "tblProfessorData";
             this.tblProfessorData.RowCount = 2;
             this.tblProfessorData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblProfessorData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblProfessorData.Size = new System.Drawing.Size(1059, 801);
             this.tblProfessorData.TabIndex = 19;
+            this.tblProfessorData.Paint += new System.Windows.Forms.PaintEventHandler(this.tblProfessorData_Paint);
             // 
             // label15
             // 
@@ -474,7 +476,7 @@
             // btnRemoveProfessor
             // 
             this.btnRemoveProfessor.Location = new System.Drawing.Point(285, 828);
-            this.btnRemoveProfessor.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.btnRemoveProfessor.Margin = new System.Windows.Forms.Padding(7);
             this.btnRemoveProfessor.Name = "btnRemoveProfessor";
             this.btnRemoveProfessor.Size = new System.Drawing.Size(254, 71);
             this.btnRemoveProfessor.TabIndex = 20;
@@ -485,7 +487,7 @@
             // btnAddProfessor
             // 
             this.btnAddProfessor.Location = new System.Drawing.Point(16, 828);
-            this.btnAddProfessor.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.btnAddProfessor.Margin = new System.Windows.Forms.Padding(7);
             this.btnAddProfessor.Name = "btnAddProfessor";
             this.btnAddProfessor.Size = new System.Drawing.Size(254, 71);
             this.btnAddProfessor.TabIndex = 19;
@@ -503,9 +505,9 @@
             this.tabManageStudents.Controls.Add(this.btnRemoveStudent);
             this.tabManageStudents.Controls.Add(this.btnAddStudent);
             this.tabManageStudents.Location = new System.Drawing.Point(10, 47);
-            this.tabManageStudents.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tabManageStudents.Margin = new System.Windows.Forms.Padding(7);
             this.tabManageStudents.Name = "tabManageStudents";
-            this.tabManageStudents.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tabManageStudents.Padding = new System.Windows.Forms.Padding(7);
             this.tabManageStudents.Size = new System.Drawing.Size(1088, 987);
             this.tabManageStudents.TabIndex = 2;
             this.tabManageStudents.Text = "Manage Students";
@@ -514,7 +516,7 @@
             // txtUserSearchStudent
             // 
             this.txtUserSearchStudent.Location = new System.Drawing.Point(572, 915);
-            this.txtUserSearchStudent.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.txtUserSearchStudent.Margin = new System.Windows.Forms.Padding(7);
             this.txtUserSearchStudent.Name = "txtUserSearchStudent";
             this.txtUserSearchStudent.Size = new System.Drawing.Size(228, 35);
             this.txtUserSearchStudent.TabIndex = 27;
@@ -527,7 +529,7 @@
             "By Last Name",
             "Reset table"});
             this.cmbSearchStudent.Location = new System.Drawing.Point(819, 915);
-            this.cmbSearchStudent.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.cmbSearchStudent.Margin = new System.Windows.Forms.Padding(7);
             this.cmbSearchStudent.Name = "cmbSearchStudent";
             this.cmbSearchStudent.Size = new System.Drawing.Size(249, 37);
             this.cmbSearchStudent.TabIndex = 24;
@@ -536,7 +538,7 @@
             // btnSearchStudent
             // 
             this.btnSearchStudent.Location = new System.Drawing.Point(819, 828);
-            this.btnSearchStudent.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.btnSearchStudent.Margin = new System.Windows.Forms.Padding(7);
             this.btnSearchStudent.Name = "btnSearchStudent";
             this.btnSearchStudent.Size = new System.Drawing.Size(254, 71);
             this.btnSearchStudent.TabIndex = 23;
@@ -547,7 +549,7 @@
             // btnUpdateStudent
             // 
             this.btnUpdateStudent.Location = new System.Drawing.Point(551, 828);
-            this.btnUpdateStudent.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.btnUpdateStudent.Margin = new System.Windows.Forms.Padding(7);
             this.btnUpdateStudent.Name = "btnUpdateStudent";
             this.btnUpdateStudent.Size = new System.Drawing.Size(254, 71);
             this.btnUpdateStudent.TabIndex = 22;
@@ -572,13 +574,14 @@
             this.tblStudentData.Controls.Add(this.label20, 3, 0);
             this.tblStudentData.Controls.Add(this.label19, 2, 0);
             this.tblStudentData.Location = new System.Drawing.Point(14, 13);
-            this.tblStudentData.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tblStudentData.Margin = new System.Windows.Forms.Padding(7);
             this.tblStudentData.Name = "tblStudentData";
             this.tblStudentData.RowCount = 2;
             this.tblStudentData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblStudentData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblStudentData.Size = new System.Drawing.Size(1059, 801);
             this.tblStudentData.TabIndex = 19;
+            this.tblStudentData.Paint += new System.Windows.Forms.PaintEventHandler(this.tblStudentData_Paint);
             // 
             // label25
             // 
@@ -653,7 +656,7 @@
             // btnRemoveStudent
             // 
             this.btnRemoveStudent.Location = new System.Drawing.Point(282, 828);
-            this.btnRemoveStudent.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.btnRemoveStudent.Margin = new System.Windows.Forms.Padding(7);
             this.btnRemoveStudent.Name = "btnRemoveStudent";
             this.btnRemoveStudent.Size = new System.Drawing.Size(254, 71);
             this.btnRemoveStudent.TabIndex = 22;
@@ -664,7 +667,7 @@
             // btnAddStudent
             // 
             this.btnAddStudent.Location = new System.Drawing.Point(14, 828);
-            this.btnAddStudent.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.btnAddStudent.Margin = new System.Windows.Forms.Padding(7);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(254, 71);
             this.btnAddStudent.TabIndex = 21;
@@ -675,7 +678,7 @@
             // btnLogOut
             // 
             this.btnLogOut.Location = new System.Drawing.Point(992, 1243);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(7);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(175, 51);
             this.btnLogOut.TabIndex = 20;
@@ -691,7 +694,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnLogOut);
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "RegistrarForm";
             this.Text = "Registrar Actions";
             this.tabControl1.ResumeLayout(false);
