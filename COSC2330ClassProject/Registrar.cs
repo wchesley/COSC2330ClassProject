@@ -50,21 +50,9 @@ namespace COSC2330ClassProject
                 {
                  insertNewProfessor.CommandText = "INSERT into dbo.InstructorDatabase VALUES '" + fName +
                     "'" + lName + "'" + address + "'" + phone + "'" + email + "'" + fax + ";";
-                try
-                {
-                    connection.Open();
-                    insertNewProfessor.ExecuteNonQuery();
-                }
-                catch
-                {
-                    MessageBox.Show("Error Saving New Professor, Please try again");
-                }
-                finally
-                {
-                    MessageBox.Show(fName + " " + lName + " was added successfully!");
-                    connection.Close();
-                }
-
+                connection.Open();
+                insertNewProfessor.ExecuteNonQuery();
+                connection.Close(); 
                 }
                 
             
