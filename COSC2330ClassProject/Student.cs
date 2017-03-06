@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Data;
 using System.Data.SqlClient;
 using System.Data.Sql;
 
@@ -12,46 +12,45 @@ namespace COSC2330ClassProject
     public class Student
     {
         public int CurrentStudentID { get; set; }
-
-        public List<string> SelectStudentRecord()
+        SqlConnection connection = new SqlConnection(); 
+        public void PopulateStudentRecord(out string name, out string address, out string phoneNumber, out string password, 
+            out string email, out string ID)
         {
-            List<string> studentRecord = new List<string>();
-            SqlConnection connection = new SqlConnection();
+            name = "";
+            address = "";
+            phoneNumber = "";
+            password = "";
+            email = "";
+            ID = ""; 
+            
             connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
-            connection.Open();
+            
 
-            using (SqlCommand readAllProfessorRecords = connection.CreateCommand())
+            using (SqlCommand readAllStudentRecords = connection.CreateCommand())
 
                 //This code will select what ever the current student ID is.
             {
-                readAllProfessorRecords.CommandText = string.Format("SELECT * FROM [dbo].[StudentDatabase] WHERE ID='{0}';", CurrentStudentID);
-
-                using (SqlDataReader reader = readAllProfessorRecords.ExecuteReader())
+                readAllStudentRecords.CommandText = "SELECT * FROM db1.StudentDatabase WHERE paddedID= @ID";
+                readAllStudentRecords.Parameters.Add("@ID", SqlDbType.Int).Value = Convert.ToInt32(CurrentStudentID);
+                connection.Open();
+                using (SqlDataReader reader = readAllStudentRecords.ExecuteReader())
                 {         
                     while (reader.Read())
                     {
-                        for (int i = 0; i <= 7; i++)
-                        {
-                            if (i == 0)
-                                studentRecord.Add(reader.GetInt32(i).ToString());
-                            else
-                                                     
-                           studentRecord.Add(reader.GetString(i));
-                            
-                        }
+                        name = reader.GetString(1) + " " + reader.GetString(2);
                     }
                 }
             }
 
 
             connection.Close();
-            return studentRecord;
+            //return studentRecord;
         }
         public void UpdateStudentNames(string fname)
         {
 
 
-            SqlConnection connection = new SqlConnection();
+            
             connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
             connection.Open();
 
@@ -65,7 +64,7 @@ namespace COSC2330ClassProject
         {
 
 
-            SqlConnection connection = new SqlConnection();
+            
             connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
             connection.Open();
 
@@ -77,7 +76,7 @@ namespace COSC2330ClassProject
         }
         public void UpdateStudentID(string studentID)
         {
-            SqlConnection connection = new SqlConnection();
+            
             connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
             connection.Open();
 
@@ -91,7 +90,7 @@ namespace COSC2330ClassProject
         {
 
 
-            SqlConnection connection = new SqlConnection();
+            
             connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
             connection.Open();
 
@@ -106,7 +105,7 @@ namespace COSC2330ClassProject
         {
 
 
-            SqlConnection connection = new SqlConnection();
+            
             connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
             connection.Open();
 
@@ -121,7 +120,7 @@ namespace COSC2330ClassProject
         {
 
 
-            SqlConnection connection = new SqlConnection();
+            
             connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
             connection.Open();
 
