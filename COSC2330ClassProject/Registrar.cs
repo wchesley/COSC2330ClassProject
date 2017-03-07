@@ -37,33 +37,36 @@ namespace COSC2330ClassProject
             }
            
             
-             if (long.TryParse(tempFax, out fax) && tempFax != null && tempFax != "") //testing to see if it's a number and not blank. 
-             {
+             //if (long.TryParse(tempFax, out fax) && tempFax != null && tempFax != "") //testing to see if it's a number and not blank. 
+             //{
 
-             }
-             else
-             {
-                 MessageBox.Show(tempFax + " is not a valid fax number, please try again ");
-             }
+             //}
+             //else
+             //{
+             //    MessageBox.Show(tempFax + " is not a valid fax number, please try again ");
+             //}
             
             using(SqlCommand insertNewProfessor = connection.CreateCommand())
                 {
                  insertNewProfessor.CommandText = "INSERT into dbo.InstructorDatabase VALUES '" + fName +
                     "'" + lName + "'" + address + "'" + phone + "'" + email + "'" + fax + ";";
-                try
-                {
-                    connection.Open();
-                    insertNewProfessor.ExecuteNonQuery();
-                }
-                catch
-                {
-                    MessageBox.Show("Error Saving New Professor, Please try again");
-                }
-                finally
-                {
-                    //MessageBox.Show(fName + " " + lName + " was added successfully!");
-                    connection.Close();
-                }
+                connection.Open();
+                insertNewProfessor.ExecuteNonQuery();
+                connection.Close();
+                //try
+                //{
+                //    connection.Open();
+                //    insertNewProfessor.ExecuteNonQuery();
+                //}
+                //catch
+                //{
+                //    MessageBox.Show("Error Saving New Professor, Please try again");
+                //}
+                //finally
+                //{
+                //    //MessageBox.Show(fName + " " + lName + " was added successfully!");
+                //    connection.Close();
+                //}
 
                 }
                 
