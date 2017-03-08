@@ -15,9 +15,37 @@ namespace COSC2330ClassProject
 
         // db login info: db1 pass: db10 
 
-        public void AddStudent() // take data from form and plug into database. 
-        { 
-            
+        public void AddStudent(string fName, string lName, string theAddress, string thePhoneNumber, string thePass, string theEmail, string theID) // take data from form and plug into database. 
+        {
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
+            connection.Open();
+
+            using (SqlCommand insertNewStudent = connection.CreateCommand())
+            {
+                insertNewStudent.CommandText = "insert into dbo.StudentDatabase values ('" + fName + "', '" + lName + "', '" + theAddress + "', '" + thePhoneNumber + "', '"+ thePass +"', '" + theEmail + "')";
+                insertNewStudent.ExecuteNonQuery();
+            }
+        }
+
+        public void ReadStudentID(string fName, string lName, string theAddress, string thePhoneNumber, string thePass, string theEmail, out string theID) // take data from form and plug into database. 
+        {
+            SqlConnection connection = new SqlConnection();
+            connection.ConnectionString = "Server=cis1.actx.edu;Database=Project1;User Id=db1;Password = db10;";
+            connection.Open();
+
+            theID = "";
+            using (SqlCommand readNewStudentID = connection.CreateCommand())
+            {
+                readNewStudentID.CommandText = "select * from dbo.StudentDatabase where FirstName = '" + fName + "' and LastName = '" + lName + "'and Address = '" + theAddress + "'and PhoneNumber = '" + thePhoneNumber + "'and Password = '" + thePass + "'and Email = '" + theEmail + "'";
+                using (SqlDataReader reader = readNewStudentID.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        theID = reader.GetString(7);
+                    }
+                }
+            }
         }
         //I'll take a look at these errors in class today (3/1/2017) 
         //Krista already has error messages in the UI, so I don't think you need to worry about them or tryparsing here? Maybe we need to remove them from the UI and let all the error handling be done in the dll.
