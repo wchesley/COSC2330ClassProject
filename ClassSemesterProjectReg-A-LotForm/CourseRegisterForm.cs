@@ -46,5 +46,12 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
 
         }
+
+        private void CourseRegisterForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'project1DataSet4.CourseDatabase' table. You can move, or remove it, as needed.
+            this.courseDatabaseTableAdapter.Fill(this.project1DataSet4.CourseDatabase);
+
+        }
     }
 }
