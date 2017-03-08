@@ -252,5 +252,22 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             // populate student data here
         }
+
+        private void dataGridCourse_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void RegistrarForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'project1DataSet.CourseDatabase' table. You can move, or remove it, as needed.
+            this.courseDatabaseTableAdapter.Fill(this.project1DataSet.CourseDatabase);
+
+        }
+
+        private void courseDatabaseBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

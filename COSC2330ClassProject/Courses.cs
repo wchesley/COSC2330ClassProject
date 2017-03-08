@@ -39,6 +39,7 @@ namespace COSC2330ClassProject
                         theCap = reader.GetInt32(5);
                         theSection = reader.GetInt32(6);
                         theProfessor = reader.GetString(7);
+
                     }
             }
         }

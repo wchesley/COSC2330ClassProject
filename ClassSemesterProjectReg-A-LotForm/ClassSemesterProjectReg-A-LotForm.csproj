@@ -114,6 +114,11 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Project1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Project1DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RegistrarForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +226,17 @@
     <EmbeddedResource Include="ViewAllStudentsForm.resx">
       <DependentUpon>ViewAllStudentsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Project1DataSet.xsc">
+      <DependentUpon>Project1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Project1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Project1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Project1DataSet.xss">
+      <DependentUpon>Project1DataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
