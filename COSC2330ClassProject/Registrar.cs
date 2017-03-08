@@ -15,10 +15,7 @@ namespace COSC2330ClassProject
 
         // db login info: db1 pass: db10 
 
-        public void AddStudent() // take data from form and plug into database. 
-        { 
-            
-        }
+        
         //I'll take a look at these errors in class today (3/1/2017) 
         //Krista already has error messages in the UI, so I don't think you need to worry about them or tryparsing here? Maybe we need to remove them from the UI and let all the error handling be done in the dll.
         public void AddProfessor(string fName, string lName, string address, string tempPhone, string email, string tempFax = "") //moved back from gui, reason: to support more OOD (seperation of gui from business logic) 
