@@ -260,6 +260,10 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void RegistrarForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'project1DataSet3.StudentDatabase' table. You can move, or remove it, as needed.
+            this.studentDatabaseTableAdapter.Fill(this.project1DataSet3.StudentDatabase);
+            // TODO: This line of code loads data into the 'project1DataSet1.InstructorDatabase' table. You can move, or remove it, as needed.
+            this.instructorDatabaseTableAdapter.Fill(this.project1DataSet1.InstructorDatabase);
             // TODO: This line of code loads data into the 'project1DataSet.CourseDatabase' table. You can move, or remove it, as needed.
             this.courseDatabaseTableAdapter.Fill(this.project1DataSet.CourseDatabase);
 
