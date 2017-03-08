@@ -137,7 +137,7 @@
             this.Column9});
             this.dataGridCourse.Location = new System.Drawing.Point(6, 6);
             this.dataGridCourse.Name = "dataGridCourse";
-            this.dataGridCourse.Size = new System.Drawing.Size(843, 359);
+            this.dataGridCourse.Size = new System.Drawing.Size(835, 359);
             this.dataGridCourse.TabIndex = 49;
             // 
             // dataGridViewTextBoxColumn1
@@ -193,7 +193,7 @@
             this.cmbSearchCourse.Items.AddRange(new object[] {
             "By Course Number",
             "By Course Name",
-            "By Professor",
+            "By Professor Last Name",
             "Reset table"});
             this.cmbSearchCourse.Location = new System.Drawing.Point(351, 410);
             this.cmbSearchCourse.Name = "cmbSearchCourse";

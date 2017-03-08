@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 using System.Data.SqlClient;
 using System.Data.Sql;
+using COSC2330ClassProject;
 
 namespace COSC2330ClassProject
 {
@@ -169,6 +170,11 @@ namespace COSC2330ClassProject
                 updateProfessorFax.CommandText = "update dbo.InstructorDatabase set Fax = '" + theFax + "' where ID = 1";
                 updateProfessorFax.ExecuteNonQuery();
             }
+
+            
         }
+
+        
+        
     }
 }

@@ -223,6 +223,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AddCourseForm";
             this.Text = "Add Course";
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 

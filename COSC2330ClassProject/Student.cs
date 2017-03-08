@@ -135,6 +135,8 @@ namespace COSC2330ClassProject
                 updateStudentEmail.ExecuteNonQuery();
             }
         }
+}
+        
 
-    }     
+             
 }
