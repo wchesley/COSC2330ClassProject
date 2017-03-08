@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.cmbSearchCourse = new System.Windows.Forms.ComboBox();
@@ -38,6 +39,8 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.courseDatabaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.project1DataSet4 = new ClassSemesterProjectReg_A_LotForm.Project1DataSet4();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +50,7 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseDatabaseTableAdapter = new ClassSemesterProjectReg_A_LotForm.Project1DataSet4TableAdapters.CourseDatabaseTableAdapter();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,8 +58,10 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseDatabaseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.project1DataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -163,6 +169,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -173,10 +180,21 @@
             this.Column6,
             this.Column7,
             this.Column8});
+            this.dataGridView1.DataSource = this.courseDatabaseBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 81);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(601, 309);
             this.dataGridView1.TabIndex = 47;
+            // 
+            // courseDatabaseBindingSource
+            // 
+            this.courseDatabaseBindingSource.DataMember = "CourseDatabase";
+            this.courseDatabaseBindingSource.DataSource = this.project1DataSet4;
+            // 
+            // project1DataSet4
+            // 
+            this.project1DataSet4.DataSetName = "Project1DataSet4";
+            this.project1DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridView2
             // 
@@ -235,38 +253,50 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "Select";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
+            // courseDatabaseTableAdapter
+            // 
+            this.courseDatabaseTableAdapter.ClearBeforeFill = true;
+            // 
             // Column1
             // 
+            this.Column1.DataPropertyName = "ID";
             this.Column1.HeaderText = "Course ID #";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
+            this.Column2.DataPropertyName = "Sections";
             this.Column2.HeaderText = "Section";
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
+            this.Column3.DataPropertyName = "CourseName";
             this.Column3.HeaderText = "Name";
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
+            this.Column4.DataPropertyName = "Professor";
             this.Column4.HeaderText = "Professor";
             this.Column4.Name = "Column4";
             // 
             // Column5
             // 
+            this.Column5.DataPropertyName = "Department";
             this.Column5.HeaderText = "Department";
             this.Column5.Name = "Column5";
             // 
             // Column6
             // 
+            this.Column6.DataPropertyName = "CourseTimeSlot";
             this.Column6.HeaderText = "Time";
             this.Column6.Name = "Column6";
             // 
             // Column7
             // 
+            this.Column7.DataPropertyName = "CapacityFilled";
             this.Column7.HeaderText = "Capacity";
             this.Column7.Name = "Column7";
             // 
@@ -274,6 +304,8 @@
             // 
             this.Column8.HeaderText = "Select";
             this.Column8.Name = "Column8";
+            this.Column8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // CourseRegisterForm
             // 
@@ -294,7 +326,10 @@
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "CourseRegisterForm";
             this.Text = "Register/Drop Sections";
+            this.Load += new System.EventHandler(this.CourseRegisterForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseDatabaseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.project1DataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -321,6 +356,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private Project1DataSet4 project1DataSet4;
+        private System.Windows.Forms.BindingSource courseDatabaseBindingSource;
+        private Project1DataSet4TableAdapters.CourseDatabaseTableAdapter courseDatabaseTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -328,6 +366,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column8;
     }
 }
