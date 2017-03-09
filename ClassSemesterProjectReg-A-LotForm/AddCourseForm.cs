@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using COSC2330ClassProject;
 
 namespace ClassSemesterProjectReg_A_LotForm
 {
@@ -22,9 +23,9 @@ namespace ClassSemesterProjectReg_A_LotForm
             string courseName = txtCourseName.Text;
             string courseCode = txtCourseCode.Text;
             string courseDepartment;
-            int courseTime;
-            int conCourseCode;
-            int courseSection;
+            int courseTime = 0;
+            int conCourseCode = 0;
+            int courseSection = 0;
             bool errorOccured = false;
             
             if (txtCourseName.Text != "")
@@ -79,8 +80,13 @@ namespace ClassSemesterProjectReg_A_LotForm
 
                         if (cmbDepartment.Text != "")
                         {
-                            courseDepartment = cmbDepartment.Text;
 
+                        courseName = txtCourseName.Text;
+                        courseDepartment = cmbDepartment.Text;
+                        courseCode = txtCourseCode.Text;
+
+                        Courses frm = new Courses();
+                        frm.AddCourse(courseName, courseCode, courseSection, courseTime, courseDepartment);
                         }
 
                         else

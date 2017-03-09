@@ -59,7 +59,7 @@ namespace COSC2330ClassProject
                         Student newStud = new Student();
                         newStud.CurrentStudentID = userID;
                         MessageBox.Show("Login Validated");
-
+                        MessageBox.Show(userID); 
                         StudentForm frm = new StudentForm();
                         frm.Show();
 

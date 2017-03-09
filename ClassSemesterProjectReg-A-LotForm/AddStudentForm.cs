@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using COSC2330ClassProject;
 
 namespace ClassSemesterProjectReg_A_LotForm
 {
@@ -31,7 +32,8 @@ namespace ClassSemesterProjectReg_A_LotForm
             string userEmail = txtEmail.Text; // Stores the Email the user entered
             string userFirstName = txtFirstName.Text; // Stores the users first name
             string userLastName = txtLastName.Text; // Stores the users last name
-
+            string password = txtFirstName.Text;
+            string newID = "";
 
             if (!(double.TryParse(rawFirstName, out conFirstName)) && txtFirstName.Text != "") //If name is not a number & not blank..
             {
@@ -47,6 +49,12 @@ namespace ClassSemesterProjectReg_A_LotForm
 
                             if (txtEmail.Text != "")
                             {
+                                Registrar frm = new Registrar();
+                                frm.AddStudent(rawFirstName, rawLastName, address, userPhoneNumber, password, userEmail, newID);
+                                frm.ReadStudentID(rawFirstName, rawLastName, address, userPhoneNumber, password, userEmail, out newID);
+
+                                lblStudentID.Text = newID;
+                                lblTempPassword.Text = password;
                                 MessageBox.Show("The student has been added"); 
                             }
 
@@ -82,6 +90,7 @@ namespace ClassSemesterProjectReg_A_LotForm
         {
             if (MessageBox.Show("Are you done adding students?", "Add Student", MessageBoxButtons.YesNo) == DialogResult.No)
             {
+                
                 txtFirstName.Clear();
                 txtLastName.Clear();
                 txtAddress.Clear();

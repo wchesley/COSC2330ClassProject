@@ -70,7 +70,7 @@ namespace COSC2330ClassProject
             connection.Open();
             using (SqlCommand readProfessorData = connection.CreateCommand())
             {
-                readProfessorData.CommandText = "select * from dbo.InstructorDatabase where PaddedID = '"+ theProfessor.CurrentProfesorID +"'";
+                readProfessorData.CommandText = "select * from dbo.InstructorDatabase where ID = 1";
                 using (SqlDataReader reader = readProfessorData.ExecuteReader())
                 {
                     while (reader.Read())
@@ -102,7 +102,7 @@ namespace COSC2330ClassProject
             
             using(SqlCommand updateProfessorFirstName = connection.CreateCommand())
             {
-                updateProfessorFirstName.CommandText = "update dbo.InstructorDatabase set FirstName = '" + fName + "' where PaddedID = '"+ CurrentProfesorID +"'";
+                updateProfessorFirstName.CommandText = "update dbo.InstructorDatabase set FirstName = '" + fName + "' where ID = 1";
                 updateProfessorFirstName.ExecuteNonQuery();
             }
 

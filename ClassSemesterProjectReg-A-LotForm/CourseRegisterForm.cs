@@ -6,7 +6,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Sql;
+using System.Data.SqlClient;
 using System.Windows.Forms;
+using COSC2330ClassProject;
+
 
 namespace ClassSemesterProjectReg_A_LotForm
 {
@@ -40,6 +44,13 @@ namespace ClassSemesterProjectReg_A_LotForm
 
         private void btnBack_Click_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void CourseRegisterForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'project1DataSet4.CourseDatabase' table. You can move, or remove it, as needed.
+            this.courseDatabaseTableAdapter.Fill(this.project1DataSet4.CourseDatabase);
 
         }
     }
