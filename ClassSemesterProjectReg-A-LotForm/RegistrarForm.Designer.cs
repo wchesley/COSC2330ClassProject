@@ -157,7 +157,7 @@
             this.dataGridCourse.Name = "dataGridCourse";
             this.dataGridCourse.Size = new System.Drawing.Size(835, 359);
             this.dataGridCourse.TabIndex = 49;
-            this.dataGridCourse.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCourse_CellContentClick);
+            
             // 
             // txtBoxUserSearch
             // 
@@ -417,7 +417,7 @@
             // 
             this.courseDatabaseBindingSource.DataMember = "CourseDatabase";
             this.courseDatabaseBindingSource.DataSource = this.project1DataSet;
-            this.courseDatabaseBindingSource.CurrentChanged += new System.EventHandler(this.courseDatabaseBindingSource_CurrentChanged);
+            
             // 
             // courseDatabaseTableAdapter
             // 
@@ -605,7 +605,7 @@
             this.Controls.Add(this.btnLogOut);
             this.Name = "RegistrarForm";
             this.Text = "Registrar Actions";
-            this.Load += new System.EventHandler(this.RegistrarForm_Load);
+            
             this.dataGridProfessors.ResumeLayout(false);
             this.tabManageCourses.ResumeLayout(false);
             this.tabManageCourses.PerformLayout();

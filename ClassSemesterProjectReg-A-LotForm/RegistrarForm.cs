@@ -111,14 +111,14 @@ namespace ClassSemesterProjectReg_A_LotForm
             else if (cmbSearchCourse.Text == "By Course Name" && txtBoxUserSearch.Text != "")
             {
                 Registrar Reg = new Registrar();
-                Reg.searchCourseName(UserInput);
+                //Reg.searchCourseName(UserInput);
                 //Show Results
 
             }
             else if (cmbSearchCourse.Text == "By Professor" && txtBoxUserSearch.Text != "")
             {
                 Registrar Reg = new Registrar();
-                Reg.searchCourseProfessor(UserInput);
+                //Reg.searchCourseProfessor(UserInput);
                 //txtBoxUserSearch.Text.Substring(0, 3);
                 //Show Results
             }
@@ -127,7 +127,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             {
                 
                 Registrar Reg = new Registrar();
-                Reg.searchCourseNumber(UserInput);
+                //Reg.searchCourseNumber(UserInput);
                 //Show results
             }
             else if (cmbSearchCourse.Text == "Reset table")
@@ -164,7 +164,7 @@ namespace ClassSemesterProjectReg_A_LotForm
             else if (cmbSearchProfessor.Text == "By ID Number" && txtBoxUserSearch.Text != "")
             {
                 Registrar Reg = new Registrar();
-                Reg.searchProfessorIDNumber(UserInput);
+                //Reg.searchProfessorIDNumber(UserInput);
                 // Show in data grid
             }
             else if (cmbSearchProfessor.Text == "By Last Name" && txtBoxUserSearch.Text != "")
@@ -192,13 +192,13 @@ namespace ClassSemesterProjectReg_A_LotForm
             else if (cmbSearchProfessor.Text == "By ID Number" && txtUserSearchStudent.Text != "")
             {
                 Registrar Reg = new Registrar();
-                Reg.searchStudentIDNumber(UserInput);
+                //Reg.searchStudentIDNumber(UserInput);
                 //Show in datagrid
             }
             else if (cmbSearchStudent.Text == "By Last Name" && txtUserSearchStudent.Text != "")
             {
                 Registrar Reg = new Registrar();
-                Reg.searchLast(UserInput);
+                //Reg.searchLast(UserInput);
                 //Show in datagrid
             }
             else if (cmbSearchStudent.Text == "Reset table")
